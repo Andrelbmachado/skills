@@ -171,3 +171,86 @@ Todas as skills (Grok, Claude Code, Codex, Gemini). Para importar: `./sync.sh`. 
 | [web-components](skills/web-components) | claude |  |
 | [web-design-guidelines](skills/web-design-guidelines) | claude, codex | Web platform design and accessibility guidelines. Use when building web interfaces, auditing accessibility, implementing responsive layouts, or reviewing web UI code. Triggers on tasks involving HTML, |
 | [xlsx](skills/xlsx) | claude | Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e. |
+| [agy-customizations](skills/agy-customizations) | gemini | >- |
+| [antigravity-guide](skills/antigravity-guide) | gemini | Provides a comprehensive guide, quick reference, and sitemap for Google Antigravity (AGY), including the Antigravity CLI (agy), Antigravity 2.0, Antigravity IDE, Python SDK, slash commands, keybinding |
+| [permissioned-github](skills/permissioned-github) | gemini | Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restrictions in the agent environment. |
+| [create-security-implementation-plan](skills/create-security-implementation-plan) | gemini | > |
+| [determine-threat-model](skills/determine-threat-model) | gemini | > |
+| [generate-security-audit-report](skills/generate-security-audit-report) | gemini | > |
+| [run-poc](skills/run-poc) | gemini | > |
+| [run-security-scanner](skills/run-security-scanner) | gemini | > |
+| [scan-dependencies](skills/scan-dependencies) | gemini | > |
+| [mandatory-secure-web-skills](skills/mandatory-secure-web-skills) | gemini | <!-- disableFinding(SKILLS_METADATA_MISSING) --> |
+| [securecoder-persona](skills/securecoder-persona) | gemini | > |
+| [automation](skills/automation) | gemini | Interactive guide to design and create a scheduled background automation. Use this skill when the user wants to create an automated or recurring scheduled task (e.g. "summarize my emails every morning |
+| [generative-ui](skills/generative-ui) | gemini | How to render rich interactive HTML widgets inline in the chat or as standalone artifacts. Use this skill when you want to show the user diagrams, data visualizations, interactive controls, educationa |
+| [migrate-workflows](skills/migrate-workflows) | gemini | Automatically migrate legacy workflows to modern skills across global and workspace configurations. Scans for existing workflows, creates target SKILL.md files, and safely archives old workflow files. |
+| [plugin](skills/plugin) | gemini | How to manage and create plugins — namespaced bundles of skills, agents, rules, MCP servers and hooks that install, enable and disable as a single unit. Use this skill when the user wants to enable, d |
+| [run-workflow](skills/run-workflow) | gemini | >- |
+| [ui-plugin-navigation](skills/ui-plugin-navigation) | gemini | Discover UI plugin panels relevant to the current task and surface a one-click pill in chat to open (toggle) them in the side pane. Use when a running UI plugin's panel would help with what the user i |
+| [android-cli](skills/android-cli) | gemini | Provides instructions for installing and using the `android` CLI. The `android` command-line tool is a critical tool for Android development and helps you create new Android projects, run Android apps |
+| [compose-preview](skills/compose-preview) | gemini | Instructions for the Android Compose Preview sidecar, which renders Jetpack Compose @Preview functions with `android preview render` and shows them in the Android Compose Preview pane. Use it when the |
+| [android-device-hub](skills/android-device-hub) | gemini | Instructions for working with the Android Device Hub sidecar, which lists, starts, stops, creates and removes Android Virtual Devices (AVDs), lists physical devices connected to adb, and lets the user |
+| [a11y-debugging](skills/a11y-debugging) | gemini | Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and c |
+| [chrome-devtools](skills/chrome-devtools) | gemini | Uses Chrome DevTools via MCP for efficient debugging, troubleshooting and browser automation. Use when debugging web pages, automating browser interactions, analyzing performance, or inspecting networ |
+| [cookie-debugging](skills/cookie-debugging) | gemini | Uses Chrome DevTools MCP for inspecting, debugging, and testing cookies, session state, authentication issues, and cookie consent compliance. Use when diagnosing 401/403 errors, authentication redirec |
+| [debug-optimize-lcp](skills/debug-optimize-lcp) | gemini | Guides debugging and optimizing Largest Contentful Paint (LCP) using Chrome DevTools MCP tools. Use this skill whenever the user asks about LCP performance, slow page loads, Core Web Vitals optimizati |
+| [memory-leak-debugging](skills/memory-leak-debugging) | gemini | Diagnoses and resolves memory leaks in JavaScript/Node.js applications. Use when a user reports high memory usage, OOM errors, or wants to capture, compare, or inspect heap snapshots with Chrome DevTo |
+| [troubleshooting](skills/troubleshooting) | gemini | Uses Chrome DevTools MCP and documentation to troubleshoot connection and target issues. Trigger this skill when list_pages, new_page, or navigate_page fail, or when the server initialization fails. |
+| [extension-to-functions-codebase](skills/extension-to-functions-codebase) | gemini | Skill for converting an installed Firebase Extension (or extension source) into a standalone Cloud Functions for Firebase codebase or publishable npm package, including V1 to V2 trigger upgrades, life |
+| [firebase-ai-logic-basics](skills/firebase-ai-logic-basics) | gemini | Official skill for integrating Firebase AI Logic (Gemini API) into web applications. Covers setup, multimodal inference, structured output, and security. |
+| [firebase-app-hosting-basics](skills/firebase-app-hosting-basics) | gemini | >- |
+| [firebase-auth-basics](skills/firebase-auth-basics) | gemini | Guide for setting up and using Firebase Authentication. Use this skill when the user's app requires user sign-in, user management, or secure data access using auth rules. |
+| [firebase-basics](skills/firebase-basics) | gemini | >- |
+| [firebase-crashlytics](skills/firebase-crashlytics) | gemini | Comprehensive guide for Firebase Crashlytics, including provisioning and SDK usage. Use this skill when the user needs help setting up Crashlytics, adding crash reporting, or using the Crashlytics SDK |
+| [firebase-data-connect](skills/firebase-data-connect) | gemini | Builds and deploys Firebase SQL Connect (aka Firebase Data Connect) backends with PostgreSQL securely. Use when designing schemas with tables and relations, writing authorized queries and mutations, c |
+| [firebase-firestore](skills/firebase-firestore) | gemini | >- |
+| [firebase-hosting-basics](skills/firebase-hosting-basics) | gemini | >- |
+| [firebase-remote-config-basics](skills/firebase-remote-config-basics) | gemini | >- |
+| [firebase-security-rules-auditor](skills/firebase-security-rules-auditor) | gemini | >- |
+| [firestore-rules-creation](skills/firestore-rules-creation) | gemini | >- |
+| [xcode-project-setup](skills/xcode-project-setup) | gemini | Safely modifies Xcode projects (.pbxproj) to add Swift Packages and link files. Use this skill whenever an iOS project needs dependencies installed (e.g. Firebase, Alamofire). |
+| [google-antigravity-sdk](skills/google-antigravity-sdk) | gemini | Design, implement, and debug autonomous AI agents and multi-agent systems using the Google Antigravity (AGY) SDK. ACTIVATE this skill when the user wants to create, configure, or orchestrate Google An |
+| [chrome-extensions](skills/chrome-extensions) | gemini | > |
+| [modern-web-guidance](skills/modern-web-guidance) | gemini | / |
+| [alphafold-database-fetch-and-analyze](skills/alphafold-database-fetch-and-analyze) | gemini | > |
+| [alphagenome-atlas-website-links](skills/alphagenome-atlas-website-links) | gemini | >- |
+| [alphagenome-single-variant-analysis](skills/alphagenome-single-variant-analysis) | gemini | > |
+| [alphagenome-variant-impact-score](skills/alphagenome-variant-impact-score) | gemini | >- |
+| [biomolecular-structure-viewer](skills/biomolecular-structure-viewer) | gemini | > |
+| [chembl-database](skills/chembl-database) | gemini | > |
+| [clinical-trials-database](skills/clinical-trials-database) | gemini | > |
+| [clinvar-database](skills/clinvar-database) | gemini | > |
+| [credentials](skills/credentials) | gemini | >- |
+| [dbsnp-database](skills/dbsnp-database) | gemini | > |
+| [embl-ebi-ols](skills/embl-ebi-ols) | gemini | > |
+| [encode-ccres-database](skills/encode-ccres-database) | gemini | > |
+| [ensembl-database](skills/ensembl-database) | gemini | > |
+| [foldseek-structural-search](skills/foldseek-structural-search) | gemini | > |
+| [gnomad-database](skills/gnomad-database) | gemini | > |
+| [gtex-database](skills/gtex-database) | gemini | > |
+| [human-protein-atlas-database](skills/human-protein-atlas-database) | gemini | > |
+| [interpro-database](skills/interpro-database) | gemini | > |
+| [jaspar-database](skills/jaspar-database) | gemini | > |
+| [literature-search-arxiv](skills/literature-search-arxiv) | gemini | > |
+| [literature-search-biorxiv](skills/literature-search-biorxiv) | gemini | > |
+| [literature-search-europepmc](skills/literature-search-europepmc) | gemini | > |
+| [literature-search-openalex](skills/literature-search-openalex) | gemini | > |
+| [ncbi-sequence-fetch](skills/ncbi-sequence-fetch) | gemini | > |
+| [openfda-database](skills/openfda-database) | gemini | > |
+| [opentargets-database](skills/opentargets-database) | gemini | > |
+| [pdb-database](skills/pdb-database) | gemini | > |
+| [predictingthepast](skills/predictingthepast) | gemini | > |
+| [protein-sequence-msa](skills/protein-sequence-msa) | gemini | > |
+| [protein-sequence-similarity-search](skills/protein-sequence-similarity-search) | gemini | > |
+| [pubchem-database](skills/pubchem-database) | gemini | > |
+| [pubmed-database](skills/pubmed-database) | gemini | >- |
+| [pymol](skills/pymol) | gemini | > |
+| [quickgo-database](skills/quickgo-database) | gemini | > |
+| [reactome-database](skills/reactome-database) | gemini | > |
+| [string-database](skills/string-database) | gemini | > |
+| [ucsc-conservation-and-tfbs](skills/ucsc-conservation-and-tfbs) | gemini | > |
+| [unibind-database](skills/unibind-database) | gemini | >- |
+| [uniprot-database](skills/uniprot-database) | gemini | >- |
+| [uv](skills/uv) | gemini | >- |
+| [workflow-skill-creator](skills/workflow-skill-creator) | gemini | > |

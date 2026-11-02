@@ -1,0 +1,165 @@
+airunway-aks-setup	airunway-aks-setup	/Users/andremachado/skills-repo/skills/airunway-aks-setup/SKILL.md	Set up AI Runway on AKS — from bare cluster to running model. Covers cluster verification, controller install, GPU asses
+android-design-guidelines	android-design-guidelines	/Users/andremachado/skills-repo/skills/android-design-guidelines/SKILL.md	Material Design 3 and Android platform guidelines. Use when building Android apps with Jetpack Compose or XML layouts, i
+appinsights-instrumentation	appinsights-instrumentation	/Users/andremachado/skills-repo/skills/appinsights-instrumentation/SKILL.md	Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry patterns, SDK setup, and configur
+apple-ai-chat-design	apple-ai-chat-design	/Users/andremachado/skills-repo/skills/apple-ai-chat-design/SKILL.md	Design system para apps de mensagem com IA no estilo Apple/ChatGPT. Use esta skill quando estiver desenvolvendo apps de 
+azure-ai	azure-ai	/Users/andremachado/skills-repo/skills/azure-ai/SKILL.md	Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search, vector/hybrid search, speech-to-text
+azure-aigateway	azure-aigateway	/Users/andremachado/skills-repo/skills/azure-aigateway/SKILL.md	Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents. WHEN: semantic caching, token limi
+azure-app-onboard	azure-app-onboard	/Users/andremachado/skills-repo/skills/azure-app-onboard/SKILL.md	End-to-end orchestrator: from a business idea, app idea, or existing app to running Azure deployment with cost estimates
+azure-app-onboard-prereq	azure-app-onboard-prereq	/Users/andremachado/skills-repo/skills/azure-app-onboard-prereq/SKILL.md	Assess whether source code is ready to deploy to Azure — the check BEFORE infrastructure work. Evaluates build health, a
+azure-cloud-migrate	azure-cloud-migrate	/Users/andremachado/skills-repo/skills/azure-cloud-migrate/SKILL.md	Assess and migrate cross-cloud workloads to Azure with reports and code conversion. Supports Lambda→Functions, Beanstalk
+azure-compliance	azure-compliance	/Users/andremachado/skills-repo/skills/azure-compliance/SKILL.md	Run Azure compliance and security audits with azqr plus Key Vault expiration checks. Covers best-practice assessment, re
+azure-compute	azure-compute	/Users/andremachado/skills-repo/skills/azure-compute/SKILL.md	Azure VM/VMSS router. WHEN: create / provision / deploy / spin-up VM, recommend VM size, compare VM pricing, VMSS, scale
+azure-cost	azure-cost	/Users/andremachado/skills-repo/skills/azure-cost/SKILL.md	Azure cost management: query costs, forecast spending, optimize to reduce waste. WHEN: \"Azure costs\", \"Azure bill\", 
+azure-deploy	azure-deploy	/Users/andremachado/skills-repo/skills/azure-deploy/SKILL.md	Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md and infrastruct
+azure-diagnostics	azure-diagnostics	/Users/andremachado/skills-repo/skills/azure-diagnostics/SKILL.md	Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health, and safe triage. WHEN: debug produ
+azure-enterprise-infra-planner	azure-enterprise-infra-planner	/Users/andremachado/skills-repo/skills/azure-enterprise-infra-planner/SKILL.md	Architect and provision enterprise Azure infrastructure from workload descriptions. For cloud architects and platform en
+azure-kubernetes	azure-kubernetes	/Users/andremachado/skills-repo/skills/azure-kubernetes/SKILL.md	Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters. Covers Day-0 checklist, SKU select
+azure-kubernetes-automatic-readiness	azure-kubernetes-automatic-readiness	/Users/andremachado/skills-repo/skills/azure-kubernetes-automatic-readiness/SKILL.md	Assess Kubernetes workloads and cluster configuration for AKS Automatic compatibility. Identifies incompatibilities, gen
+azure-kusto	azure-kusto	/Users/andremachado/skills-repo/skills/azure-kusto/SKILL.md	Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics, telemetry, and time series analys
+azure-messaging	azure-messaging	/Users/andremachado/skills-repo/skills/azure-messaging/SKILL.md	Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service Bus. Covers connection failures, au
+azure-prepare	azure-prepare	/Users/andremachado/skills-repo/skills/azure-prepare/SKILL.md	Prepare azd-based Azure projects for deployment: generates azure.yaml, infrastructure (Bicep/Terraform), and Dockerfiles
+azure-quotas	azure-quotas	/Users/andremachado/skills-repo/skills/azure-quotas/SKILL.md	Check/manage Azure quotas and usage across providers. For deployment planning, capacity validation, region selection. WH
+azure-reliability	azure-reliability	/Users/andremachado/skills-repo/skills/azure-reliability/SKILL.md	Assess and improve the reliability posture of PaaS Applications (Azure Functions and Azure App Service). Scans deployed 
+azure-resource-lookup	azure-resource-lookup	/Users/andremachado/skills-repo/skills/azure-resource-lookup/SKILL.md	List, find, and show Azure resources across subscriptions or resource groups. Handles prompts like \"list the websites i
+azure-resource-visualizer	azure-resource-visualizer	/Users/andremachado/skills-repo/skills/azure-resource-visualizer/SKILL.md	Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing the relationships between indi
+azure-storage	azure-storage	/Users/andremachado/skills-repo/skills/azure-storage/SKILL.md	Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage, and Data Lake. Answers questio
+azure-upgrade	azure-upgrade	/Users/andremachado/skills-repo/skills/azure-upgrade/SKILL.md	Assess and upgrade Azure workloads between plans, tiers, or SKUs, or modernize Azure SDK dependencies in source code. WH
+azure-validate	azure-validate	/Users/andremachado/skills-repo/skills/azure-validate/SKILL.md	Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure (Bicep or Terraform), RB
+built-in-browser	built-in-browser	/Users/andremachado/skills-repo/skills/built-in-browser/SKILL.md	Read this skill before the first step that uses the built-in browser, the browser pane inside the Claude desktop app (al
+capacity	capacity	/Users/andremachado/skills-repo/skills/capacity/SKILL.md	Discovers available Azure OpenAI model capacity across regions and projects. Analyzes quota limits, compares availabilit
+cavecrew	cavecrew	/Users/andremachado/skills-repo/skills/cavecrew/SKILL.md	>
+caveman	caveman	/Users/andremachado/skills-repo/skills/caveman/SKILL.md	>
+caveman-commit	caveman-commit	/Users/andremachado/skills-repo/skills/caveman-commit/SKILL.md	>
+caveman-compress	caveman-compress	/Users/andremachado/skills-repo/skills/caveman-compress/SKILL.md	>
+caveman-help	caveman-help	/Users/andremachado/skills-repo/skills/caveman-help/SKILL.md	>
+caveman-review	caveman-review	/Users/andremachado/skills-repo/skills/caveman-review/SKILL.md	>
+caveman-stats	caveman-stats	/Users/andremachado/skills-repo/skills/caveman-stats/SKILL.md	>
+chrome-browser	chrome-browser	/Users/andremachado/skills-repo/skills/chrome-browser/SKILL.md	Read this skill before the first step that uses Claude in Chrome, the browser extension whose tools are named mcp__claud
+computer-use	computer-use	/Users/andremachado/skills-repo/skills/computer-use/SKILL.md	Read this skill before the first step of any request to do something in an app on the person's own computer (Notes, Find
+criar-site-arte	criar-site-arte	/Users/andremachado/skills-repo/skills/criar-site-arte/SKILL.md	Cria sites, dashboards e app screens temáticos de movimentos artísticos/civilizações (style kits do Design Master — Pale
+customize	customize	/Users/andremachado/skills-repo/skills/customize/SKILL.md	Interactive guided deployment flow for Azure OpenAI models with full customization control. Step-by-step selection of mo
+debug-issue	Debug Issue	/Users/andremachado/skills-repo/skills/debug-issue/SKILL.md	Systematically debug issues using graph-powered code navigation
+deep-research	deep-research	/Users/andremachado/skills-repo/skills/deep-research/SKILL.md	Use this skill when the user's prompt requires (1) researching a topic across multiple sources, comparing options or alt
+deltadb-omniscient	deltadb-omniscient	/Users/andremachado/skills-repo/skills/deltadb-omniscient/SKILL.md	Use when resuming work, needing context from previous agent sessions (Claude, Codex, Gemini, Grok), asking "why was this
+deploy	deploy	/Users/andremachado/skills-repo/skills/deploy/SKILL.md	
+deploy-model	deploy-model	/Users/andremachado/skills-repo/skills/deploy-model/SKILL.md	Unified Azure OpenAI model deployment skill with intelligent intent-based routing. Handles quick preset deployments, ful
+develop-web-game	develop-web-game	/Users/andremachado/skills-repo/skills/develop-web-game/SKILL.md	Use when Codex is building or iterating on a web game (HTML/JS) and needs a reliable development + testing loop: impleme
+docs	docs	/Users/andremachado/skills-repo/skills/docs/SKILL.md	docs (editable docs people share and comment on; the default for any document, named as a doc or not: a document, report
+docx	docx	/Users/andremachado/skills-repo/skills/docx/SKILL.md	Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.d
+entra-agent-id	entra-agent-id	/Users/andremachado/skills-repo/skills/entra-agent-id/SKILL.md	Provision Microsoft Entra Agent Identity Blueprints, BlueprintPrincipals, and per-instance Agent Identities via Microsof
+entra-app-registration	entra-app-registration	/Users/andremachado/skills-repo/skills/entra-app-registration/SKILL.md	Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration. USE FOR: create app registra
+everything-claude-code-conventions	everything-claude-code-conventions	/Users/andremachado/skills-repo/skills/everything-claude-code-conventions/SKILL.md	Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.
+explore-codebase	Explore Codebase	/Users/andremachado/skills-repo/skills/explore-codebase/SKILL.md	Navigate and understand codebase structure using the knowledge graph
+figma	figma	/Users/andremachado/skills-repo/skills/figma/SKILL.md	Use the Figma MCP server to fetch design context, screenshots, variables, and assets from Figma, and to translate Figma 
+figma-code-connect-components	figma-code-connect-components	/Users/andremachado/skills-repo/skills/figma-code-connect-components/SKILL.md	Connects Figma design components to code components using Code Connect mapping tools. Use when user says "code connect",
+figma-create-design-system-rules	figma-create-design-system-rules	/Users/andremachado/skills-repo/skills/figma-create-design-system-rules/SKILL.md	Generates custom design system rules for the user's codebase. Use when user says "create design system rules", "generate
+figma-create-new-file	figma-create-new-file	/Users/andremachado/skills-repo/skills/figma-create-new-file/SKILL.md	Create a new blank Figma file. Use when the user wants to create a new Figma design or FigJam file, or when you need a n
+figma-generate-design	figma-generate-design	/Users/andremachado/skills-repo/skills/figma-generate-design/SKILL.md	Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout
+figma-generate-library	figma-generate-library	/Users/andremachado/skills-repo/skills/figma-generate-library/SKILL.md	Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables
+figma-implement-design	figma-implement-design	/Users/andremachado/skills-repo/skills/figma-implement-design/SKILL.md	Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code 
+figma-use	figma-use	/Users/andremachado/skills-repo/skills/figma-use/SKILL.md	**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` direc
+find-skills	find-skills	/Users/andremachado/skills-repo/skills/find-skills/SKILL.md	Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is th
+finetuning	finetuning	/Users/andremachado/skills-repo/skills/finetuning/SKILL.md	Fine-tune models on Microsoft Foundry using SFT (supervised), DPO (preference), or RFT (reinforcement with graders). Cov
+frontend-skill	frontend-skill	/Users/andremachado/skills-repo/skills/frontend-skill/SKILL.md	Use when the task asks for a visually strong landing page, website, app, prototype, demo, or game UI. This skill enforce
+gh-address-comments	gh-address-comments	/Users/andremachado/skills-repo/skills/gh-address-comments/SKILL.md	Help address review/issue comments on the open GitHub PR for the current branch using gh CLI; verify gh auth first and p
+gh-fix-ci	gh-fix-ci	/Users/andremachado/skills-repo/skills/gh-fix-ci/SKILL.md	Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and
+google-workspace	google-workspace	/Users/andremachado/skills-repo/skills/google-workspace/SKILL.md	Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Go
+gsd-add-tests	gsd-add-tests	/Users/andremachado/skills-repo/skills/gsd-add-tests/SKILL.md	Generate tests for a completed phase based on UAT criteria and implementation
+gsd-ai-integration-phase	gsd-ai-integration-phase	/Users/andremachado/skills-repo/skills/gsd-ai-integration-phase/SKILL.md	Generate an AI-SPEC.md design contract for phases that involve building AI systems.
+gsd-audit-fix	gsd-audit-fix	/Users/andremachado/skills-repo/skills/gsd-audit-fix/SKILL.md	Autonomous audit-to-fix pipeline — find issues, classify, fix, test, commit
+gsd-audit-milestone	gsd-audit-milestone	/Users/andremachado/skills-repo/skills/gsd-audit-milestone/SKILL.md	Audit milestone completion against original intent before archiving
+gsd-audit-uat	gsd-audit-uat	/Users/andremachado/skills-repo/skills/gsd-audit-uat/SKILL.md	Cross-phase audit of all outstanding UAT and verification items
+gsd-autonomous	gsd-autonomous	/Users/andremachado/skills-repo/skills/gsd-autonomous/SKILL.md	Run all remaining phases autonomously — discuss→plan→execute per phase
+gsd-capture	gsd-capture	/Users/andremachado/skills-repo/skills/gsd-capture/SKILL.md	Capture ideas, tasks, notes, and seeds to their destination
+gsd-cleanup	gsd-cleanup	/Users/andremachado/skills-repo/skills/gsd-cleanup/SKILL.md	Archive accumulated phase directories from completed milestones
+gsd-code-review	gsd-code-review	/Users/andremachado/skills-repo/skills/gsd-code-review/SKILL.md	Review source files changed during a phase for bugs, security issues, and code quality problems
+gsd-complete-milestone	gsd-complete-milestone	/Users/andremachado/skills-repo/skills/gsd-complete-milestone/SKILL.md	Archive completed milestone and prepare for next version
+gsd-config	gsd-config	/Users/andremachado/skills-repo/skills/gsd-config/SKILL.md	Configure GSD settings — workflow toggles, advanced knobs, integrations, and model profile
+gsd-debug	gsd-debug	/Users/andremachado/skills-repo/skills/gsd-debug/SKILL.md	Systematic debugging with persistent state across context resets
+gsd-discuss-phase	gsd-discuss-phase	/Users/andremachado/skills-repo/skills/gsd-discuss-phase/SKILL.md	Gather phase context through adaptive questioning before planning.
+gsd-docs-update	gsd-docs-update	/Users/andremachado/skills-repo/skills/gsd-docs-update/SKILL.md	Generate or update project documentation verified against the codebase
+gsd-eval-review	gsd-eval-review	/Users/andremachado/skills-repo/skills/gsd-eval-review/SKILL.md	Audit an executed AI phase's evaluation coverage and produce an EVAL-REVIEW.md remediation plan.
+gsd-execute-phase	gsd-execute-phase	/Users/andremachado/skills-repo/skills/gsd-execute-phase/SKILL.md	Execute all plans in a phase with wave-based parallelization
+gsd-explore	gsd-explore	/Users/andremachado/skills-repo/skills/gsd-explore/SKILL.md	Socratic ideation and idea routing — think through ideas before committing to plans
+gsd-extract-learnings	gsd-extract-learnings	/Users/andremachado/skills-repo/skills/gsd-extract-learnings/SKILL.md	Extract decisions, lessons, patterns, and surprises from completed phase artifacts
+gsd-fast	gsd-fast	/Users/andremachado/skills-repo/skills/gsd-fast/SKILL.md	Execute a trivial task inline — no subagents, no planning overhead
+gsd-forensics	gsd-forensics	/Users/andremachado/skills-repo/skills/gsd-forensics/SKILL.md	Post-mortem investigation for failed GSD workflows — diagnoses what went wrong.
+gsd-graphify	gsd-graphify	/Users/andremachado/skills-repo/skills/gsd-graphify/SKILL.md	Build, query, and inspect the project knowledge graph in .planning/graphs/
+gsd-health	gsd-health	/Users/andremachado/skills-repo/skills/gsd-health/SKILL.md	Diagnose planning directory health and optionally repair issues
+gsd-help	gsd-help	/Users/andremachado/skills-repo/skills/gsd-help/SKILL.md	Show available GSD commands and usage guide
+gsd-import	gsd-import	/Users/andremachado/skills-repo/skills/gsd-import/SKILL.md	Ingest external plans with conflict detection against project decisions before writing anything.
+gsd-inbox	gsd-inbox	/Users/andremachado/skills-repo/skills/gsd-inbox/SKILL.md	Triage and review open GitHub issues and PRs against project templates and contribution guidelines.
+gsd-ingest-docs	gsd-ingest-docs	/Users/andremachado/skills-repo/skills/gsd-ingest-docs/SKILL.md	Bootstrap or merge a .planning/ setup from existing ADRs, PRDs, SPECs, and docs in a repo.
+gsd-manager	gsd-manager	/Users/andremachado/skills-repo/skills/gsd-manager/SKILL.md	Interactive command center for managing multiple phases from one terminal
+gsd-map-codebase	gsd-map-codebase	/Users/andremachado/skills-repo/skills/gsd-map-codebase/SKILL.md	Analyze codebase with parallel mapper agents to produce .planning/codebase/ documents
+gsd-milestone-summary	gsd-milestone-summary	/Users/andremachado/skills-repo/skills/gsd-milestone-summary/SKILL.md	Generate a comprehensive project summary from milestone artifacts for team onboarding and review
+gsd-mvp-phase	gsd-mvp-phase	/Users/andremachado/skills-repo/skills/gsd-mvp-phase/SKILL.md	Plan a phase as a vertical MVP slice — user story, SPIDR splitting, then plan-phase
+gsd-new-milestone	gsd-new-milestone	/Users/andremachado/skills-repo/skills/gsd-new-milestone/SKILL.md	Start a new milestone cycle — update PROJECT.md and route to requirements
+gsd-new-project	gsd-new-project	/Users/andremachado/skills-repo/skills/gsd-new-project/SKILL.md	Initialize a new project with deep context gathering and PROJECT.md
+gsd-ns-context	gsd-ns-context	/Users/andremachado/skills-repo/skills/gsd-ns-context/SKILL.md	codebase intelligence | map graphify docs learnings
+gsd-ns-ideate	gsd-ns-ideate	/Users/andremachado/skills-repo/skills/gsd-ns-ideate/SKILL.md	exploration capture | explore sketch spike spec capture
+gsd-ns-manage	gsd-ns-manage	/Users/andremachado/skills-repo/skills/gsd-ns-manage/SKILL.md	config workspace | workstreams thread update ship inbox
+gsd-ns-project	gsd-ns-project	/Users/andremachado/skills-repo/skills/gsd-ns-project/SKILL.md	project lifecycle | milestones audits summary
+gsd-ns-review	gsd-ns-review	/Users/andremachado/skills-repo/skills/gsd-ns-review/SKILL.md	quality gates | code review debug audit security eval ui
+gsd-ns-workflow	gsd-ns-workflow	/Users/andremachado/skills-repo/skills/gsd-ns-workflow/SKILL.md	workflow | discuss plan execute verify phase progress
+gsd-pause-work	gsd-pause-work	/Users/andremachado/skills-repo/skills/gsd-pause-work/SKILL.md	Create context handoff when pausing work mid-phase
+gsd-phase	gsd-phase	/Users/andremachado/skills-repo/skills/gsd-phase/SKILL.md	CRUD for phases in ROADMAP.md — add, insert, remove, or edit phases
+gsd-plan-phase	gsd-plan-phase	/Users/andremachado/skills-repo/skills/gsd-plan-phase/SKILL.md	Create detailed phase plan (PLAN.md) with verification loop
+gsd-plan-review-convergence	gsd-plan-review-convergence	/Users/andremachado/skills-repo/skills/gsd-plan-review-convergence/SKILL.md	Cross-AI plan convergence loop — replan with review feedback until no HIGH concerns remain.
+gsd-pr-branch	gsd-pr-branch	/Users/andremachado/skills-repo/skills/gsd-pr-branch/SKILL.md	Create a clean PR branch by filtering out .planning/ commits — ready for code review
+gsd-profile-user	gsd-profile-user	/Users/andremachado/skills-repo/skills/gsd-profile-user/SKILL.md	Generate developer behavioral profile and create Claude-discoverable artifacts
+gsd-progress	gsd-progress	/Users/andremachado/skills-repo/skills/gsd-progress/SKILL.md	Check progress, advance workflow, or dispatch freeform intent — the unified GSD situational command
+gsd-quick	gsd-quick	/Users/andremachado/skills-repo/skills/gsd-quick/SKILL.md	Execute a quick task with GSD guarantees (atomic commits, state tracking) but skip optional agents
+gsd-resume-work	gsd-resume-work	/Users/andremachado/skills-repo/skills/gsd-resume-work/SKILL.md	Resume work from previous session with full context restoration
+gsd-review	gsd-review	/Users/andremachado/skills-repo/skills/gsd-review/SKILL.md	Request cross-AI peer review of phase plans from external AI CLIs
+gsd-review-backlog	gsd-review-backlog	/Users/andremachado/skills-repo/skills/gsd-review-backlog/SKILL.md	Review and promote backlog items to active milestone
+gsd-secure-phase	gsd-secure-phase	/Users/andremachado/skills-repo/skills/gsd-secure-phase/SKILL.md	Retroactively verify threat mitigations for a completed phase
+gsd-settings	gsd-settings	/Users/andremachado/skills-repo/skills/gsd-settings/SKILL.md	Configure GSD workflow toggles and model profile
+gsd-ship	gsd-ship	/Users/andremachado/skills-repo/skills/gsd-ship/SKILL.md	Create PR, run review, and prepare for merge after verification passes
+gsd-sketch	gsd-sketch	/Users/andremachado/skills-repo/skills/gsd-sketch/SKILL.md	Sketch UI/design ideas with throwaway HTML mockups, or propose what to sketch next (frontier mode)
+gsd-spec-phase	gsd-spec-phase	/Users/andremachado/skills-repo/skills/gsd-spec-phase/SKILL.md	Clarify WHAT a phase delivers with ambiguity scoring; produces a SPEC.md before discuss-phase.
+gsd-spike	gsd-spike	/Users/andremachado/skills-repo/skills/gsd-spike/SKILL.md	Spike an idea through experiential exploration, or propose what to spike next (frontier mode)
+gsd-stats	gsd-stats	/Users/andremachado/skills-repo/skills/gsd-stats/SKILL.md	Display project statistics — phases, plans, requirements, git metrics, and timeline
+gsd-surface	gsd-surface	/Users/andremachado/skills-repo/skills/gsd-surface/SKILL.md	Toggle which skills are surfaced — apply a profile, list, or disable a cluster without reinstall
+gsd-thread	gsd-thread	/Users/andremachado/skills-repo/skills/gsd-thread/SKILL.md	Manage persistent context threads for cross-session work
+gsd-ui-phase	gsd-ui-phase	/Users/andremachado/skills-repo/skills/gsd-ui-phase/SKILL.md	Generate UI design contract (UI-SPEC.md) for frontend phases
+gsd-ui-review	gsd-ui-review	/Users/andremachado/skills-repo/skills/gsd-ui-review/SKILL.md	Retroactive 6-pillar visual audit of implemented frontend code
+gsd-ultraplan-phase	gsd-ultraplan-phase	/Users/andremachado/skills-repo/skills/gsd-ultraplan-phase/SKILL.md	[BETA] Offload plan phase to Claude Code's ultraplan cloud; review in browser and import back.
+gsd-undo	gsd-undo	/Users/andremachado/skills-repo/skills/gsd-undo/SKILL.md	Safe git revert. Roll back phase or plan commits using the phase manifest with dependency checks.
+gsd-update	gsd-update	/Users/andremachado/skills-repo/skills/gsd-update/SKILL.md	Update GSD to latest version with changelog display
+gsd-validate-phase	gsd-validate-phase	/Users/andremachado/skills-repo/skills/gsd-validate-phase/SKILL.md	Retroactively audit and fill Nyquist validation gaps for a completed phase
+gsd-verify-work	gsd-verify-work	/Users/andremachado/skills-repo/skills/gsd-verify-work/SKILL.md	Validate built features through conversational UAT
+gsd-workspace	gsd-workspace	/Users/andremachado/skills-repo/skills/gsd-workspace/SKILL.md	Manage GSD workspaces — create, list, or remove isolated workspace environments
+gsd-workstreams	gsd-workstreams	/Users/andremachado/skills-repo/skills/gsd-workstreams/SKILL.md	Manage parallel workstreams — list, create, switch, status, progress, complete, and resume
+import-memory	import-memory	/Users/andremachado/skills-repo/skills/import-memory/SKILL.md	Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the conte
+ios-design-guidelines	ios-design-guidelines	/Users/andremachado/skills-repo/skills/ios-design-guidelines/SKILL.md	Apple Human Interface Guidelines for iPhone. Use when building, reviewing, or refactoring SwiftUI/UIKit interfaces for i
+ipados-design-guidelines	ipados-design-guidelines	/Users/andremachado/skills-repo/skills/ipados-design-guidelines/SKILL.md	Apple Human Interface Guidelines for iPad. Use when building iPad-optimized interfaces, implementing multitasking, point
+macos-design-guidelines	macos-design-guidelines	/Users/andremachado/skills-repo/skills/macos-design-guidelines/SKILL.md	Apple Human Interface Guidelines for Mac. Use when building macOS apps with SwiftUI or AppKit, implementing menu bars, t
+macos-patterns	macos-patterns	/Users/andremachado/skills-repo/skills/macos-patterns/SKILL.md	
+microsoft-foundry	microsoft-foundry	/Users/andremachado/skills-repo/skills/microsoft-foundry/SKILL.md	Build, deploy, evaluate, optimize, fine-tune, and manage Microsoft Foundry agents, models, and resources end to end. USE
+morning	morning	/Users/andremachado/skills-repo/skills/morning/SKILL.md	Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the u
+motion-code	motion-code	/Users/andremachado/skills-repo/skills/motion-code/SKILL.md	>-
+netlify-deploy	netlify-deploy	/Users/andremachado/skills-repo/skills/netlify-deploy/SKILL.md	Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user asks to deploy, host, publish, o
+openai-docs	openai-docs	/Users/andremachado/skills-repo/skills/openai-docs/SKILL.md	Use when the user asks how to build with OpenAI products or APIs and needs up-to-date official documentation with citati
+pdf	pdf	/Users/andremachado/skills-repo/skills/pdf/SKILL.md	Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables fr
+playwright	playwright	/Users/andremachado/skills-repo/skills/playwright/SKILL.md	Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots
+pptx	pptx	/Users/andremachado/skills-repo/skills/pptx/SKILL.md	Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creatin
+prepare	prepare	/Users/andremachado/skills-repo/skills/prepare/SKILL.md	
+preset	preset	/Users/andremachado/skills-repo/skills/preset/SKILL.md	Intelligently deploys Azure OpenAI models to optimal regions by analyzing capacity across all available regions. Automat
+python-appservice-deploy	python-appservice-deploy	/Users/andremachado/skills-repo/skills/python-appservice-deploy/SKILL.md	Deploy Python (Flask/Django/FastAPI) code to Azure App Service Linux. WHEN: \"Flask App Service\", \"Django App Service\
+refactor-safely	Refactor Safely	/Users/andremachado/skills-repo/skills/refactor-safely/SKILL.md	Plan and execute safe refactoring using dependency analysis
+render-deploy	render-deploy	/Users/andremachado/skills-repo/skills/render-deploy/SKILL.md	Deploy applications to Render by analyzing codebases, generating render.yaml Blueprints, and providing Dashboard deeplin
+reverse-engineer-anything	reverse-engineer-anything	/Users/andremachado/skills-repo/skills/reverse-engineer-anything/SKILL.md	Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. Use shipped-art
+review-changes	Review Changes	/Users/andremachado/skills-repo/skills/review-changes/SKILL.md	Perform a structured code review using change detection and impact
+scaffold	scaffold	/Users/andremachado/skills-repo/skills/scaffold/SKILL.md	
+site-veterinaria	site-veterinaria	/Users/andremachado/skills-repo/skills/site-veterinaria/SKILL.md	Cria e refina sites estáticos (HTML/CSS/JS puros, pt-BR) para clínicas, hospitais e serviços veterinários de Sorocaba us
+skill-creator	skill-creator	/Users/andremachado/skills-repo/skills/skill-creator/SKILL.md	Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a sk
+sora	sora	/Users/andremachado/skills-repo/skills/sora/SKILL.md	Use when the user asks to generate, edit, extend, poll, list, download, or delete Sora videos, create reusable non-human
+transcribe	transcribe	/Users/andremachado/skills-repo/skills/transcribe/SKILL.md	Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe spe
+tvos-design-guidelines	tvos-design-guidelines	/Users/andremachado/skills-repo/skills/tvos-design-guidelines/SKILL.md	Apple Human Interface Guidelines for Apple TV. Use when building tvOS apps with focus-based navigation, Siri Remote inpu
+vercel-deploy	vercel-deploy	/Users/andremachado/skills-repo/skills/vercel-deploy/SKILL.md	Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy 
+visionos-design-guidelines	visionos-design-guidelines	/Users/andremachado/skills-repo/skills/visionos-design-guidelines/SKILL.md	Apple Human Interface Guidelines for Apple Vision Pro. Use when building spatial computing apps, implementing eye/hand i
+watchos-design-guidelines	watchos-design-guidelines	/Users/andremachado/skills-repo/skills/watchos-design-guidelines/SKILL.md	Apple Human Interface Guidelines for Apple Watch. Use when building watchOS apps, complications, or workout features. Tr
+web-components	web-components	/Users/andremachado/skills-repo/skills/web-components/SKILL.md	
+web-design-guidelines	web-design-guidelines	/Users/andremachado/skills-repo/skills/web-design-guidelines/SKILL.md	Web platform design and accessibility guidelines. Use when building web interfaces, auditing accessibility, implementing
+xlsx	xlsx	/Users/andremachado/skills-repo/skills/xlsx/SKILL.md	Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: 
