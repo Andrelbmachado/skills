@@ -1,3 +1,8 @@
+---
+name: web-components
+description: "React/Web Implementation Reference"
+---
+
 # React/Web Implementation Reference
 
 ## CSS Base (Tailwind + Custom)

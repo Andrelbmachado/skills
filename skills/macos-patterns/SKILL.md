@@ -1,3 +1,8 @@
+---
+name: macos-patterns
+description: "macOS Implementation Patterns"
+---
+
 # macOS Implementation Patterns
 
 ## Diferenças do iOS para macOS

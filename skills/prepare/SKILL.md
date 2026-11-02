@@ -1,3 +1,8 @@
+---
+name: prepare
+description: "Prepare — Architecture Planning & Cost Estimation"
+---
+
 # Prepare — Architecture Planning & Cost Estimation
 
 ## Quick Reference

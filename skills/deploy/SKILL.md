@@ -1,3 +1,8 @@
+---
+name: deploy
+description: "Deploy — IaC Execution & Health Verification"
+---
+
 # Deploy — IaC Execution & Health Verification
 
 ## Quick Reference

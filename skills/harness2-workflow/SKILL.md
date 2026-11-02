@@ -1,5 +1,5 @@
 ---
-name: Harness2 Workflow
+name: harness2-workflow
 description: >-
   Use when designing, refining, or executing complex tasks, skills, or
   multi-step agent workflows using the Google Research Harness² 8-component
