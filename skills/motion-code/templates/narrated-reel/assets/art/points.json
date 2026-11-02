@@ -1,0 +1,14 @@
+{
+ "analog": {"file": "analog.jpg", "title": "A Noite Estrelada", "by": "Van Gogh, 1889", "points": [
+   {"hue": 9, "u": 0.6094, "v": 0.4118, "r": 0.006}, {"hue": 8, "u": 0.4094, "v": 0.1592, "r": 0.006}, {"hue": 7, "u": 0.8865, "v": 0.6329, "r": 0.006}]},
+ "comp": {"file": "comp.jpg", "title": "Autorretrato", "by": "Van Gogh, 1889", "points": [
+   {"hue": 2, "u": 0.45, "v": 0.565}, {"hue": 8, "u": 0.86, "v": 0.2}]},
+ "triad": {"file": "triad.jpg", "title": "Composição com vermelho, azul e amarelo", "by": "Mondrian, 1930", "points": [
+   {"hue": 4, "u": 0.6427, "v": 0.3529}, {"hue": 8, "u": 0.0719, "v": 0.8488}, {"hue": 0, "u": 0.9406, "v": 0.9105, "r": 0.006}]},
+ "split": {"file": "split.jpg", "title": "Campo de trigo com corvos", "by": "Van Gogh, 1890", "points": [
+   {"hue": 8, "u": 0.2406, "v": 0.1206, "r": 0.006}, {"hue": 1, "u": 0.5448, "v": 0.4627, "r": 0.006}, {"hue": 3, "u": 0.4531, "v": 0.7741, "r": 0.006}]},
+ "rect": {"file": "rect.jpg", "title": "O Café à Noite", "by": "Van Gogh, 1888", "points": [
+   {"hue": 4, "u": 0.06, "v": 0.22}, {"hue": 10, "u": 0.45, "v": 0.03}, {"hue": 2, "u": 0.205, "v": 0.17}, {"hue": 8, "u": 0.09, "v": 0.5, "r": 0.008}]},
+ "square": {"file": "square.jpg", "title": "Arearea", "by": "Gauguin, 1892", "points": [
+   {"hue": 1, "u": 0.18, "v": 0.48}, {"hue": 4, "u": 0.2, "v": 0.72}, {"hue": 7, "u": 0.47, "v": 0.57}, {"hue": 10, "u": 0.2, "v": 0.12}]}
+}

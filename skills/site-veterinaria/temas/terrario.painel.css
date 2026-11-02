@@ -1,0 +1,30 @@
+/* terrario.painel.css: identidade "Viveiro" aplicada ao painel. Entra DEPOIS de painel/painel.css.
+   O painel herda as cores dos tokens; aqui ficam só os detalhes que eram da primeira identidade (picote, sombra amarela, verdes fixos). */
+:root { --escamas-painel: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cg fill='%23ffffff' fill-opacity='.045' stroke='%23ffffff' stroke-opacity='.2' stroke-width='1'%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='40' cy='0' r='20'/%3E%3Ccircle cx='0' cy='20' r='20'/%3E%3Ccircle cx='40' cy='20' r='20'/%3E%3Ccircle cx='20' cy='-10' r='20'/%3E%3Ccircle cx='20' cy='10' r='20'/%3E%3Ccircle cx='20' cy='30' r='20'/%3E%3C/g%3E%3C/svg%3E"); }
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 2px; }
+h1, h2, h3 { font-weight: 800; letter-spacing: -.025em; }
+.btn { border-radius: 999px; }
+.btn-peq { border-radius: 999px; }
+
+/* entrada e aviso de módulo: fundo escuro com escamas, cartão branco liso */
+.painel-login, .painel-aviso { background-color: var(--folha); background-image: var(--escamas-painel); background-size: 40px 20px; }
+.login-cartao { border: 0; border-radius: 24px; padding: 26px 24px 22px; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .6); }
+.login-cartao::before { content: none; }
+.login-marca { color: var(--musgo); font-weight: 800; }
+.aviso-modulo { border: 0; border-radius: 24px; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .6); }
+.aviso-limite { border-top-style: solid; border-top-color: var(--linha); }
+.login-cartao :focus-visible, .aviso-modulo :focus-visible { outline-color: var(--folha); }
+
+/* verdes fixos da primeira identidade */
+.fundo-menu, .menu-aberto .fundo-menu { background: rgba(12, 53, 71, .55); }
+dialog.modal::backdrop { background: rgba(12, 53, 71, .62); }
+.toast { box-shadow: 0 6px 20px rgba(5, 30, 42, .4); }
+.tabela tr.clicavel:hover td { background: #f1f6f8; }
+.bloco-consulta { background: #eaf1f4; }
+.bloco-consulta.st-confirmada { background: #dbe8f5; }
+.bloco-consulta.st-em_atendimento { background: #fbeab8; }
+.bloco-consulta.st-concluida { background: #d6ecdf; }
+.lateral nav a[aria-current="page"] { font-weight: 800; }
+.resumo-forte { background: var(--folha); }
+.chip-neutro { background: #e3e9e5; color: #2f4038; } /* o painel base ficou neutro na v0.4; o site 2 manteve o cinza esverdeado que já tinha */

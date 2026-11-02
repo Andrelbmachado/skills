@@ -1,0 +1,58 @@
+{
+  "nome": "letreiro",
+  "descricao": "O telefone como letreiro. Del Vet é uma clínica de bairro com telefone FIXO e sem WhatsApp confirmado: o número é o dado que mais importa, e o tema o trata como uma faixa pintada de parede, de uma borda à outra, com o número em letras enormes (o link de Ligar). Embaixo, em linhas de letreiro, Como chegar e o horário. Uma coluna só: a ordem do DOM é a ordem visual no celular e no desktop. Topo em verde-oliva escuro, faixa em verde-oliva e acento rosa-claro sobre cinza esverdeado; título em grotesca pesada do sistema. Nada de selo de urgência, relógio, área de atendimento nem foto. Usado no site 7 (Del Vet, clínica geral com consulta em domicílio, banho e tosa e farmácia).",
+  "hero": "letreiro",
+  "ornamento": {
+    "marca": "letreiro",
+    "servico": "pata",
+    "sprite": ["letreiro", "pata", "fone", "pino", "relogio"],
+    "faixa": null
+  },
+  "favicon": {"fundo": "#232a0a", "cor": "#ffcfd9", "simbolo": "letreiro"},
+  "css": {"vitrine": "letreiro.vitrine.css", "painel": "letreiro.painel.css"},
+  "papeis": {
+    "folha": "verde-oliva escuro (topo, rodapé, faixas, menu lateral do painel)",
+    "musgo": "verde-oliva de ação (a faixa do telefone, botões, links)",
+    "carimbo": "rosa-claro sobre o escuro (rótulos da faixa, nota do Google, item ativo do menu)",
+    "papel": "fundo da página (cinza esverdeado muito claro)",
+    "superficie": "cartões, formulários e campos"
+  },
+  "tokens": {
+    "folha": "#232a0a",
+    "musgo": "#4a5d0c",
+    "musgo-escuro": "#3a4a09",
+    "papel": "#f5f6f0",
+    "superficie": "#ffffff",
+    "tinta": "#1b2008",
+    "neblina": "#515a3e",
+    "linha": "#d9dccb",
+    "borda-campo": "#6f7a5a",
+    "carimbo": "#ffcfd9",
+    "carimbo-tinta": "#2a0f16",
+    "claro-sobre-escuro": "#dfe5c9",
+    "wa": "#0f7a4a",
+    "perigo": "#b0123f",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Arial Black', 'Helvetica Neue', Arial, sans-serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "4px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["musgo", "carimbo"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["superficie", "aviso"],
+    ["superficie", "borda-campo"]
+  ]
+}

@@ -1,0 +1,54 @@
+/* caderneta.vitrine.css: identidade "Caderneta de vacinação" (site 1, clínica geral) sobre o chão liso de components/vitrine.base.css.
+   Aqui moram as decisões visuais que NÃO são estrutura: abas de caderneta no topo, ficha com furos de picote e sombra amarela deslocada,
+   carimbo girado da nota (a única animação), pegadas decorativas, linhas pontilhadas e tracejadas, pontos em círculo. Uma ideia memorável (a ficha com o
+   carimbo); o resto acompanha. Antes da v0.4 isto estava misturado no CSS base e os temas seguintes precisavam desfazer cada item. */
+.topo { border-bottom: 2px solid var(--folha); }
+.menu { margin-bottom: -2px; }
+.menu a { border-radius: 10px 10px 0 0; border: 2px solid transparent; border-bottom: 0; }
+@media (min-width: 860px) { .menu { margin-bottom: -2px; } }
+
+/* v1.1 (PEDIDO_DESIGN_3, itens G e H): um cachorro atravessa a TELA. Patas 5x maiores (150px na tela de 1280x800) num caminho em S do canto superior esquerdo ao
+   inferior direito, esquerda e direita alternadas, giradas no sentido do caminho. A camada é fixa e fica ACIMA das cores de fundo das seções e ABAIXO de todo
+   conteúdo (o .container de cada faixa sobe para z-index 1): o texto e as fichas passam por cima das patas. Paisagem e retrato têm traçados próprios. */
+.pegadas { color: var(--musgo); opacity: .14; }  /* a estrutura da camada (fixa, atrás do conteúdo, paisagem ou retrato) está no chão liso */
+/* Cada pata pisa (aparece em 120 ms), fica marcada por 2 s e some devagar, como pegada que seca; uma pata a cada 0,5 s (2 passos por segundo). O ciclo de 12 s
+   cobre as patas da paisagem (até 20, 10 s) e uma pausa. Só opacidade: o <use> já usa o atributo transform. Com prefers-reduced-motion o rastro inteiro fica parado. */
+@media (prefers-reduced-motion: no-preference) {
+  .pegadas { opacity: .2; }
+  .pegadas use { opacity: 0; animation: passo 12s linear infinite; animation-delay: calc(var(--passo) * .5s); }
+}
+@keyframes passo { 0% { opacity: 0; } 1% { opacity: 1; } 17% { opacity: 1; } 27% { opacity: 0; } 100% { opacity: 0; } }
+
+.ficha { border: 2px solid var(--folha); border-radius: 8px 20px 20px 8px; padding: 28px 22px 20px 38px; box-shadow: 7px 7px 0 var(--carimbo); margin-top: 18px; }
+.ficha::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 16px; background: radial-gradient(circle at 0 50%, var(--papel) 6px, transparent 6.5px) 0 0 / 16px 30px repeat-y; }
+.ficha h2, .ficha h3 { padding-right: 108px; }
+.ficha .item { border-top: 1px dashed var(--borda-campo); }
+.carimbo { border-radius: 50%; transform: rotate(9deg); box-shadow: 0 0 0 3px var(--carimbo), 0 0 0 5px var(--tinta); animation: carimbar .6s cubic-bezier(.2, .9, .3, 1.15) .2s both; }
+@keyframes carimbar { from { transform: rotate(20deg) scale(1.18); opacity: 0; } to { transform: rotate(9deg) scale(1); opacity: 1; } }
+
+.servico { border-top: 2px solid var(--folha); }
+.servico:last-child { border-bottom: 2px solid var(--folha); }
+.servico .icone { border-radius: 50%; }
+
+.passos li::before { border-radius: 50%; }
+.passos li:not(:last-child)::after { border-left: 3px dotted var(--musgo); }
+@media (min-width: 800px) { .passos li:not(:last-child)::after { border-left: 0; border-top: 3px dotted var(--musgo); } }
+
+.pagina-topo { border-bottom: 2px dotted var(--borda-campo); }
+.lista-simples li::before { border-radius: 50%; background: var(--carimbo); box-shadow: 0 0 0 2px var(--folha); }
+
+.formulario { border: 2px solid var(--folha); border-radius: 8px 20px 20px 8px; padding: 26px 22px 22px 34px; box-shadow: 7px 7px 0 var(--carimbo); }
+.formulario::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 16px; background: radial-gradient(circle at 0 50%, var(--papel) 6px, transparent 6.5px) 0 0 / 16px 30px repeat-y; }
+.contatos .item { border-top: 1px dashed var(--borda-campo); }
+.contatos .item:last-child { border-bottom: 1px dashed var(--borda-campo); }
+.mapa iframe { border: 2px solid var(--folha); border-radius: 12px; }
+.galeria img { border-radius: 10px; border: 2px solid var(--folha); }
+.tabela-precos th, .tabela-precos td { border-bottom: 1px dashed var(--borda-campo); }
+
+.wa-flutuante { box-shadow: 0 6px 18px rgba(14, 59, 53, .35); }
+
+/* telas muito estreitas (320px): o selo da nota não pode comer a largura do título da ficha */
+@media (max-width: 359px) {
+  .ficha { padding-left: 34px; }
+  .ficha h2, .ficha h3 { padding-right: 0; margin-top: 46px; }
+}

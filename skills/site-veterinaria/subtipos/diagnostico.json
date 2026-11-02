@@ -1,0 +1,40 @@
+{
+  "nome": "diagnostico",
+  "descricao": "Centro de diagnóstico por imagem (receita do site 4, Prime). A vitrine põe telefone e \"Como chegar\" no primeiro toque, cita o horário com a fonte enquanto ele está a confirmar e lista como exames só os serviços COM FONTE do cadastro. O painel troca prontuários e vacinas por Exames e laudos (pedido, agenda, realização, laudo, entrega) e Encaminhadores; a recepção agenda e acompanha a situação sem ler indicação clínica nem laudo. A receita NÃO afirma nada sobre o negócio: exame, equipamento, prazo de laudo, convênio ou parceria só aparecem na vitrine se estiverem no JSON do site, com a fonte dele.",
+  "vitrine": {
+    "cta": ["ligar", "como_chegar", "whatsapp"],
+    "horario_com_fonte": true,
+    "quem_atende": "o centro",
+    "de_tipo_negocio": "do centro"
+  },
+  "painel": {
+    "modulos": ["inicio", "agenda", "tutores", "exames", "encaminhadores", "caixa", "estoque", "equipe", "config"],
+    "titulos": {
+      "agenda": "Agenda de exames",
+      "exames": "Exames e laudos",
+      "equipe": "Profissionais e exames"
+    },
+    "matriz": {
+      "dono": { "exames": "rw", "encaminhadores": "rw", "laudos": "rw" },
+      "veterinario": { "exames": "rw", "encaminhadores": "r", "laudos": "rw" },
+      "recepcao": { "exames": "rw", "encaminhadores": "rw" }
+    },
+    "colecoesExtras": ["exames", "encaminhadores"],
+    "textos": {
+      "agenda": {
+        "nova": "Novo agendamento", "editar": "Editar agendamento", "singular": "agendamento", "plural": "agendamentos",
+        "marcada": "Horário marcado.", "atualizada": "Agendamento atualizado.",
+        "hoje": "Exames hoje", "livre": "Agenda livre", "semMais": "Nenhum exame pela frente hoje",
+        "bloco": "Agenda de exames de hoje", "vazio": "Nenhum exame marcado para hoje.", "abrir": "Abrir a agenda"
+      },
+      "servico": {
+        "plural": "Exames oferecidos", "novo": "Novo exame", "vazio": "Nenhum exame cadastrado.",
+        "vazioTexto": "Os exames definem a duração padrão na agenda e o valor sugerido no caixa. O dono cadastra os que o centro realiza."
+      }
+    },
+    "rotulos": { "marcar": "Agendar exame" },
+    "exameDosServicos": true
+  },
+  "descricao_painel": "agenda de exames, tutores e pets, exames e laudos (pedido, agenda, realização, laudo e entrega), encaminhadores, caixa, estoque de insumos, profissionais e exames, configurações. Perfis: dono/gerente, veterinário e recepção.",
+  "resumo_painel": "Em vez de prontuários e vacinas, tem Exames e laudos: cada exame passa por solicitado, agendado, realizado, laudado e entregue (ou cancelado), com o horário ligado à Agenda de exames, o encaminhador e a forma de entrega. Dono e veterinário leem e escrevem a indicação clínica e o texto do laudo; a recepção agenda, vê a situação e registra a entrega, mas não lê indicação nem laudo. Encaminhadores são as clínicas e os veterinários que pedem exames (convênio e condições são campos livres do centro). Limite: o painel guarda só texto; imagens, arquivos de laudo e integração com equipamentos não fazem parte (o campo \"Entregue por\" é livre: link, e-mail ou local). O dono cadastra os exames do centro em Profissionais e exames (o painel sugere os que o site apresenta). A grade da agenda vem de 08:00 a 18:00; o dono ajusta em Configurações, Agenda, conforme o funcionamento real (o site não afirma horário confirmado)."
+}

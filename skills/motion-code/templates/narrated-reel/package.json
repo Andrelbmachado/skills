@@ -1,0 +1,15 @@
+{
+  "name": "narrated-reel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "voice": "node tools/tts.mjs",
+    "voice:draft": "node tools/tts.mjs --engine say",
+    "render": "node tools/build.mjs",
+    "check": "node tools/check.mjs",
+    "build": "node tools/tts.mjs && node tools/build.mjs && node tools/check.mjs",
+    "art:grid": "python3 tools/art-grid.py grid",
+    "art:check": "python3 tools/art-grid.py check",
+    "art:pick": "python3 tools/art-pick.py"
+  }
+}

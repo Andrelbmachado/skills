@@ -1,0 +1,153 @@
+/* gondola.vitrine.css: identidade "Gôndola" (site 5, clínica com venda de produtos).
+   Entra DEPOIS de components/vitrine.base.css (vira o final de assets/style.css) e sobrepõe o chão liso.
+   Ideia: o balcão e a prateleira de uma loja de bairro, só como forma (sem foto, marca, preço nem catálogo). O elemento memorável é a PAREDE DE GANCHOS do hero:
+   um painel perfurado onde as etiquetas penduradas por um fio SÃO os botões (ligar, como chegar, horário). A perfuração volta, quieta, nas faixas escuras e debaixo dos
+   títulos; os serviços ficam cada um numa prateleira (régua grossa). O resto é liso: ameixa, framboesa e menta, título em serifa de lâmina (placa de comércio), sem
+   sombra, sem cartões iguais, sem rótulo em caixa-alta. Uma animação: as etiquetas se penduram uma vez (prefers-reduced-motion desliga).
+   Classes do hero e do ornamento levam o prefixo gd- (o chão liso tem .nota, .ficha, .placa... e uma colisão de nome já custou um dia). Todo gradiente tem cor sólida por baixo. */
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 6px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .gd-parede :focus-visible { outline-color: var(--carimbo); }
+.gd-etq:focus-visible, .gd-prateleira :focus-visible, .ficha :focus-visible { outline-color: var(--folha); }
+
+/* ---------- tipografia ---------- */
+h1, h2, h3 { font-weight: 700; letter-spacing: 0; line-height: 1.14; }
+h1 { font-size: clamp(2.3rem, 1.4rem + 3.9vw, 4.1rem); line-height: 1.04; letter-spacing: -.01em; }
+h2 { font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.3rem); }
+h3 { font-size: 1.3rem; }
+.texto p { line-height: 1.7; }
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+.btn { border-radius: var(--raio); padding: 10px 22px; }
+.btn-segundo { background: transparent; border-color: var(--musgo); color: var(--musgo); }
+.btn-segundo:hover { background: var(--musgo); border-color: var(--musgo); color: #fff; }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo { background: transparent; border-color: var(--carimbo); color: var(--carimbo); }
+.escuro .btn-segundo:hover { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.escuro .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover { background: transparent; border-color: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- topo ---------- */
+.topo { background: var(--superficie); border-bottom: 4px solid var(--folha); }
+.marca { font: 700 1.35rem/1 var(--fonte-titulo); letter-spacing: 0; }
+.marca svg { width: 38px; height: 38px; padding: 6px; background: var(--folha); color: var(--carimbo); border-radius: 10px; }
+.rodape .marca svg { background: var(--carimbo); color: var(--folha); }
+.menu a { border-radius: var(--raio) var(--raio) 0 0; }
+.menu a[aria-current="page"] { background: var(--folha); color: #fff; }
+/* 320px: marca, botão e abas precisam caber em 288px sem rolagem horizontal */
+@media (max-width: 359px) {
+  .marca { font-size: 1.05rem; gap: 7px; } .marca svg { width: 32px; height: 32px; padding: 5px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero: texto + parede de ganchos ---------- */
+.hero--gondola { background: var(--papel); padding: 32px 0 64px; }
+.hero--gondola .hero-grade { gap: 24px; }
+.hero--gondola h1 { max-width: 17ch; }
+.hero--gondola .destaque { max-width: 36ch; font-size: 1.16rem; line-height: 1.6; color: var(--tinta); }
+.hero--gondola .destaque::before { content: ""; display: block; width: 64px; height: 6px; margin-bottom: 18px; border-radius: 3px; background: var(--musgo); } /* a régua da prateleira, curta, entre o título e o texto */
+/* celular (v1.0): título, texto curto e a parede; sem telefone no hero, o texto de apresentação volta para logo depois do título */
+@media (min-width: 900px) {
+  .hero--gondola { padding: 88px 0 112px; }
+  .hero--gondola .hero-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 540px); gap: 80px; align-items: center; }
+  .hero--gondola .hero-texto { padding-top: 0; }
+  .gd-parede { justify-self: end; }
+}
+/* a parede: painel perfurado (furos em grade) dentro de uma moldura ameixa; a cor sólida por baixo é a que o teste de contraste (e o navegador sem gradiente) enxerga */
+.gd-parede { position: relative; width: 100%; max-width: 520px; padding: 54px 18px 0; border: 8px solid var(--folha); border-radius: 18px;
+  background: radial-gradient(circle at 13px 13px, rgba(45, 22, 53, .3) 0 2.6px, transparent 3.3px) 0 0 / 26px 26px #d3f3e5; }
+.gd-etiquetas { list-style: none; margin: 0; padding: 0 0 26px; display: grid; gap: 50px; }
+.gd-etiquetas li { position: relative; animation: pendurar .55s cubic-bezier(.2, .8, .3, 1) both; }
+.gd-etiquetas li:nth-child(2) { animation-delay: .1s; }
+.gd-etiquetas li:nth-child(3) { animation-delay: .2s; }
+.gd-etiquetas li:nth-child(4) { animation-delay: .3s; }
+@media (min-width: 900px) { .gd-etiquetas li:nth-child(even) { margin-left: 8%; } .gd-etiquetas li:nth-child(odd):not(:first-child) { margin-right: 8%; } }
+/* a etiqueta: papel branco com borda ameixa, furo no alto, fio até o gancho (::before é o gancho, ::after é o fio, que passa pelo furo) */
+.gd-etq { position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 14px; padding: 28px 16px 15px; color: var(--tinta);
+  background: var(--superficie); border: 3px solid var(--folha); border-radius: 14px; text-decoration: none; }
+a.gd-etq:hover { background: #f3e6f2; color: var(--tinta); }
+/* v1.0: a etiqueta balança no gancho quando o ponteiro passa (gira em torno do furo); só com movimento liberado */
+@media (prefers-reduced-motion: no-preference) {
+  .gd-etq { transform-origin: 50% -30px; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1), background-color .2s; }
+  a.gd-etq:hover { transform: rotate(-2.5deg); }
+  a.gd-etq:active { transform: rotate(0); }
+}
+/* v1.0 (item B): o painel perfurado é a imagem ilustrativa (artigos sem marca); um véu ameixa mantém as etiquetas em primeiro plano. A cor sólida de baixo continua para o contraste */
+.gd-parede--foto { overflow: hidden; background: #d3f3e5; }
+.gd-foto { position: absolute; inset: 0; margin: 0; border-radius: 10px; background: #d3f3e5; }
+.gd-foto img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 30%; }
+.gd-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45, 22, 53, .08), rgba(45, 22, 53, .38)) #2d163514; } /* véu sem texto por cima (as etiquetas têm fundo próprio); a base sólida é o mesmo véu, para o teste de gradiente */
+.gd-foto figcaption { top: 10px; bottom: auto; z-index: 1; }
+.gd-parede--foto .gd-etiquetas, .gd-parede--foto .gd-prateleira { position: relative; z-index: 1; }
+.gd-parede--foto { padding-top: 64px; }
+.gd-etq::before { content: ""; position: absolute; left: 50%; top: -46px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: var(--musgo); border: 4px solid var(--folha); box-sizing: border-box; }
+.gd-etq::after { content: ""; position: absolute; left: 50%; top: -30px; width: 3px; height: 48px; margin-left: -1.5px; background: var(--folha); }
+.gd-furo { position: absolute; left: 50%; top: 8px; width: 15px; height: 15px; margin-left: -7.5px; border-radius: 50%; border: 3px solid var(--folha); background: #d3f3e5; }
+.gd-etq-marca { display: grid; place-items: center; width: 52px; height: 52px; background: var(--musgo); color: #fff; border-radius: 12px; }
+.gd-etq-marca svg { width: 28px; height: 28px; fill: currentColor; }
+.gd-etq-texto { display: grid; gap: 1px; min-width: 0; }
+.gd-etq-texto b { font: 700 1.05rem/1.2 var(--fonte-titulo); color: var(--musgo); }
+.gd-etq-texto span { font-size: 1.05rem; line-height: 1.35; font-weight: 600; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+a.gd-etq--servicos .gd-etq-texto span { font-size: 1.08rem; font-weight: 700; }
+.gd-etq--onde .gd-etq-texto span { font-size: .92rem; }
+.gd-etq--horario .gd-etq-marca { background: var(--superficie); color: var(--musgo); border: 2px solid var(--musgo); }
+.gd-etq--horario .gd-etq-texto span { font-size: 1rem; font-weight: 500; }
+/* a faixa de prateleira no pé da parede: papel branco, régua ameixa em cima; leva a nota do Google */
+.gd-prateleira { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin: 0 -18px; padding: 16px 18px 16px; background: var(--superficie); border-top: 6px solid var(--folha); }
+@keyframes pendurar { from { transform: translateY(-14px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width: 359px) {
+  .hero--gondola h1 { font-size: 1.95rem; }
+  .gd-parede { padding: 52px 10px 0; border-width: 6px; }
+  .gd-prateleira { margin: 0 -10px; padding-inline: 10px; }
+  .gd-etq { grid-template-columns: 42px minmax(0, 1fr); gap: 10px; padding: 28px 10px 14px; }
+  .gd-etq-marca { width: 42px; height: 42px; } .gd-etq-marca svg { width: 24px; height: 24px; }
+}
+
+/* selo da nota do Google: adesivo de preço (retângulo menta com borda ameixa); no hero fica na faixa de prateleira, na ficha da página Sobre fica no alto */
+.carimbo { width: auto; height: auto; flex: none; position: static; display: flex; align-items: baseline; gap: 8px; padding: 6px 14px 7px; border: 2px solid var(--folha); border-radius: 10px; transform: rotate(-2deg); }
+.carimbo b { font: 700 1.7rem/1 var(--fonte-titulo); }
+.carimbo span { font-size: .78rem; margin-top: 0; }
+.ficha .carimbo { display: inline-flex; margin: 0 0 14px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos") como etiqueta de prateleira ---------- */
+.ficha { padding: 52px 22px 14px; background: var(--superficie); border: 3px solid var(--folha); border-radius: 16px; }
+.ficha::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 30px; border-bottom: 3px solid var(--folha); border-radius: 12px 12px 0 0;
+  background: radial-gradient(circle at 13px 15px, rgba(45, 22, 53, .3) 0 2.6px, transparent 3.3px) 0 0 / 26px 30px #d3f3e5; }
+.ficha h2, .ficha h3 { font-size: 1.5rem; }
+.ficha a:not(.carimbo) { color: var(--musgo); }
+
+/* ---------- seções ---------- */
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+/* fileira de furos debaixo dos títulos de seção: a perfuração da parede, em framboesa */
+.secao-cabeca h2::after { content: ""; display: block; width: 96px; height: 14px; margin-top: 12px;
+  background: radial-gradient(circle at 7px 7px, var(--musgo) 0 3px, transparent 3.7px) 0 0 / 16px 14px transparent; }
+/* cada serviço fica numa prateleira: régua grossa em cima */
+.servicos { display: grid; }
+.servico { border-top: 6px solid var(--folha); padding: 24px 0 28px; }
+.servico .icone { width: 54px; height: 54px; background: var(--musgo); color: #fff; border-radius: 14px; }
+.servico .icone svg { width: 30px; height: 30px; }
+@media (min-width: 800px) { .servico { grid-template-columns: 4.3rem minmax(0, 1fr) minmax(0, 1.2fr); } }
+.passos li::before { background: var(--folha); color: var(--carimbo); border-radius: 12px; }
+.passos li:not(:last-child)::after { border-color: var(--musgo); border-style: dotted; }
+.lista-simples li::before { width: 10px; height: 10px; background: var(--musgo); border-radius: 50%; }
+
+/* ---------- faixas escuras: a parede perfurada em ameixa ---------- */
+.faixa { background: radial-gradient(circle at 14px 14px, rgba(255, 255, 255, .16) 0 2.4px, transparent 3.1px) 0 0 / 28px 28px var(--folha); border-top: 8px solid var(--carimbo); }
+.faixa .btn { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.faixa .btn:hover { background: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+.faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: radial-gradient(circle at 14px 14px, rgba(255, 255, 255, .16) 0 2.4px, transparent 3.1px) 0 0 / 28px 28px var(--folha); border-bottom: 0; padding: 48px 0 48px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(2rem, 1.35rem + 3vw, 3.1rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.formulario { border: 3px solid var(--folha); border-radius: 16px; }
+.formulario input, .formulario select, .formulario textarea { border-radius: 10px; }
+.mapa iframe { border: 3px solid var(--folha); border-radius: 16px; }
+.galeria img { border: 3px solid var(--folha); border-radius: 14px; }
+
+/* ---------- rodapé e botão flutuante ---------- */
+.rodape { background: var(--folha); border-top: 8px solid var(--carimbo); }

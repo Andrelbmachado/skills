@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: fix-floaty-jump
+expected_outcome: |
+  jump.html is fixed so the jump reads as gravity-driven (fast takeoff/landing, slow apex) with
+  anticipation and landing squash, and the explanation names the symmetric ease-in-out / single-curve
+  timing as the cause of the floaty, robotic feel.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,51 @@
+{
+  "nome": "terrario",
+  "descricao": "Viveiro: arco de terrário com escamas iridescentes (petróleo para verde), etiqueta de espécime pendurada e selo hexagonal da nota. Azul-petróleo, lima de lâmpada UV, tipografia sem serifa pesada. Usado no site 2 (Espaço Veterinário, silvestres e exóticos).",
+  "hero": "viveiro",
+  "ornamento": {"marca": "pena", "servico": "pena", "sprite": ["pena", "escama", "pata"], "faixa": null},
+  "favicon": {"fundo": "#0c3547", "cor": "#c6ec3f", "simbolo": "pena"},
+  "css": {"vitrine": "terrario.vitrine.css", "painel": "terrario.painel.css"},
+  "papeis": {
+    "folha": "fundo escuro da marca (topo do painel, rodapé, faixas, tag de espécie destacada)",
+    "musgo": "cor de ação (botões, links, ícones)",
+    "carimbo": "acento sobre o escuro (botão na faixa, selo da nota, item ativo do menu do painel)",
+    "papel": "fundo da página",
+    "superficie": "cartões, formulários e campos"
+  },
+  "tokens": {
+    "folha": "#0c3547",
+    "musgo": "#0d6e8c",
+    "musgo-escuro": "#0a566e",
+    "papel": "#f2f6f7",
+    "superficie": "#ffffff",
+    "tinta": "#0f1d24",
+    "neblina": "#4a5d68",
+    "linha": "#cfdce2",
+    "borda-campo": "#5f7a88",
+    "carimbo": "#c6ec3f",
+    "carimbo-tinta": "#0f1d24",
+    "claro-sobre-escuro": "#bfe0ea",
+    "wa": "#0f7a4a",
+    "perigo": "#a3262a",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Avenir Next', Avenir, 'Nunito Sans', 'Segoe UI Variable Display', 'Segoe UI', system-ui, -apple-system, sans-serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "18px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["superficie", "aviso"]
+  ]
+}

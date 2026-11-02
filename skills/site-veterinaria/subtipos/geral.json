@@ -1,0 +1,8 @@
+{
+  "nome": "geral",
+  "descricao": "Clínica geral (cães e gatos). Receita testada no site 1. Sem ajustes extras no painel; na vitrine só a regra do horário com a fonte (v0.6).",
+  "vitrine": {
+    "horario_com_fonte": true
+  },
+  "painel": {}
+}

@@ -1,0 +1,87 @@
+{
+  "output": "círculo cromático.mp4",
+  "duration": 52.7,
+  "fps": 30,
+  "lines": [
+    {
+      "id": "hook",
+      "window": [
+        0.0,
+        2.4
+      ],
+      "lead": 0.35,
+      "speed": 1.0,
+      "text": "Quer escolher cores sem ficar no chute?"
+    },
+    {
+      "id": "analog",
+      "window": [
+        2.4,
+        10.519
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "No círculo cromático, cada posição é um matiz. Nas análogas, você usa cores vizinhas, e uma pode fazer a sombra da outra, como os azuis da Noite Estrelada."
+    },
+    {
+      "id": "comp",
+      "window": [
+        10.519,
+        18.834
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "As complementares ficam em lados opostos. Uma pode escurecer a outra: um pouco de verde sombreia o vermelho. Ou dar contraste: em Van Gogh, a barba laranja salta do fundo azul."
+    },
+    {
+      "id": "triad",
+      "window": [
+        18.834,
+        26.293
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "Na tríade, três cores ficam igualmente espaçadas. Use a regra sessenta, trinta, dez: uma domina, outra apoia e a terceira destaca, como em Mondrian."
+    },
+    {
+      "id": "split",
+      "window": [
+        26.293,
+        33.957
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "Nas complementares divididas, mantenha uma cor principal e use as duas vizinhas da sua oposta: o céu azul contra o trigo amarelo e a terra avermelhada."
+    },
+    {
+      "id": "rect",
+      "window": [
+        33.957,
+        41.388
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "Na tetrádica retangular, quatro cores formam dois pares complementares. No Café à Noite, vermelho com verde e laranja com azul. Escolha uma dominante."
+    },
+    {
+      "id": "square",
+      "window": [
+        41.388,
+        49.168
+      ],
+      "lead": 0.12,
+      "speed": 1.0,
+      "text": "Na tetrádica quadrada, quatro cores ficam igualmente espaçadas. Ela pede cuidado: escolha uma dominante para a paleta não competir, como Gauguin em Arearea."
+    },
+    {
+      "id": "cta",
+      "window": [
+        49.168,
+        52.241
+      ],
+      "lead": 1.2,
+      "speed": 1.05,
+      "text": "Salva e testa na próxima paleta."
+    }
+  ]
+}

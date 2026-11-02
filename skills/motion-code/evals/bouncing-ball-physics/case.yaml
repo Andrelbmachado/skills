@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: bouncing-ball-physics
+expected_outcome: |
+  bounce.html is a self-contained page where an orange rubber ball drops, bounces left to right with
+  physically consistent decay (shrinking heights and intervals), squashes on contact and stretches in
+  flight, then rolls with rotation tied to distance and stops. No external libraries.

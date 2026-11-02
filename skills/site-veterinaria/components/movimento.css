@@ -1,0 +1,16 @@
+/* movimento.css (v1.0, PEDIDO_DESIGN/PEDIDO_DESIGN_3): movimento comum a todos os temas, anexado ao style.css DEPOIS do chão liso (vitrine.base.css) e ANTES do tema.
+   Não é identidade: é a entrada do WhatsApp flutuante, a revelação dos cards ao rolar e a resposta dos botões ao toque. Tudo some com prefers-reduced-motion
+   e na impressão; sem JavaScript (sem a classe js-revela no <html>) nada fica escondido. */
+.wa-flutuante { box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .45); }
+/* v1.4: o foco do botão redondo é visível sobre o papel claro E sobre o rodapé escuro (antes o anel era da cor do tema e o `:focus-visible` do tema o deixava quadrado): anel escuro (3:1 sobre o papel claro, que é onde `contraste.mjs` o mede) com halo branco dos dois lados (sobre o rodapé escuro o branco é que se vê) */
+.wa-flutuante:focus-visible { border-radius: 50%; outline: 3px solid var(--tinta); outline-offset: 3px; box-shadow: 0 0 0 9px #fff; }
+@keyframes flutuante-entra { from { opacity: 0; transform: translateY(16px) scale(.9); } }
+@media (prefers-reduced-motion: no-preference) {
+  .wa-flutuante { animation: flutuante-entra .45s cubic-bezier(.2, .9, .3, 1.15) .9s both; }
+  .js-revela .revela { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .7s cubic-bezier(.2, .7, .2, 1); }
+  .js-revela .revela.visto { opacity: 1; transform: none; }
+  .btn { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0) scale(.97); }
+}
+@media print { .js-revela .revela { opacity: 1; transform: none; } }

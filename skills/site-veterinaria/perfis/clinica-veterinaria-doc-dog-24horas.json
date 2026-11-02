@@ -1,0 +1,20 @@
+{
+  "subtipo": "hospital24h",
+  "tema": "dupla",
+  "opcoes": [
+    "recepcao_ve_leitos"
+  ],
+  "pesquisa_pendente": [
+    "CEP diverge: o CSV traz 18020-002 e o cadastro da Receita Federal (guiapj) traz 18020-000. A pesquisa não registrou a divergência; o endereço é mostrado sem CEP até o negócio confirmar."
+  ],
+  "retirar_servicos": [
+    {
+      "titulo": "Internamento assistido",
+      "motivo": "Aparece só em resumo de busca do Petbooking (a página estava bloqueada), sem fonte que a pesquisa tenha conseguido ler."
+    }
+  ],
+  "pendencias_gestao": [
+    "Módulo de internação do painel: é um modelo do gerador (leitos, internações, observações do plantão, escala e folha de passagem), NÃO uma afirmação de que a clínica interna animais (a única fonte do internamento é um resumo de busca). O que a clínica realmente usa (leitos, plantão, passagem) precisa ser conferido com o responsável antes de entregar o painel.",
+    "A grade da agenda do painel vem de 08:00 às 18:00. Se a clínica confirmar o plantão 24 horas, o dono ajusta em Configurações, Agenda; o gerador não mexe nisso enquanto o horário não for confirmado."
+  ]
+}

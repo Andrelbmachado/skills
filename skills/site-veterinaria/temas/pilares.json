@@ -1,0 +1,59 @@
+{
+  "nome": "pilares",
+  "descricao": "Os pilares. O nome do negócio é a ideia: Pilares, unidade veterinária no Jardim América com cinco serviços divulgados (atendimento clínico e especializado, exames, internação, cirurgias, emergência). O hero é uma fachada de templo, simples e geométrica: o frontão sobre o friso índigo com o título, a apresentação e os dois atalhos do primeiro toque; abaixo, uma coluna por serviço (só o título, em placa branca sobre o fuste estriado; no celular viram UMA coluna de tambores empilhados); e, nos degraus, o número de contato como texto, o endereço e o horário (com a fonte). As seções levam um friso duplo sobre o título e os serviços têm numeral romano. Violeta, índigo-escuro e coral-claro sobre cinza-pedra; título em geométrica (Futura); cantos retos de 4px; sem sombra; sem rótulo em caixa-alta. Nada de selo de urgência, relógio, luz acesa nem foto da unidade: o prazo de funcionamento só aparece onde o gerador o cita com a fonte. Usado no site 10 (Pilares, hospital 24h).",
+  "hero": "pilares",
+  "ornamento": {
+    "marca": "pilares",
+    "servico": "pata",
+    "sprite": ["pilares", "pata", "fone", "pino", "relogio"],
+    "faixa": null
+  },
+  "favicon": {"fundo": "#201046", "cor": "#ffcdbd", "simbolo": "pilares"},
+  "css": {"vitrine": "pilares.vitrine.css", "painel": "pilares.painel.css"},
+  "papeis": {
+    "folha": "índigo muito escuro (topo, rodapé, friso do hero, menu lateral do painel, título das páginas internas)",
+    "musgo": "violeta de ação (botões, links, faixas, capitel e base das colunas)",
+    "carimbo": "coral claro sobre o escuro (botão do friso, rótulos, nota do Google, item ativo do menu)",
+    "papel": "fundo da página (cinza-pedra quente)",
+    "superficie": "o fuste das colunas, cartões e campos"
+  },
+  "tokens": {
+    "folha": "#201046",
+    "musgo": "#5b32b4",
+    "musgo-escuro": "#44238f",
+    "papel": "#f1eee8",
+    "superficie": "#ffffff",
+    "tinta": "#17112c",
+    "neblina": "#4f4866",
+    "linha": "#dcd6e8",
+    "borda-campo": "#6c6585",
+    "carimbo": "#ffcdbd",
+    "carimbo-tinta": "#2a1208",
+    "claro-sobre-escuro": "#e4dcf5",
+    "wa": "#0f7a4a",
+    "perigo": "#b3261e",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Futura', 'Century Gothic', 'Trebuchet MS', 'Segoe UI', sans-serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "4px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["musgo", "carimbo"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["papel", "perigo"],
+    ["superficie", "aviso"],
+    ["superficie", "borda-campo"]
+  ]
+}

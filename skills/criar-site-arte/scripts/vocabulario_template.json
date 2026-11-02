@@ -1,0 +1,19 @@
+{
+  "schema": "criar-site-arte/vocabulario@1",
+  "estilo": "<style-id>",
+  "cenario": "<tela concreta com narrativa>",
+  "assinaturas": [
+    {"nome": "<obra/figura>", "arquivo": "research/<cat>/<file>", "uso_ui": "hero|sidebar|grafico|card", "licenca": "CC BY-SA 4.0"}
+  ],
+  "camadas": {
+    "texturas":   [{"descricao": "", "arquivo": "", "recorte": [0, 0, 1600, 1600], "uso_ui": "face de botão primário", "licenca": ""}],
+    "cores":      [{"hex": "", "papel": "accent|bg|graphicsOnly", "arquivo": "", "descricao": ""}],
+    "formas":     [{"descricao": "", "arquivo": "", "uso_ui": "seta de navegação|aba|barra de gráfico"}],
+    "escrita":    [{"sistema": "", "signos": "", "codepoints": [], "significado": "", "fonte_traducao": "", "uso_ui": "KPI|título|cartucho"}],
+    "padroes":    [{"descricao": "", "arquivo": "", "modulo_px": 0, "uso_ui": "borda|divisor|foco"}],
+    "objetos":    [{"nome": "", "arquivo": "", "uso_ui": "ícone|vinheta|cena"}],
+    "palavras":   [{"termo": "", "significado": "", "uso_ui": "nome de seção|métrica|unidade|data"}],
+    "luz":        [{"descricao": "", "arquivo": "", "uso_ui": "bisel|normal map|efeito de interação"}]
+  },
+  "descartadas": [{"arquivo": "", "motivo": ""}]
+}

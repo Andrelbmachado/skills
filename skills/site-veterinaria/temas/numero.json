@@ -1,0 +1,59 @@
+{
+  "nome": "numero",
+  "descricao": "O número da porta. Animal Inc é uma clínica do Centro que só tem celular listado e um endereço firme (a Receita, o Perfil do Google e o guia dizem o mesmo): o dado que o tutor leva é a rua e o número. v1.5 (PEDIDO_DESIGN_4): o hero é uma FAIXA DE ABERTURA de uma borda à outra (a parede verde-garrafa com o rejunte em linhas claras), em duas colunas: título, apresentação, atalhos e os fatos do cadastro à esquerda; à direita a imagem ilustrativa numa moldura de esmalte, com a placa do número da porta afixada no canto e a nota do Google. Sem número no cadastro (ou com o número em disputa) o bloco mostra só a rua e o bairro. Verde-garrafa, branco esmaltado e verde-claro sobre cinza-sálvia; título em humanista de placa (Gill Sans). Nada de selo de urgência, relógio, foto da clínica nem área de atendimento (a imagem é ilustrativa e legendada). Usado no site 8 (Animal Inc, clínica geral do Centro).",
+  "hero": "numero",
+  "foto_hero": {"arquivo": "vet-caes-gatos", "alt": "Um cachorro e um gato descansando sobre uma manta"},
+  "ornamento": {
+    "marca": "numero",
+    "servico": "pata",
+    "sprite": ["numero", "pata", "fone", "pino", "relogio"],
+    "faixa": null
+  },
+  "favicon": {"fundo": "#12301c", "cor": "#c8efc3", "simbolo": "numero"},
+  "css": {"vitrine": "numero.vitrine.css", "painel": "numero.painel.css"},
+  "papeis": {
+    "folha": "verde-garrafa escuro (topo, rodapé, moldura da placa, bloco do número, menu lateral do painel)",
+    "musgo": "verde de ação (botões, links, faixas)",
+    "carimbo": "verde-claro sobre o escuro (rótulos, nota do Google, item ativo do menu)",
+    "papel": "fundo da página (cinza-sálvia muito claro, com a grade fina do rejunte)",
+    "superficie": "a placa branca, cartões, formulários e campos"
+  },
+  "tokens": {
+    "folha": "#12301c",
+    "musgo": "#256b2b",
+    "musgo-escuro": "#1b5321",
+    "papel": "#edf1ea",
+    "superficie": "#ffffff",
+    "tinta": "#112016",
+    "neblina": "#4a5a4e",
+    "linha": "#d0dccf",
+    "borda-campo": "#66796a",
+    "carimbo": "#c8efc3",
+    "carimbo-tinta": "#10291a",
+    "claro-sobre-escuro": "#d6e8d4",
+    "wa": "#0f7a4a",
+    "perigo": "#a3262a",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'Segoe UI', sans-serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "8px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["musgo", "carimbo"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["superficie", "aviso"],
+    ["superficie", "borda-campo"]
+  ]
+}

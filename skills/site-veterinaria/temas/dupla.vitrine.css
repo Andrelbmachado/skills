@@ -1,0 +1,151 @@
+/* dupla.vitrine.css: identidade "Dupla" (site 6, hospital 24h: Doc & Dog).
+   Entra DEPOIS de components/vitrine.base.css (vira o final de assets/style.css) e sobrepõe o chão liso.
+   Ideia: o NOME. "Doc" e "Dog" são uma dupla com um "&" no meio, e o tema as trata assim: o nome vira cartaz (as duas metades em duas cores, o "&" num disco de lilás-claro) e,
+   numa faixa grafite que vai de uma borda à outra, o balcão com o que o tutor precisa no primeiro toque: Ligar (a célula cheia, ferrugem), Como chegar e o horário.
+   Os dois anéis que se cruzam (a marca) voltam, quietos, no alto de cada título de seção e como marcador das listas. Ferrugem, grafite e lilás-claro sobre cinza frio; título em
+   grotesca pesada; cantos de 6px; sem sombra, sem cartões iguais, sem rótulo em caixa-alta. NÃO tem luz acesa à noite, relógio, escala de turnos nem selo de urgência: o
+   funcionamento 24 horas ainda não foi confirmado e o tema não pode afirmá-lo por enfeite. Uma animação: as células do balcão sobem uma vez (prefers-reduced-motion desliga).
+   Classes do hero e do ornamento levam o prefixo dp- (o chão liso tem .nota, .ficha, .placa... e uma colisão de nome já custou um dia). Todo gradiente tem cor sólida por baixo. */
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 4px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .dp-faixa :focus-visible { outline-color: var(--carimbo); }
+.dp-bloco:focus-visible, .dp-pe :focus-visible { outline-offset: -4px; }
+
+/* ---------- tipografia ---------- */
+h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.8rem); }
+h2 { font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.3rem); }
+h3 { font-size: 1.3rem; }
+.texto p { line-height: 1.7; }
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+.btn { border-radius: var(--raio); }
+.btn-segundo { background: transparent; border-color: var(--folha); color: var(--folha); }
+.btn-segundo:hover { background: var(--folha); border-color: var(--folha); color: #fff; }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo { background: transparent; border-color: var(--carimbo); color: var(--carimbo); }
+.escuro .btn-segundo:hover { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.escuro .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover { background: transparent; border-color: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- topo ---------- */
+.topo { background: var(--superficie); border-bottom: 1px solid var(--linha); }
+.marca { font: 800 1.4rem/1 var(--fonte-titulo); letter-spacing: -.03em; }
+.marca svg { width: 40px; height: 40px; color: var(--musgo); }
+.rodape .marca svg { color: var(--carimbo); }
+.menu a { border-bottom: 4px solid transparent; }
+.menu a:hover { background: transparent; border-bottom-color: var(--linha); }
+.menu a[aria-current="page"] { background: transparent; color: var(--folha); border-bottom-color: var(--musgo); }
+/* 320px: marca, botão e abas precisam caber em 288px sem rolagem horizontal */
+@media (max-width: 359px) {
+  .marca { font-size: 1.12rem; gap: 6px; } .marca svg { width: 32px; height: 32px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero: o nome como cartaz + a faixa do balcão ---------- */
+.hero--dupla { display: grid; padding: 0; background: var(--papel); }
+.dp-topo { position: relative; padding: 22px 0 22px; }
+.dp-topo > * { position: relative; z-index: 1; }
+.dp-nome { display: flex; flex-wrap: wrap; align-items: center; margin: 0 0 14px; max-width: none; font: 800 clamp(2.7rem, 13.4vw, 6.4rem)/.95 var(--fonte-titulo); letter-spacing: -.05em; color: var(--folha); overflow-wrap: anywhere; } /* quebra só se o nome não couber (nome longo), em vez de cortar */
+.dp-metade--2 { color: var(--musgo); }
+/* o "&" fica num disco de lilás-claro: a ligação entre as duas metades */
+.dp-e { display: inline-grid; place-items: center; flex: none; width: 1.12em; height: 1.12em; margin: 0 .22em 0 .16em; border-radius: 50%; background: var(--carimbo); color: var(--folha); border: 3px solid var(--folha); font-size: .56em; line-height: 1; letter-spacing: 0; padding-bottom: .05em; }
+.hero--dupla h1 { max-width: 22ch; color: var(--tinta); font-weight: 700; letter-spacing: -.015em; }
+/* o "&" gigante, só como textura (cor sólida quase igual ao fundo; texto alternativo vazio para leitor de tela) */
+.dp-topo::after { content: "&"; content: "&" / ""; position: absolute; z-index: 0; right: -2%; top: -14%; font: 800 clamp(14rem, 32vw, 30rem)/1 var(--fonte-titulo); color: #e6e8ed; pointer-events: none; }
+@media (max-width: 899px) { .dp-topo::after { display: none; } }
+.dp-lead { padding: 22px 0 30px; }
+.dp-lead .destaque { margin: 0; max-width: 40ch; }
+@media (max-width: 899px) { .dp-lead .destaque { padding-right: 52px; } } /* o Ligar flutuante não cobre o fim das linhas */
+
+/* a faixa: grafite de uma borda à outra; Ligar é a célula cheia (ferrugem), as outras são linhas */
+.dp-faixa { background: var(--folha); border-top: 5px solid var(--carimbo); color: #fff; }
+.dp-balcao { list-style: none; margin: 0; padding: 22px 0 6px; display: grid; gap: 0; }
+.dp-balcao li { min-width: 0; animation: dp-subir .5s cubic-bezier(.2, .8, .3, 1) both; }
+.dp-balcao li:nth-child(2) { animation-delay: .08s; }
+.dp-balcao li:nth-child(3) { animation-delay: .16s; }
+.dp-balcao li:nth-child(4) { animation-delay: .24s; }
+.dp-bloco { display: grid; align-content: center; gap: 4px; min-height: 76px; padding: 14px 4px; color: #fff; text-decoration: none; }
+a.dp-bloco:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.dp-balcao li + li .dp-bloco { border-top: 1px solid rgba(255, 255, 255, .22); }
+.dp-rotulo { display: flex; align-items: center; gap: 8px; color: var(--carimbo); }
+.dp-rotulo b { font: 700 1rem/1.2 var(--fonte-titulo); letter-spacing: 0; }
+.dp-rotulo svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.dp-valor { font-size: 1.05rem; line-height: 1.35; font-weight: 600; overflow-wrap: anywhere; }
+.dp-bloco--onde .dp-valor { font-size: .98rem; font-weight: 500; color: #fff; }
+.dp-bloco--horario .dp-valor { font-size: 1rem; font-weight: 500; }
+/* Serviços (v1.0, antes Ligar): a célula cheia, a primeira da faixa */
+.dp-bloco--servicos { padding: 16px 18px; background: var(--musgo); border-radius: var(--raio); margin-bottom: 8px; }
+a.dp-bloco--servicos:hover { background: var(--musgo-escuro); }
+.dp-bloco--servicos .dp-rotulo { color: #fff; }
+.dp-bloco--servicos .dp-valor { font: 700 1.12rem/1.3 var(--fonte-titulo); }
+/* o pé da faixa: a nota do Google */
+.dp-pe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 14px 0 22px; border-top: 1px solid rgba(255, 255, 255, .22); }
+.dp-pe:empty { display: none; }
+@keyframes dp-subir { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+@media (min-width: 900px) {
+  .hero--dupla { grid-template-areas: "topo" "lead" "faixa"; }
+  .dp-topo { grid-area: topo; padding: 56px 0 8px; }
+  .dp-lead { grid-area: lead; padding: 6px 0 44px; }
+  .dp-faixa { grid-area: faixa; }
+  .hero--dupla h1 { max-width: 20ch; }
+  .dp-balcao { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.45fr) minmax(0, 1fr); padding: 30px 0 22px; gap: 0 36px; align-items: stretch; }
+  .dp-balcao[style*="--n:4"] { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, .9fr); gap: 0 24px; }
+  .dp-balcao[style*="--n:2"] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+  .dp-balcao li + li .dp-bloco { border-top: 0; border-left: 1px solid rgba(255, 255, 255, .22); padding-left: 24px; }
+  .dp-balcao li { display: grid; }
+  .dp-bloco--servicos { margin-bottom: 0; align-content: center; }
+  .dp-pe { padding: 16px 0 26px; }
+}
+@media (max-width: 359px) {
+  .dp-bloco--servicos { padding-inline: 14px; }
+}
+
+/* selo da nota do Google: etiqueta de lilás-claro no pé da faixa; na ficha da página Sobre fica no alto */
+.carimbo { width: auto; height: auto; flex: none; position: static; display: flex; align-items: baseline; gap: 8px; padding: 6px 14px 7px; border-radius: var(--raio); }
+.carimbo b { font: 800 1.6rem/1 var(--fonte-titulo); }
+.carimbo span { font-size: .78rem; margin-top: 0; }
+.ficha .carimbo { display: inline-flex; margin: 0 0 14px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos") ---------- */
+.ficha { padding: 22px 22px 14px; background: var(--superficie); border: 1px solid var(--linha); border-top: 8px solid var(--folha); border-radius: 2px; }
+.ficha h2, .ficha h3 { font-size: 1.5rem; }
+.ficha a:not(.carimbo) { color: var(--musgo); }
+
+/* ---------- seções ---------- */
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+/* no alto de cada título de seção, a marca: dois anéis que se cruzam (ferrugem e grafite), só com gradientes sobre fundo transparente */
+.secao-cabeca h2::before { content: ""; display: block; width: 62px; height: 32px; margin-bottom: 12px; background-color: transparent;
+  background-image: radial-gradient(circle at 16px 16px, transparent 10px, var(--musgo) 10.5px 13.5px, transparent 14px), radial-gradient(circle at 34px 16px, transparent 10px, var(--folha) 10.5px 13.5px, transparent 14px);
+  background-repeat: no-repeat; }
+.servicos { display: grid; }
+.servico { border-top: 2px solid var(--folha); padding: 24px 0 28px; }
+.servico .icone { width: 50px; height: 50px; background: var(--folha); color: var(--carimbo); border-radius: 50%; }
+.servico .icone svg { width: 28px; height: 28px; }
+@media (min-width: 800px) { .servico { grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1.2fr); } }
+.passos li::before { background: var(--folha); color: var(--carimbo); border-radius: 50%; }
+.passos li:not(:last-child)::after { border-color: var(--musgo); }
+.lista-simples li::before { width: 12px; height: 12px; top: .5em; background: transparent; border: 3px solid var(--musgo); border-radius: 50%; }
+
+/* ---------- faixas escuras ---------- */
+.faixa { background: var(--folha); border-top: 5px solid var(--carimbo); }
+.faixa .btn { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.faixa .btn:hover { background: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+.faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: var(--folha); border-bottom: 5px solid var(--carimbo); padding: 44px 0 40px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(1.9rem, 1.3rem + 2.8vw, 3rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.formulario { border: 1px solid var(--linha); border-top: 6px solid var(--musgo); border-radius: var(--raio); }
+.formulario input, .formulario select, .formulario textarea { border-radius: var(--raio); }
+.mapa iframe { border: 2px solid var(--folha); border-radius: var(--raio); }
+.galeria img { border: 2px solid var(--folha); border-radius: var(--raio); }
+
+/* ---------- rodapé e botão flutuante ---------- */
+.rodape { background: var(--folha); border-top: 5px solid var(--carimbo); }
+/* o botão flutua sobre o papel claro E sobre o rodapé grafite: o anel de foco precisa de 3:1 nos dois (cinza médio `#767d8c`: 3,75:1 sobre o papel e 3,91:1 sobre o grafite; o `--folha` sumia no rodapé) */

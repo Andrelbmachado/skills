@@ -1,0 +1,59 @@
+{
+  "nome": "registro",
+  "descricao": "O livro de registro. A Ishizuka é uma clínica de bairro com seis serviços citados nos guias e só um telefone fixo: o que o tutor leva é a lista do que ela faz, o endereço e o número para ligar. O hero é UMA folha de livro de registro (margem dupla em carmim à esquerda, a fita marcadora que sai pelo topo) com o título, a apresentação, os dois atalhos do primeiro toque e, em linhas de lançamento, o número como texto, o endereço e o horário; as seções levam um marcador de fita no título e os serviços são lançamentos numerados na margem. Carmim, ameixa-escuro e azul de névoa sobre cinza de pedra clara (v1.5: papel de fibra, camadas suaves de montanha no pé do hero, ondas de areia rastelada nos títulos, mais respiro; nada literal); título em serifa de livro (Charter), corpo em fonte do sistema; cantos de 6px; sem sombra de brilho (só o fio da folha de baixo); sem rótulo em caixa-alta. Nada de selo de urgência, relógio, foto da clínica nem área de atendimento. Usado no site 9 (Ishizuka, clínica geral com seis serviços).",
+  "hero": "registro",
+  "ornamento": {
+    "marca": "registro",
+    "servico": "pata",
+    "sprite": ["registro", "pata", "fone", "pino", "relogio"],
+    "faixa": null
+  },
+  "favicon": {"fundo": "#2b0d18", "cor": "#d3e5f3", "simbolo": "registro"},
+  "css": {"vitrine": "registro.vitrine.css", "painel": "registro.painel.css"},
+  "papeis": {
+    "folha": "ameixa muito escura (topo, rodapé, menu lateral do painel, título das páginas internas)",
+    "musgo": "carmim de ação (botões, links, faixas, a fita e a margem do livro)",
+    "carimbo": "azul de pauta claro sobre o escuro (rótulos, nota do Google, item ativo do menu)",
+    "papel": "fundo da página (cinza de pedra clara, com fibra de papel muito leve)",
+    "superficie": "a folha do livro, cartões e campos"
+  },
+  "tokens": {
+    "folha": "#2b0d18",
+    "musgo": "#a3123f",
+    "musgo-escuro": "#7e0e31",
+    "papel": "#f2f0eb",
+    "superficie": "#ffffff",
+    "tinta": "#1f1219",
+    "neblina": "#5a4a53",
+    "linha": "#ddd7cd",
+    "borda-campo": "#76636c",
+    "carimbo": "#d3e5f3",
+    "carimbo-tinta": "#12263a",
+    "claro-sobre-escuro": "#ecdce4",
+    "wa": "#0f7a4a",
+    "perigo": "#a53600",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Charter', 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "6px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["musgo", "carimbo"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["papel", "perigo"],
+    ["superficie", "aviso"],
+    ["superficie", "borda-campo"]
+  ]
+}

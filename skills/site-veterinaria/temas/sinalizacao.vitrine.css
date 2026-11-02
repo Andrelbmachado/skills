@@ -1,0 +1,143 @@
+/* sinalizacao.vitrine.css: identidade "Sinalização" (site 3, hospital/plantão).
+   Entra DEPOIS de components/vitrine.css (vira o final de assets/style.css) e sobrepõe o visual base.
+   Ideia: a sinalização de um hospital, azul-marinho, cobalto e amarelo. v1.2 (PEDIDO_DESIGN_3, item I): o hero foi refeito do zero, a "cruz de plantão":
+   a cruz da marca é a janela da imagem ilustrativa, com uma cruz amarela deslocada atrás, como placa. O resto é quieto: linhas retas, sem cartões iguais.
+   Uma única animação: a cruz amarela desliza para o lugar uma vez (prefers-reduced-motion desliga). Os botões principais são amarelos com texto branco. */
+:root {
+  --chevrons: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M12 8l14 14-14 14' fill='none' stroke='%23ffffff' stroke-opacity='.08' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E");
+}
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 2px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .hero--cruz :focus-visible { outline-color: #fff; }
+
+/* ---------- tipografia ---------- */
+h1, h2, h3 { font-weight: 700; letter-spacing: -.01em; line-height: 1.08; }
+h1 { font-size: clamp(2.3rem, 1.5rem + 3.9vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 1.35rem + 1.8vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+.texto p { line-height: 1.7; }
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+/* v1.2 (item I.1): botão principal amarelo com texto e ícone brancos. O branco sobre o amarelo da marca (#ffc21a) dá 1,6:1, então o fundo é o amarelo
+   escurecido #8f6200 (5,4:1; no hover #7a5300, 6,9:1) e a borda de baixo fica no amarelo da marca, para o botão continuar lendo como amarelo. */
+.btn { border-radius: var(--raio); padding: 10px 22px; background: #8f6200; border-color: #8f6200; color: #fff; box-shadow: inset 0 -4px 0 var(--carimbo); text-shadow: 0 1px 0 rgba(0, 0, 0, .2); }
+.btn:hover { background: #7a5300; border-color: #7a5300; color: #fff; }
+.btn-segundo, .btn-terciario, .btn-fantasma { box-shadow: none; text-shadow: none; }
+.btn-segundo { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.btn-segundo:hover { background: var(--carimbo-tinta); border-color: var(--carimbo-tinta); color: var(--carimbo); }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo { background: transparent; border-color: #fff; color: #fff; }
+.escuro .btn-segundo:hover { background: #fff; border-color: #fff; color: var(--folha); }
+.escuro .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover { background: transparent; color: var(--carimbo); }
+
+/* ---------- topo ---------- */
+.topo { background: var(--superficie); border-bottom: 6px solid var(--musgo); }
+.marca { font: 700 1.4rem/1 var(--fonte-titulo); letter-spacing: -.01em; }
+.marca svg { width: 36px; height: 36px; padding: 7px; background: var(--musgo); color: var(--carimbo); border-radius: var(--raio); }
+.rodape .marca svg { background: var(--carimbo); color: var(--carimbo-tinta); }
+.menu { margin-bottom: -6px; }
+.menu a { padding: 12px 6px 10px; border-bottom: 6px solid transparent; font-weight: 600; }
+.menu a:hover { background: transparent; border-bottom-color: var(--linha); }
+.menu a[aria-current="page"] { background: transparent; color: var(--folha); font-weight: 700; border-bottom-color: var(--carimbo); }
+@media (min-width: 860px) { .menu { margin-bottom: -6px; } .menu a { padding: 16px 20px 14px; } }
+/* 320px: marca, botão e abas precisam caber em 288px sem rolagem horizontal */
+@media (max-width: 359px) {
+  .marca { font-size: 1.15rem; gap: 7px; } .marca svg { width: 30px; height: 30px; padding: 6px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero (v1.2, item I): "cruz de plantão" ---------- */
+.hero--cruz { background: var(--folha); color: #fff; padding: 28px 0 0; border-bottom: 8px solid var(--carimbo); }
+.cz-grade { display: grid; grid-template-areas: "janela" "texto" "trilho"; gap: 28px; position: relative; z-index: 1; }
+.cz-texto { grid-area: texto; min-width: 0; }
+.hero--cruz h1 { color: #fff; max-width: 16ch; font-size: clamp(2.3rem, 1.4rem + 3.6vw, 4.1rem); line-height: 1.02; letter-spacing: -.02em; }
+.hero--cruz .destaque { color: var(--claro-sobre-escuro); max-width: 38ch; margin-top: 18px; }
+.cz-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.cz-cta { min-height: 56px; padding: 12px 24px; font-size: 1.08rem; }
+@media (max-width: 520px) { .cz-cta { flex: 1 1 100%; } }
+/* a janela: a foto recortada na cruz da marca e a cruz amarela deslocada atrás; legenda e nota do Google nos cantos vazios da cruz */
+.cz-janela { grid-area: janela; position: relative; justify-self: end; width: min(62vw, 240px); aspect-ratio: 1; margin-right: 14px; }  /* 14px: o deslocamento da cruz amarela fica dentro da tela */
+.cz-sinal { position: absolute; inset: 0; background: var(--carimbo); transform: translate(14px, 14px); clip-path: polygon(30% 0, 70% 0, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0 70%, 0 30%, 30% 30%); }
+.cz-foto { position: absolute; inset: 0; background: transparent; border-radius: 0; overflow: visible; }
+.cz-foto img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; clip-path: polygon(30% 0, 70% 0, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0 70%, 0 30%, 30% 30%); }
+.cz-foto figcaption { right: auto; left: 0; bottom: 0; }
+.cz-janela .carimbo { position: absolute; top: 0; left: 0; z-index: 2; }
+/* trilho de dados práticos no pé do banner */
+.cz-trilho { grid-area: trilho; list-style: none; margin: 0; padding: 0; border-top: 2px solid rgba(255, 255, 255, .22); }
+.cz-dado { display: grid; gap: 4px; padding: 16px 0; min-width: 0; }
+.cz-dado + .cz-dado { border-top: 1px solid rgba(255, 255, 255, .16); }
+.cz-dado b { display: flex; align-items: center; gap: 8px; color: var(--carimbo); font: 700 1rem/1.2 var(--fonte-titulo); }
+.cz-dado b svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
+.cz-dado span { color: #fff; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
+@media (min-width: 900px) {
+  .hero--cruz { padding-top: 64px; }
+  .cz-grade { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); grid-template-areas: "texto janela" "trilho trilho"; column-gap: 56px; row-gap: 56px; align-items: center; }
+  .cz-janela { width: min(100% - 14px, 440px); margin-right: 14px; justify-self: center; }
+  .cz-trilho { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  .cz-dado { padding: 22px 28px 26px 0; }
+  .cz-dado + .cz-dado { border-top: 0; border-left: 1px solid rgba(255, 255, 255, .16); padding-left: 28px; }
+}
+@media (max-width: 359px) { .hero--cruz h1 { font-size: 2.05rem; } }
+@media (prefers-reduced-motion: no-preference) {
+  .cz-sinal { animation: cruz-entra .7s cubic-bezier(.2, .7, .2, 1) .15s both; }
+}
+@keyframes cruz-entra { from { transform: none; } to { transform: translate(14px, 14px); } }
+
+/* selo da nota do Google: plaqueta redonda (o hero põe no canto da janela em cruz; a ficha da página Sobre, no canto da faixa do título) */
+.carimbo { width: 84px; height: 84px; border-radius: 50%; background: #fff; color: var(--carimbo-tinta); border: 4px solid var(--carimbo); flex: none; }
+.carimbo b { font: 700 1.55rem/1 var(--fonte-titulo); }
+.carimbo span { font-size: .68rem; margin-top: 2px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos") como placa de diretório ---------- */
+.ficha { border: 2px solid var(--tinta); border-radius: var(--raio); padding: 0; overflow: hidden; }
+.ficha h2, .ficha h3 { background: var(--musgo); color: #fff; margin: 0; padding: 18px 98px 18px 20px; font-size: 1.5rem; }
+.ficha dl { padding: 4px 20px 14px; }
+.ficha .item:first-child { border-top: 0; }
+.ficha .carimbo { top: 8px; right: 12px; width: 68px; height: 68px; border-width: 3px; }
+.ficha .carimbo span { font-size: .6rem; }
+.ficha .carimbo b { font-size: 1.3rem; }
+@media (max-width: 359px) { .ficha h2, .ficha h3 { padding-right: 20px; margin-top: 0; } .ficha .carimbo { position: static; margin: 12px 0 0 20px; } }
+
+/* ---------- seções ---------- */
+.secao-cabeca { border-left: 8px solid var(--musgo); padding-left: 16px; }
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+.servicos { display: grid; border-bottom: 2px solid var(--tinta); }
+.servico { border-top: 2px solid var(--tinta); }
+.servico .icone { width: 56px; height: 56px; border-radius: 2px; background: var(--musgo); }
+.servico .icone svg { width: 30px; height: 30px; }
+.servico h3 { font-size: 1.6rem; }
+@media (min-width: 800px) { .servico { grid-template-columns: 4.4rem minmax(0, 1fr) minmax(0, 1.2fr); } }
+
+.passos li::before { width: 52px; height: 52px; border-radius: 2px; background: var(--musgo); font: 700 1.5rem/52px var(--fonte-titulo); }
+.passos li:not(:last-child)::after { left: 24px; top: 60px; border-left: 4px solid var(--linha); }
+.passos strong { font: 700 1.3rem/1.2 var(--fonte-titulo); }
+@media (min-width: 800px) {
+  .passos li { padding-top: 76px; }
+  .passos li:not(:last-child)::after { left: 64px; right: -24px; top: 24px; border-left: 0; border-top: 4px solid var(--linha); }
+}
+
+.faixa { background: var(--musgo) var(--chevrons); background-size: 44px 44px; border-top: 8px solid var(--carimbo); }
+.faixa .btn { background: #8f6200; border-color: #8f6200; color: #fff; }  /* v1.2: o amarelo do botão principal, também sobre o cobalto */
+.faixa .btn:hover { background: #7a5300; border-color: #7a5300; color: #fff; }
+.faixa .btn-segundo { background: transparent; border-color: #fff; color: #fff; }
+.faixa .btn-segundo:hover { background: #fff; color: var(--folha); }
+.faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.faixa .btn-terciario:hover { background: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: var(--folha) var(--chevrons); background-size: 44px 44px; border-bottom: 8px solid var(--carimbo); padding: 48px 0 40px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(2.2rem, 1.4rem + 3.4vw, 3.5rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.lista-simples li::before { width: 10px; height: 10px; top: .55em; }
+
+.formulario { border: 2px solid var(--tinta); border-radius: var(--raio); padding: 26px 24px 24px; }
+.formulario input, .formulario select, .formulario textarea { border-radius: var(--raio); }
+.mapa iframe { border: 2px solid var(--tinta); border-radius: var(--raio); }
+.galeria img { border: 2px solid var(--tinta); border-radius: var(--raio); }
+
+/* ---------- rodapé e botão flutuante ---------- */
+.rodape { background: var(--folha); border-top: 8px solid var(--carimbo); }

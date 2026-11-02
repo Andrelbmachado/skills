@@ -1,0 +1,14 @@
+/* caderneta.painel.css: identidade "Caderneta de vacinação" no painel (site 1, clínica geral) sobre o painel.css neutro (v0.4).
+   Cartão de entrada com picote e sombra amarela deslocada, e os cinzas com tom de verde-folha (fundos de diálogo, linhas clicáveis, chips). */
+.login-cartao { border: 2px solid var(--folha); border-radius: 8px 20px 20px 8px; padding: 26px 22px 22px 36px; box-shadow: 7px 7px 0 var(--carimbo); }
+.login-cartao::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 16px; background: radial-gradient(circle at 0 50%, var(--papel) 6px, transparent 6.5px) 0 0 / 16px 30px repeat-y; }
+.aviso-modulo { border: 2px solid var(--folha); border-radius: 12px; box-shadow: 7px 7px 0 var(--carimbo); }
+.chip-neutro { background: #e3e9e5; color: #2f4038; }
+.tabela tr.clicavel:hover td { background: #f7faf8; }
+.bloco-consulta { background: #eef3f0; }
+.bloco-consulta.st-confirmada { background: #dbe8f5; }
+.bloco-consulta.st-em_atendimento { background: #fbeab8; }
+.bloco-consulta.st-concluida { background: #d6ecdf; }
+dialog.modal::backdrop { background: rgba(14, 59, 53, .6); }
+.toast { box-shadow: 0 6px 20px rgba(14, 59, 53, .35); }
+@media (max-width: 860px) { .menu-aberto .fundo-menu { background: rgba(14, 59, 53, .55); } }

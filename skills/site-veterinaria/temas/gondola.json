@@ -1,0 +1,123 @@
+{
+  "nome": "gondola",
+  "descricao": "Gôndola de loja de bairro: a parede perfurada (painel de ganchos) onde as etiquetas penduradas SÃO os botões (ligar, como chegar, horário), a faixa de prateleira no pé com a nota do Google e as prateleiras que separam os serviços. Ameixa escura, framboesa de ação e menta, título em fonte de placa de comércio (serifa de lâmina, não a de livro). A ideia é o balcão e a prateleira como forma; nada de marca, preço nem catálogo. v1.0 (PEDIDO_DESIGN_3, item B): o fundo da parede é uma imagem ILUSTRATIVA de painel perfurado com artigos sem marca (legenda \"Imagem ilustrativa\"), não foto da loja. Usado no site 5 (Nutrimed Ipanema, clínica com venda de produtos).",
+  "hero": "gondola",
+  "ornamento": {
+    "marca": "etiqueta",
+    "servico": "pata",
+    "sprite": [
+      "etiqueta",
+      "pata",
+      "fone",
+      "pino",
+      "relogio"
+    ],
+    "faixa": null
+  },
+  "favicon": {
+    "fundo": "#2d1635",
+    "cor": "#a8ecd0",
+    "simbolo": "etiqueta"
+  },
+  "css": {
+    "vitrine": "gondola.vitrine.css",
+    "painel": "gondola.painel.css"
+  },
+  "papeis": {
+    "folha": "ameixa escura da marca (moldura da parede, faixas, rodapé, menu lateral do painel)",
+    "musgo": "framboesa de ação (botões, links, ícones)",
+    "carimbo": "menta sobre o escuro (nota do Google, botão na faixa, item ativo do menu)",
+    "papel": "fundo da página",
+    "superficie": "etiquetas, cartões, formulários e campos"
+  },
+  "tokens": {
+    "folha": "#2d1635",
+    "musgo": "#8c2f7a",
+    "musgo-escuro": "#6d2160",
+    "papel": "#f6f3f7",
+    "superficie": "#ffffff",
+    "tinta": "#1e1222",
+    "neblina": "#5a4a63",
+    "linha": "#ded3e3",
+    "borda-campo": "#745f80",
+    "carimbo": "#a8ecd0",
+    "carimbo-tinta": "#1a0e20",
+    "claro-sobre-escuro": "#e4cfe9",
+    "wa": "#0f7a4a",
+    "perigo": "#a3262a",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'Rockwell', 'Rockwell Nova', 'Roboto Slab', 'Zilla Slab', 'Sitka Text', Georgia, serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "12px"
+  },
+  "pares_contraste": [
+    [
+      "superficie",
+      "musgo"
+    ],
+    [
+      "superficie",
+      "musgo-escuro"
+    ],
+    [
+      "papel",
+      "tinta"
+    ],
+    [
+      "papel",
+      "neblina"
+    ],
+    [
+      "superficie",
+      "neblina"
+    ],
+    [
+      "papel",
+      "musgo"
+    ],
+    [
+      "carimbo",
+      "carimbo-tinta"
+    ],
+    [
+      "folha",
+      "superficie"
+    ],
+    [
+      "folha",
+      "claro-sobre-escuro"
+    ],
+    [
+      "folha",
+      "carimbo"
+    ],
+    [
+      "musgo",
+      "superficie"
+    ],
+    [
+      "musgo",
+      "carimbo"
+    ],
+    [
+      "wa",
+      "superficie"
+    ],
+    [
+      "superficie",
+      "perigo"
+    ],
+    [
+      "superficie",
+      "aviso"
+    ],
+    [
+      "superficie",
+      "borda-campo"
+    ]
+  ],
+  "foto_hero": {
+    "arquivo": "vet-gondola",
+    "alt": "Painel perfurado de loja com coleiras, guias, escovas e brinquedos sem marca pendurados em ganchos"
+  }
+}

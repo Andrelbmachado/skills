@@ -1,0 +1,6 @@
+.env
+audio/cache/
+audio/asr/
+motion-capture/
+out/
+audio/.bin/

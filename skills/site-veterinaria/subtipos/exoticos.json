@@ -1,0 +1,133 @@
+{
+  "nome": "exoticos",
+  "descricao": "Pets silvestres e exóticos (aves, répteis, pequenos mamíferos, ferrets) além de cães e gatos. Receita do site 2 (Espaço Veterinário).",
+  "vitrine": {
+    "horario_com_fonte": true,
+    "quadro_especies": {
+      "titulo": "Quem atendemos",
+      "rotulo_servico": "Serviço: ",
+      "itens": [
+        {
+          "rotulo": "Aves",
+          "busca": [
+            "aves",
+            "ave"
+          ],
+          "icone": "pena"
+        },
+        {
+          "rotulo": "Répteis",
+          "busca": [
+            "repteis",
+            "reptil"
+          ],
+          "icone": "escama"
+        },
+        {
+          "rotulo": "Pequenos mamíferos de companhia",
+          "busca": [
+            "pequenos mamiferos de companhia",
+            "pequenos mamiferos"
+          ],
+          "icone": "pata"
+        },
+        {
+          "rotulo": "Ferrets",
+          "busca": [
+            "ferrets",
+            "ferret"
+          ],
+          "icone": "pata"
+        },
+        {
+          "rotulo": "Cães",
+          "busca": [
+            "caes",
+            "cao"
+          ],
+          "icone": "pata"
+        },
+        {
+          "rotulo": "Gatos",
+          "busca": [
+            "gatos",
+            "gato"
+          ],
+          "icone": "pata"
+        }
+      ]
+    }
+  },
+  "painel": {
+    "especies": [
+      "Cão",
+      "Gato",
+      "Ave",
+      "Réptil",
+      "Anfíbio",
+      "Coelho",
+      "Roedor",
+      "Furão (ferret)",
+      "Outro pequeno mamífero",
+      "Outro silvestre ou exótico"
+    ],
+    "sexos": [
+      "Macho",
+      "Fêmea",
+      "Indeterminado"
+    ],
+    "pesoEmGramas": true,
+    "rotulos": {
+      "raca": "Raça, variedade ou espécie (nome popular)",
+      "microchip": "Microchip ou anilha",
+      "nascimento": "Nascimento ou eclosão (aproximado)"
+    },
+    "camposPet": [
+      {
+        "nome": "ambiente",
+        "curto": "Ambiente",
+        "rotulo": "Ambiente (recinto, temperatura, umidade, iluminação, substrato)",
+        "tipo": "textarea",
+        "linhas": 2
+      },
+      {
+        "nome": "dieta",
+        "curto": "Dieta",
+        "rotulo": "Dieta (o que come, frequência, suplementos)",
+        "tipo": "textarea",
+        "linhas": 2
+      },
+      {
+        "nome": "manejo",
+        "curto": "Manejo",
+        "rotulo": "Manejo (limpeza do recinto, convivência com outros animais, rotina)",
+        "tipo": "textarea",
+        "linhas": 2
+      }
+    ],
+    "camposProntuario": [
+      {
+        "nome": "ambiente",
+        "curto": "Ambiente",
+        "rotulo": "Ambiente relatado (recinto, temperatura, umidade, iluminação)",
+        "tipo": "textarea",
+        "linhas": 2
+      },
+      {
+        "nome": "dieta",
+        "curto": "Dieta",
+        "rotulo": "Dieta relatada",
+        "tipo": "textarea",
+        "linhas": 2
+      },
+      {
+        "nome": "manejo",
+        "curto": "Manejo",
+        "rotulo": "Manejo relatado",
+        "tipo": "textarea",
+        "linhas": 2
+      }
+    ]
+  },
+  "resumo_painel": "Cadastro de pets com espécies amplas (aves, répteis, pequenos mamíferos, ferrets, cães e gatos), peso em gramas e campos de ambiente, dieta e manejo no cadastro e no prontuário."
+}

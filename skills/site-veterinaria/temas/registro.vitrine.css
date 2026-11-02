@@ -1,0 +1,147 @@
+/* registro.vitrine.css: identidade "Registro" (site 9, clínica de bairro com seis serviços e só telefone fixo: Ishizuka).
+   Entra DEPOIS de components/vitrine.base.css e movimento.css (vira o final de assets/style.css) e sobrepõe o chão liso.
+   Ideia: o LIVRO DE REGISTRO. O que o tutor leva desta clínica é a lista do que ela faz (seis serviços citados nos guias), o endereço e o número para ligar; o hero é UMA folha de
+   livro (margem dupla em carmim à esquerda, uma fita marcadora que sai pelo topo) com o título, a apresentação, os dois atalhos do primeiro toque e, em linhas de lançamento,
+   o número como texto, o endereço e o horário. As seções ganham um marcador de fita no título e os serviços são lançamentos numerados na margem (01, 02...). Carmim, ameixa-escuro e
+   azul de pauta sobre cinza-claro; título em serifa de livro (Charter); cantos de 6px; só o fio da folha de baixo como sombra; sem rótulo em caixa-alta. NÃO tem selo de urgência,
+   relógio, foto da clínica nem área de atendimento. Uma animação: a fita desce e assenta uma vez; prefers-reduced-motion desliga.
+   v1.5 (PEDIDO_DESIGN_4): uma camada SUTIL de pedra e montanha, sem nada literal: o papel ganha fibra muito leve e tom de pedra clara; no pé do hero, três camadas suaves de
+   montanha quase transparentes; no canto da folha, círculos finos como areia rastelada em volta de uma pedra; sob os títulos, três linhas de areia; mais respiro em tudo; a nota do
+   Google vira um selo carmim. Nenhum texto novo: a referência é só de forma e de cor.
+   Classes do hero levam o prefixo rg- (o chão liso tem .nota, .ficha, .placa... e uma colisão de nome já custou um dia). A fita e a margem são decoração (aria-hidden ou pseudo-elemento). */
+
+body { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .31 0 0 0 0 .3 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E") var(--papel); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } } /* os atalhos do hero descem até a seção com calma */
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 4px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .topo :focus-visible, .faixa :focus-visible { outline-color: var(--carimbo); }
+
+/* ---------- tipografia: serifa de livro, peso 700 ---------- */
+h1, h2, h3 { font-weight: 700; letter-spacing: -.005em; line-height: 1.14; }
+h1 { font-size: clamp(1.75rem, 1.15rem + 2.7vw, 3rem); }
+h2 { font-size: clamp(1.45rem, 1.15rem + 1.3vw, 2.15rem); }
+h3 { font-size: 1.3rem; }
+.texto p { line-height: 1.8; }
+.secao { padding: clamp(72px, 9vw, 112px) 0; } /* respiro: as seções afastadas, a leitura sem pressa */
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+.btn { border-radius: var(--raio); }
+.btn-segundo { background: transparent; border-color: var(--folha); color: var(--folha); }
+.btn-segundo:hover { background: var(--folha); border-color: var(--folha); color: #fff; }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo, .faixa .btn-segundo { background: transparent; border-color: var(--carimbo); color: var(--carimbo); }
+.escuro .btn-segundo:hover, .faixa .btn-segundo:hover { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.escuro .btn-terciario, .faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover, .faixa .btn-terciario:hover { background: transparent; border-color: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- topo: ameixa, a marca é a folha; a página atual é uma aba clara ---------- */
+.topo { background: var(--folha); border-bottom: 5px solid var(--musgo); }
+.marca, .marca:hover { color: #fff; }
+.marca { font: 700 1.3rem/1.1 var(--fonte-titulo); }
+.marca svg { width: 36px; height: 36px; color: var(--carimbo); }
+.menu a { color: var(--claro-sobre-escuro); border-radius: 6px 6px 0 0; }
+.menu a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+.menu a[aria-current="page"] { background: var(--papel); color: var(--folha); }
+/* 320px: marca e abas precisam caber em 288px sem rolagem horizontal */
+@media (max-width: 359px) {
+  .marca { font-size: 1.1rem; gap: 6px; } .marca svg { width: 30px; height: 30px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero: a folha do livro de registro ---------- */
+.hero--registro { isolation: isolate; padding: 44px 0 92px; overflow: visible; background-color: transparent; }
+/* as camadas de montanha no pé do hero: três silhuetas suaves, quase transparentes, atrás da folha (decoração: pseudo-elemento, sem clique) */
+.hero--registro::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: min(46%, 260px); z-index: -1; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%232b0d18'%3E%3Cpath fill-opacity='.03' d='M0 150C170 92 300 128 460 84S760 38 905 96 1110 66 1200 98V220H0Z'/%3E%3Cpath fill-opacity='.035' d='M0 182C130 150 250 168 382 146S604 118 728 158 978 136 1200 168V220H0Z'/%3E%3Cpath fill-opacity='.04' d='M0 208C210 196 420 214 642 202S1004 194 1200 208V220H0Z'/%3E%3C/g%3E%3C/svg%3E") center bottom / 100% 100% no-repeat; }
+/* a folha: o fio por baixo é a folha seguinte do livro (sem desfoque); a margem dupla é o ::before */
+.rg-folha { position: relative; isolation: isolate; display: grid; gap: 22px; padding: 68px 24px 32px 56px; background-color: var(--superficie); border: 1px solid var(--linha); border-radius: 6px 6px 16px 16px; box-shadow: 0 8px 0 -2px var(--superficie), 0 9px 0 -2px var(--linha); }
+.rg-folha::before { content: ""; position: absolute; top: 0; bottom: 0; left: 26px; width: 6px; border-left: 1px solid var(--musgo); border-right: 1px solid var(--musgo); pointer-events: none; }
+/* no canto de baixo da folha, círculos finos de areia rastelada em volta de uma pedra (atrás do texto, quase transparentes) */
+.rg-folha::after { content: ""; position: absolute; right: 0; bottom: 0; width: min(62%, 280px); aspect-ratio: 7 / 5; z-index: -1; border-radius: 0 0 16px 0; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 200'%3E%3Cg fill='none' stroke='%232b0d18' stroke-opacity='.07'%3E%3Ccircle cx='280' cy='200' r='54'/%3E%3Ccircle cx='280' cy='200' r='82'/%3E%3Ccircle cx='280' cy='200' r='110'/%3E%3Ccircle cx='280' cy='200' r='138'/%3E%3Ccircle cx='280' cy='200' r='166'/%3E%3C/g%3E%3Cellipse cx='272' cy='196' rx='36' ry='26' fill='%232b0d18' fill-opacity='.05'/%3E%3C/svg%3E") right bottom / 100% 100% no-repeat; }
+.rg-folha > * { min-width: 0; }
+/* a fita marcadora: sai pelo topo da folha e termina em V (o triângulo na cor da folha recorta a ponta) */
+.rg-fita { position: absolute; top: -16px; right: 26px; width: 34px; height: 70px; background-color: var(--musgo); animation: rg-pender .8s ease-out both; pointer-events: none; }
+.rg-fita::after { content: ""; position: absolute; left: 0; bottom: 0; border-left: 17px solid transparent; border-right: 17px solid transparent; border-bottom: 16px solid var(--superficie); }
+@keyframes rg-pender { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: none; } }
+.hero--registro h1 { max-width: 20ch; color: var(--folha); }
+.hero--registro .rg-lead { margin: 0; max-width: 44ch; font-size: 1.08rem; line-height: 1.7; color: var(--tinta); }
+
+/* os dois atalhos do primeiro toque: Ver serviços (cheio) e Onde fica (só o contorno) */
+.rg-acoes { display: grid; gap: 10px; align-content: start; }
+.rg-botao { min-height: 54px; font-size: 1.08rem; justify-content: flex-start; padding-inline: 18px; overflow-wrap: anywhere; }
+.rg-botao--onde { background: transparent; color: var(--musgo); }
+.rg-botao--onde:hover { background: var(--musgo); color: #fff; }
+
+/* as linhas de lançamento: número, endereço e horário, em texto, com a régua de pauta */
+.rg-linhas { list-style: none; margin: 4px 0 0; padding: 0; display: grid; border-top: 2px solid var(--folha); }
+.rg-linha { display: grid; gap: 2px; padding: 11px 0 12px; border-bottom: 1px solid var(--linha); color: var(--tinta); }
+.rg-rotulo { display: flex; align-items: center; gap: 8px; color: var(--neblina); }
+.rg-rotulo b { font: 600 .92rem/1.2 var(--fonte-corpo); letter-spacing: 0; }
+.rg-rotulo svg { width: 18px; height: 18px; fill: currentColor; color: var(--musgo); flex: none; }
+.rg-valor { font: 600 1.05rem/1.4 var(--fonte-corpo); overflow-wrap: anywhere; }
+/* o número de contato é o dado que mais se procura: maior, na fonte do corpo (os algarismos da serifa de reserva, Georgia, são de texto e se confundem) */
+.rg-linha--numero .rg-valor { font-size: 1.55rem; font-weight: 800; line-height: 1.2; letter-spacing: .01em; color: var(--folha); font-variant-numeric: lining-nums tabular-nums; }
+.rg-pe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+@media (max-width: 899px) { body:has(.wa-flutuante) .hero--registro .rg-lead, body:has(.wa-flutuante) .rg-valor { padding-right: 52px; } body:has(.wa-flutuante) .rg-linha--numero .rg-valor { padding-right: 0; } } /* o WhatsApp flutuante (quando há) não cobre o fim das linhas; sem ele (só telefone fixo) a linha usa a largura toda */
+@media (max-width: 359px) { .rg-folha { padding: 62px 18px 26px 46px; } .rg-folha::before { left: 20px; } .hero--registro { padding-top: 24px; } .rg-linha--numero .rg-valor { font-size: 1.4rem; } }
+@media (min-width: 900px) {
+  .hero--registro { padding: 80px 0 140px; }
+  .rg-folha { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); column-gap: 64px; row-gap: 36px; align-content: start; padding: 88px 64px 52px 96px; }
+  .rg-folha::before { left: 44px; }
+  .rg-fita { right: 56px; width: 40px; height: 82px; } .rg-fita::after { border-left-width: 20px; border-right-width: 20px; border-bottom-width: 18px; }
+  .rg-folha > h1 { grid-column: 1; grid-row: 1; }
+  .hero--registro .rg-lead { grid-column: 2; grid-row: 1; align-self: end; font-size: 1.15rem; padding-right: 0; }
+  .rg-acoes { grid-column: 1; grid-row: 2; }
+  .rg-linhas { grid-column: 2; grid-row: 2; margin-top: 0; }
+  .rg-pe { grid-column: 1 / -1; grid-row: 3; }
+  .rg-valor { padding-right: 0; }
+}
+
+/* selo da nota do Google (v1.5): um selo carmim pequeno, de cantos levemente arredondados, a única peça de cor cheia na folha além do botão (não é selo de qualidade: é a nota e o link para o Perfil) */
+.carimbo { width: auto; height: auto; flex: none; position: static; display: flex; align-items: baseline; gap: 8px; padding: 7px 14px 8px; background-color: var(--musgo); color: #fff; border: 0; border-radius: 4px; }
+.carimbo:hover { color: #fff; background-color: var(--musgo-escuro); }
+.carimbo b { font: 800 1.45rem/1 var(--fonte-corpo); }
+.carimbo span { font-size: .78rem; margin-top: 0; }
+.ficha .carimbo { display: inline-flex; margin: 0 0 14px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos"): outra folha do livro, com a margem dupla ---------- */
+.ficha { padding: 24px 22px 14px 54px; background: var(--superficie); border: 1px solid var(--linha); border-radius: 4px 4px 10px 10px; }
+.ficha::before { content: ""; position: absolute; top: 0; bottom: 0; left: 22px; width: 7px; border-left: 2px solid var(--musgo); border-right: 2px solid var(--musgo); pointer-events: none; }
+.ficha h2, .ficha h3 { font-size: 1.45rem; }
+.ficha a:not(.carimbo) { color: var(--musgo); }
+
+/* ---------- seções: o título leva o marcador de fita; os serviços são lançamentos numerados ---------- */
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+/* sob o título, três linhas finas de areia rastelada (no lugar da fita cheia da 1.3) */
+.secao-cabeca h2::after { content: ""; display: block; width: 132px; height: 14px; margin-top: 14px; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 16'%3E%3Cg fill='none' stroke='%235a4a53' stroke-opacity='.5' stroke-linecap='round'%3E%3Cpath d='M1 3C40 3 62 1.5 98 3S146 4.5 159 3.5'/%3E%3Cpath d='M1 8C38 8 64 6.5 100 8S144 9.5 152 8.5'/%3E%3Cpath d='M1 13C36 13 66 11.5 102 13S136 14 142 13.5'/%3E%3C/g%3E%3C/svg%3E") left center / 100% 100% no-repeat; }
+.servicos--fotos { counter-reset: lancamento; }
+.servico { counter-increment: lancamento; padding: 0 0 24px; margin-bottom: 34px; background-color: var(--superficie); border: 1px solid var(--linha); border-top: 2px solid var(--musgo); border-radius: 4px 4px 16px 16px; align-content: start; overflow: hidden; }
+.secao--clara .servico { background-color: var(--papel); }
+.servico > * { margin-inline: 20px; }
+.servico > .ilustra { margin: 0 0 4px; border-radius: 0; }
+.servico .icone { margin-right: 0; width: 38px; height: 50px; padding-bottom: 9px; background-color: var(--musgo); color: #fff; align-self: start; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); }
+.servico .icone svg { display: none; }
+.servico .icone::before { content: counter(lancamento, decimal-leading-zero); font: 800 1rem/1 var(--fonte-corpo); letter-spacing: .02em; font-variant-numeric: lining-nums; }
+.servico h3 { margin-left: 0; font-size: 1.3rem; align-self: center; }
+@media (min-width: 800px) { .servico { grid-template-columns: auto minmax(0, 1fr); } .servico h3 { font-size: 1.4rem; } }
+.passos li::before { background-color: var(--musgo); color: #fff; border-radius: 0; font: 800 1.2rem/38px var(--fonte-corpo); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%); }
+.passos li:not(:last-child)::after { border-color: var(--linha); }
+.passos strong { font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.15rem; }
+.lista-simples li::before { width: 9px; height: 9px; top: .6em; background-color: var(--musgo); transform: rotate(45deg); }
+
+/* ---------- faixas escuras ---------- */
+.faixa { background-color: var(--musgo); border-top: 6px solid var(--folha); }
+.faixa .btn { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.faixa .btn:hover { background: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: var(--folha); border-bottom: 5px solid var(--musgo); padding: 44px 0 40px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(1.7rem, 1.2rem + 2.6vw, 2.8rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.mapa iframe { border: 1px solid var(--linha); border-radius: 4px; }
+.galeria img { border: 1px solid var(--linha); border-radius: 4px; }
+
+/* ---------- rodapé ---------- */
+.rodape { background: var(--folha); border-top: 6px solid var(--musgo); }

@@ -1,0 +1,50 @@
+/* sinalizacao.painel.css: identidade "Sinalização" aplicada ao painel. Entra DEPOIS de painel/painel.css.
+   O painel herda as cores dos tokens; aqui ficam os detalhes que eram da primeira identidade (picote, sombra amarela, verdes fixos)
+   e o jeito de placa: cantos retos, faixas de cor e um friso âmbar. */
+:root { --chevrons-painel: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M12 8l14 14-14 14' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='4' stroke-linecap='square'/%3E%3C/svg%3E"); }
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 2px; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -.01em; }
+.btn, .btn-peq { border-radius: var(--raio); }
+.chip-botao { border-radius: var(--raio); }
+.chip { border-radius: 3px; }
+
+/* entrada e aviso de módulo: fundo escuro com setas, placa branca com friso âmbar */
+.painel-login, .painel-aviso { background: var(--folha) var(--chevrons-painel); background-size: 44px 44px; }
+.login-cartao { border: 0; border-top: 8px solid var(--carimbo); border-radius: var(--raio); padding: 24px 24px 22px; box-shadow: none; }
+.login-cartao::before { content: none; }
+.login-marca { color: var(--musgo); font-weight: 700; }
+.aviso-modulo { border: 0; border-top: 8px solid var(--carimbo); border-radius: var(--raio); box-shadow: none; }
+.aviso-limite { border-top-style: solid; border-top-color: var(--linha); }
+.login-cartao :focus-visible, .aviso-modulo :focus-visible { outline-color: var(--folha); }
+
+/* menu lateral: friso âmbar no topo, item ativo em âmbar */
+.lateral { border-top: 6px solid var(--carimbo); }
+.lateral nav a { border-radius: var(--raio); }
+.lateral nav a[aria-current="page"] { font-weight: 700; }
+.topo-app { border-bottom: 4px solid var(--carimbo); }
+
+/* blocos: cantos retos e faixa de cor à esquerda nos cartões de resumo */
+.bloco, .tabela-wrap, .vazio, .painel-vazio, .registro, .grade-dia { border-radius: var(--raio); }
+.resumo-card { border-radius: var(--raio); border-left: 6px solid var(--musgo); }
+.resumo-aviso { border-left-color: #7a4b00; }
+.leito { border-radius: var(--raio); border-left: 6px solid var(--linha); }
+.leito--ocupado { border-left-color: var(--musgo); }
+.leito .chip { justify-self: start; }
+dialog.modal { border-radius: var(--raio); }
+.modal-topo { border-radius: 2px 2px 0 0; }
+.aba { border-radius: 2px 2px 0 0; }
+
+/* verdes fixos da primeira identidade */
+.fundo-menu, .menu-aberto .fundo-menu { background: rgba(15, 27, 82, .55); }
+dialog.modal::backdrop { background: rgba(15, 27, 82, .62); }
+.toast { box-shadow: 0 6px 20px rgba(13, 19, 38, .4); }
+.tabela tr.clicavel:hover td { background: #eef2fb; }
+.bloco-consulta { background: #edf1fa; }
+.bloco-consulta.st-confirmada { background: #dbe8f5; } /* a cor do estado vence a do fundo comum (sem isto o status sumia) */
+.bloco-consulta.st-em_atendimento { background: #fbeab8; }
+.bloco-consulta.st-concluida { background: #d6ecdf; }
+.chip-neutro { background: #e3e8f3; color: #232e4a; }
+.chip-info { background: #dbe5fb; color: #14306f; }
+.lateral nav a:hover { background: rgba(255, 255, 255, .14); }
+.resumo-forte { background: var(--folha); }

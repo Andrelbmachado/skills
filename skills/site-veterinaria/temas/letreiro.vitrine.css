@@ -1,0 +1,125 @@
+/* letreiro.vitrine.css: identidade "Letreiro" (site 7, clínica de bairro: Del Vet).
+   Entra DEPOIS de components/vitrine.base.css (vira o final de assets/style.css) e sobrepõe o chão liso.
+   Ideia: o TELEFONE como letreiro. A clínica só tem telefone fixo (o WhatsApp não é confirmado), então o número é o dado que mais importa e o tema o pinta como se pinta uma parede:
+   uma faixa de uma borda à outra, com friso fino, e o número em letras enormes. Embaixo, em linhas de letreiro (barra grossa à esquerda), Como chegar e o horário.
+   Uma coluna só: a ordem do DOM é a ordem visual no celular e no desktop (o hero `dupla` não consegue isso). Verde-oliva e rosa-claro sobre cinza esverdeado; título em grotesca pesada
+   do sistema (Arial Black); cantos de 4px; sem sombra, sem cartões iguais, sem rótulo em caixa-alta. NÃO tem selo de urgência, relógio, área de atendimento nem foto.
+   Uma animação: o número é pintado (entra da esquerda) uma vez; prefers-reduced-motion desliga.
+   Classes do hero e do ornamento levam o prefixo lt- (o chão liso tem .nota, .ficha, .placa... e uma colisão de nome já custou um dia). Todo gradiente tem cor sólida por baixo. */
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 3px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .topo :focus-visible, .lt-faixa :focus-visible, .faixa :focus-visible { outline-color: var(--carimbo); }
+
+/* ---------- tipografia: grotesca pesada, uma só espessura ---------- */
+h1, h2, h3 { font-weight: 900; letter-spacing: -.01em; line-height: 1.14; }
+h1 { font-size: clamp(1.55rem, 1.05rem + 2.4vw, 2.7rem); }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.3vw, 2.1rem); }
+h3 { font-size: 1.15rem; }
+.texto p { line-height: 1.7; }
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+.btn { border-radius: var(--raio); }
+.btn-segundo { background: transparent; border-color: var(--folha); color: var(--folha); }
+.btn-segundo:hover { background: var(--folha); border-color: var(--folha); color: #fff; }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo, .faixa .btn-segundo { background: transparent; border-color: var(--carimbo); color: var(--carimbo); }
+.escuro .btn-segundo:hover, .faixa .btn-segundo:hover { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.escuro .btn-terciario, .faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover, .faixa .btn-terciario:hover { background: transparent; border-color: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- topo: verde-oliva escuro, a marca é a placa sobre dois postes ---------- */
+.topo { background: var(--folha); border-bottom: 5px solid var(--musgo); }
+.marca, .marca:hover { color: #fff; }
+.marca { font: 900 1.3rem/1 var(--fonte-titulo); letter-spacing: -.02em; }
+.marca svg { width: 40px; height: 40px; color: var(--carimbo); }
+.menu a { color: var(--claro-sobre-escuro); border-bottom: 4px solid transparent; }
+.menu a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+.menu a[aria-current="page"] { background: transparent; color: #fff; border-bottom-color: var(--carimbo); }
+/* 320px: marca, botão e abas precisam caber em 288px sem rolagem horizontal */
+@media (max-width: 359px) {
+  .marca { font-size: 1.1rem; gap: 6px; } .marca svg { width: 32px; height: 32px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero: o telefone como letreiro ---------- */
+.hero--letreiro { padding: 0; background: var(--papel); overflow: visible; }
+.lt-topo { padding: 30px 0 28px; }
+.hero--letreiro h1 { max-width: 19ch; color: var(--folha); }
+/* a faixa pintada: cor de ação de uma borda à outra, barra grossa em cima e embaixo e um friso fino de rosa-claro dentro de cada barra */
+.lt-faixa { position: relative; background-color: var(--musgo); border-block: 8px solid var(--folha); padding: 24px 0 26px; }
+.lt-faixa::before, .lt-faixa::after { content: ""; position: absolute; left: 0; right: 0; height: 2px; background-color: var(--carimbo); }
+.lt-faixa::before { top: 8px; } .lt-faixa::after { bottom: 8px; }
+.lt-fone { display: block; position: relative; z-index: 1; color: #fff; text-decoration: none; padding: 2px 0; }
+.lt-chamada { display: flex; align-items: center; gap: 10px; color: var(--carimbo); font: 700 1.05rem/1.2 var(--fonte-corpo); }
+.lt-chamada svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.lt-numero { display: block; margin-top: 6px; font: 900 clamp(2rem, 11vw, 6.2rem)/1.04 var(--fonte-titulo); letter-spacing: -.02em; font-variant-numeric: tabular-nums; animation: lt-pintar .6s cubic-bezier(.2, .8, .3, 1) both; }
+.lt-grupo { white-space: nowrap; } /* o número só quebra entre o DDD e o resto, nunca no meio dos dígitos */
+@keyframes lt-pintar { from { transform: translateX(-18px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* as linhas do letreiro: barra grossa à esquerda, rótulo em letra pesada e o dado */
+.lt-corpo { display: grid; gap: 24px; padding: 28px 0 30px; }
+.lt-corpo > * { min-width: 0; }
+.lt-linhas { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.lt-linha { display: grid; gap: 4px; padding: 14px 16px 14px 18px; border-left: 8px solid var(--musgo); background: var(--superficie); color: var(--tinta); text-decoration: none; }
+a.lt-linha:hover { background: #ebeee0; color: var(--tinta); }
+.lt-linha--horario { border-left-color: var(--folha); }
+.lt-rotulo { display: flex; align-items: center; gap: 8px; color: var(--folha); }
+.lt-rotulo b { font: 900 1rem/1.2 var(--fonte-titulo); letter-spacing: 0; }
+.lt-rotulo svg { width: 20px; height: 20px; fill: currentColor; color: var(--musgo); flex: none; }
+.lt-valor { font-size: 1.05rem; line-height: 1.4; font-weight: 600; overflow-wrap: anywhere; }
+.hero--letreiro .lt-lead { margin: 0; max-width: 40ch; } /* dois níveis: `.hero .destaque` do chão liso tem 0,2,0 e vencia `.lt-lead` (0,1,0): margem, largura e tamanho do tema eram ignorados */
+@media (max-width: 899px) { .hero--letreiro .lt-lead { padding-right: 52px; } } /* o Ligar flutuante não cobre o fim das linhas */
+@media (min-width: 900px) {
+  .lt-topo { padding: 54px 0 40px; }
+  .lt-faixa { padding: 34px 0 38px; }
+  .lt-corpo { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 56px; align-items: start; padding: 42px 0 52px; }
+  .hero--letreiro .lt-lead { font-size: 1.25rem; }
+}
+/* o pé: a nota do Google e o WhatsApp (só tentativa) */
+.lt-pe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding-bottom: 40px; margin-top: -8px; }
+
+/* selo da nota do Google: uma plaquinha retangular com moldura (não é selo de qualidade: é a nota e o link para o Perfil) */
+.carimbo { width: auto; height: auto; flex: none; position: static; display: flex; align-items: baseline; gap: 8px; padding: 6px 14px 7px; border: 3px solid var(--folha); border-radius: var(--raio); }
+.carimbo b { font: 900 1.5rem/1 var(--fonte-titulo); }
+.carimbo span { font-size: .78rem; margin-top: 0; }
+.ficha .carimbo { display: inline-flex; margin: 0 0 14px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos") ---------- */
+.ficha { padding: 22px 22px 14px; background: var(--superficie); border: 1px solid var(--linha); border-left: 8px solid var(--musgo); border-radius: 2px; }
+.ficha h2, .ficha h3 { font-size: 1.4rem; }
+.ficha a:not(.carimbo) { color: var(--musgo); }
+
+/* ---------- seções ---------- */
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+.secao-cabeca h2 { display: inline-block; padding-bottom: 10px; border-bottom: 8px solid var(--musgo); }
+.servicos { display: grid; }
+.servico { border-top: 3px solid var(--folha); padding: 24px 0 28px; }
+.servico .icone { width: 46px; height: 46px; background: var(--folha); color: var(--carimbo); border-radius: 0; }
+.servico .icone svg { width: 26px; height: 26px; }
+.servico h3 { font-size: 1.3rem; }
+@media (min-width: 800px) { .servico { grid-template-columns: 3.4rem minmax(0, 1fr) minmax(0, 1.2fr); } .servico h3 { font-size: 1.45rem; } }
+.passos li::before { background: var(--folha); color: var(--carimbo); border-radius: 0; font-family: var(--fonte-titulo); font-weight: 900; }
+.passos li:not(:last-child)::after { border-color: var(--musgo); border-width: 4px; }
+.passos strong { font-family: var(--fonte-titulo); font-weight: 900; font-size: 1.1rem; }
+.lista-simples li::before { width: 12px; height: 12px; top: .5em; background: var(--musgo); border-radius: 0; }
+
+/* ---------- faixas escuras (a mesma faixa pintada do hero, para fechar a página) ---------- */
+.faixa { background-color: var(--musgo); border-block: 8px solid var(--folha); }
+.faixa .btn { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.faixa .btn:hover { background: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: var(--folha); border-bottom: 8px solid var(--musgo); padding: 44px 0 40px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(1.7rem, 1.2rem + 2.6vw, 2.8rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.formulario { border: 1px solid var(--linha); border-top: 8px solid var(--musgo); border-radius: var(--raio); }
+.formulario input, .formulario select, .formulario textarea { border-radius: var(--raio); }
+.mapa iframe { border: 3px solid var(--folha); border-radius: var(--raio); }
+.galeria img { border: 3px solid var(--folha); border-radius: var(--raio); }
+
+/* ---------- rodapé e botão flutuante ---------- */
+.rodape { background: var(--folha); border-top: 8px solid var(--musgo); }
+/* o botão flutua sobre o papel claro E sobre o rodapé escuro: o anel de foco precisa de 3:1 nos dois */

@@ -1,0 +1,46 @@
+/* letreiro.painel.css: identidade "Letreiro" aplicada ao painel. Entra DEPOIS de painel/painel.css.
+   O painel herda as cores dos tokens; aqui ficam os detalhes de forma: a entrada em verde-oliva escuro com a faixa pintada atrás do cartão, o menu com o item ativo em rosa-claro,
+   a barra grossa à esquerda nos blocos de resumo e os títulos em grotesca pesada. Sem sombra decorativa. */
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 2px; }
+h1, h2, h3 { font-weight: 900; letter-spacing: -.01em; }
+.btn, .btn-peq, .chip-botao { border-radius: var(--raio); }
+.chip { border-radius: 3px; }
+
+/* entrada e aviso de módulo: verde-oliva escuro, a faixa pintada de uma borda à outra atrás do cartão branco */
+.painel-login, .painel-aviso { background-color: var(--folha); }
+.painel-login::before, .painel-aviso::before { content: ""; position: fixed; left: 0; right: 0; top: 30%; height: 150px; z-index: 0; background-color: var(--musgo); border-block: 8px solid #2f380f; pointer-events: none; }
+#login-raiz { position: relative; z-index: 1; }
+.aviso-modulo { position: relative; z-index: 1; }
+.login-cartao, .aviso-modulo { position: relative; z-index: 1; border: 0; border-top: 8px solid var(--carimbo); border-radius: var(--raio); box-shadow: none; }
+.login-cartao { padding: 28px 24px 22px; }
+.login-cartao::before { content: none; }
+.login-marca { color: var(--musgo); font-weight: 900; }
+.aviso-limite { border-top-style: solid; border-top-color: var(--linha); }
+.login-cartao :focus-visible, .aviso-modulo :focus-visible { outline-color: var(--folha); }
+
+/* menu lateral e topo do celular */
+.lateral { border-top: 8px solid var(--musgo); }
+.lateral nav a { border-radius: var(--raio); }
+.lateral nav a[aria-current="page"] { font-weight: 700; }
+.lateral nav a:hover { background: rgba(255, 255, 255, .12); }
+.topo-app { border-bottom: 5px solid var(--musgo); }
+
+/* blocos: o resumo tem a barra grossa à esquerda */
+.bloco, .tabela-wrap, .vazio, .painel-vazio, .registro, .grade-dia, .nota-restrita { border-radius: var(--raio); }
+.resumo-card { border-radius: var(--raio); border-left: 8px solid var(--musgo); }
+.resumo-aviso { border-left-color: #7a4b00; }
+.resumo-forte { background: var(--folha); border-left-color: var(--carimbo); }
+dialog.modal { border-radius: var(--raio); border-color: var(--folha); }
+.modal-topo { border-radius: 2px 2px 0 0; }
+.aba { border-radius: 3px 3px 0 0; }
+
+/* cores fixas da primeira identidade (verdes e cinzas) trocadas pelas do verde-oliva */
+.fundo-menu, .menu-aberto .fundo-menu { background: rgba(35, 42, 10, .6); }
+dialog.modal::backdrop { background: rgba(35, 42, 10, .66); }
+.toast { box-shadow: 0 6px 20px rgba(27, 32, 8, .4); }
+.tabela tr.clicavel:hover td { background: #eef0e4; }
+.bloco-consulta { background: #e9ecdd; }
+.bloco-consulta.st-confirmada { background: #dbe8f5; } /* a cor do estado vence a do fundo comum (sem isto o status sumia) */
+.bloco-consulta.st-em_atendimento { background: #fbeab8; }
+.bloco-consulta.st-concluida { background: #d6ecdf; border-color: #0b5a3a; }
+.chip-neutro { background: #e5e9d6; color: #232a0a; }

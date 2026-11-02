@@ -1,0 +1,20 @@
+{
+  "subtipo": "geral",
+  "tema": "numero",
+  "pendencias": [
+    "Telefone: o pacote usa só o celular (15) 99850-7950, o do Perfil do Google e do guia Sorocaba Fácil (a página do negócio no guia, https://www.sorocabafacil.com.br/guia/animais/clinica-veterinaria-animal-inc-54-32065, aberta em 22/10/2026, traz esse número, o mesmo endereço e o horário 09:00-19:00). A Receita Federal lista outro número, que NÃO foi usado em lugar nenhum do pacote (a pesquisa já registra a divergência). Confirmar com o negócio qual é o telefone da clínica e qual tem WhatsApp: enquanto a pesquisa não registrar um número como confirmado, o gerador não o trata como WhatsApp.",
+    "Atividades no cadastro da Receita (GuiaPJ, https://guiapj.com.br/consulta-cnpj/19845117000102, aberto em 22/10/2026; o fato não está na pesquisa em data/research): além de atividades veterinárias, consta como atividade secundária o comércio varejista de medicamentos veterinários. A pesquisa e o cadastro do negócio (data/content) NÃO trazem venda de produtos, e nada no pacote a afirma. Confirmar com o negócio se a clínica vende medicamentos ou produtos no balcão.",
+    "Página no Facebook: o guia Sorocaba Fácil indica https://www.facebook.com/animalincinc como \"website\" da clínica. A página não abriu para a conferência (a rede social pediu login), então ela NÃO foi usada e a pesquisa não a registra. Confirmar com o negócio se o Facebook é dele e se quer divulgá-lo.",
+    "Foco de atendimento: a pesquisa pede para confirmar se a clínica atende pets silvestres e exóticos (um perfil de Instagram com o nome da clínica apareceu na busca, mas não pôde ser lido). O pacote não afirma nenhum foco de atendimento (silvestres, exóticos ou outro)."
+  ],
+  "pendencias_vitrine": [
+    "\"Atendimento veterinário para cães e gatos\" (linha Serviços da faixa do início): o texto veio do pedido de design do André de 23/10/2026 (PEDIDO_DESIGN_4) e NÃO tem fonte na pesquisa, que pergunta se o foco do atendimento inclui silvestres e exóticos. Confirmar com o negócio quais animais a clínica atende antes de publicar; para tirar a frase, apague \"hero_servicos\" do perfil do site e gere de novo (a linha volta a mostrar o serviço do cadastro).",
+    "O único serviço do site (\"Atendimento veterinário\") vem do cadastro do guia Sorocaba Fácil, que só classifica a clínica na categoria \"Clínicas Veterinárias\" e não detalha serviços; a vitrine usa o texto do cadastro, que manda falar com a equipe. Com os serviços reais em mãos (vacinas, consultas, cirurgias...), acrescente-os em data/content e gere de novo.",
+    "A placa afixada na imagem do início mostra o número da porta (341) e a rua porque o endereço do cadastro bate com o da Receita (como a pesquisa registra), com o do guia Sorocaba Fácil (página conferida em 22/10/2026) e com o do CSV, que vem do Perfil do Google; os diretórios que listam outro endereço (Rua Monteiro Lobato, 273, Jardim Prestes de Barros) estão registrados na pesquisa e NÃO foram usados. Se o negócio disser que o endereço é outro, o cadastro precisa ser corrigido e o site gerado de novo.",
+    "A imagem do início (um cachorro e um gato sobre uma manta) é ilustrativa e legendada como tal: não é foto da clínica, da equipe nem de pacientes. Com fotos reais do negócio, troque-a."
+  ],
+  "pendencias_gestao": [
+    "O painel deste pacote é o da clínica geral. Se o negócio confirmar que vende medicamentos ou produtos no balcão (ver a atividade secundária da Receita nas pendências), o gerador tem o modelo de clínica com venda no balcão (subtipo clinica_loja) que pode ser ligado como proposta; nada disso foi incluído por conta própria."
+  ],
+  "hero_servicos": "Atendimento veterinário para cães e gatos"
+}

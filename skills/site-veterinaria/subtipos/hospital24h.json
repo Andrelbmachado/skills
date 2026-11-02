@@ -1,0 +1,48 @@
+{
+  "nome": "hospital24h",
+  "descricao": "Clínica ou hospital veterinário com perfil de plantão e urgência. Receita do site 3 (CEDVET). A vitrine põe telefone e \"Como chegar\" no primeiro toque; o painel ganha o módulo de internação (leitos, internados, observações do plantão) e o painel de plantão. A receita NÃO afirma nada sobre o negócio: horário, \"24 horas\" e emergência só aparecem na vitrine se estiverem no JSON do site, com a fonte dele.",
+  "vitrine": {
+    "cta": ["ligar", "como_chegar", "whatsapp"],
+    "horario_com_fonte": true
+  },
+  "painel": {
+    "modulos": ["inicio", "agenda", "tutores", "prontuarios", "internacao", "vacinas", "caixa", "estoque", "equipe", "config"],
+    "matriz": {
+      "dono": { "internacao": "rw" },
+      "veterinario": { "internacao": "rw" }
+    },
+    "colecoesExtras": ["leitos", "internacoes", "evolucoes", "plantoes"],
+    "camposProntuario": [
+      {
+        "nome": "prioridade",
+        "curto": "Prioridade",
+        "rotulo": "Prioridade no atendimento",
+        "tipo": "select",
+        "largura": "meia",
+        "vazio": "Não classificada",
+        "opcoes": [
+          { "valor": "Rotina", "rotulo": "Rotina" },
+          { "valor": "Urgente", "rotulo": "Urgente" },
+          { "valor": "Emergência", "rotulo": "Emergência" }
+        ]
+      }
+    ]
+  },
+  "resumo_painel": "Além das telas de clínica geral, tem Internação e plantão: mapa de leitos, pacientes internados (entrada, responsável, previsão de alta e encerramento), observações do plantão por internação, escala de plantão e folha de passagem de plantão para imprimir. Dono e veterinário acessam; a recepção não vê dados de internação. Observações de plantão geram muitos registros: para volume maior, troque o armazenamento do painel para IndexedDB em assets/site-config.js (painel.armazenamento: \"indexeddb\"). A grade da agenda vem de 08:00 a 18:00; o dono ajusta em Configurações, Agenda, conforme o funcionamento real (o site não afirma horário).",
+  "opcoes": {
+    "recepcao_ve_leitos": {
+      "descricao": "Opção do perfil do site (perfis/<slug>.json → opcoes). A recepção passa a ver quem está em qual leito (paciente, tutor e hora da entrada), sem motivo, situação, previsão de alta, responsável, observações do plantão nem escala. É uma proposta do gerador, a confirmar com o negócio; sem a opção a recepção não acessa a internação (como no site 3). Permissão 'r' em internacao = visão restrita; 'rw' = completa.",
+      "painel": {
+        "matriz": {
+          "recepcao": {
+            "internacao": "r"
+          }
+        }
+      },
+      "resumo_painel": "Além das telas de clínica geral, tem Internação e plantão: mapa de leitos, pacientes internados (entrada, responsável, previsão de alta e encerramento), observações do plantão por internação, escala de plantão e folha de passagem de plantão para imprimir. Dono e veterinário acessam tudo; a recepção vê só o mapa de leitos (quem está em qual leito e desde quando: paciente, tutor e entrada), sem motivo, situação, previsão de alta, responsável, observações nem plantão. Observações de plantão geram muitos registros: para volume maior, troque o armazenamento do painel para IndexedDB em assets/site-config.js (painel.armazenamento: \"indexeddb\"). A grade da agenda vem de 08:00 a 18:00; o dono ajusta em Configurações, Agenda, conforme o funcionamento real (o site não afirma horário).",
+      "pendencias_gestao": [
+        "Visão da recepção na internação: é PROPOSTA do gerador, não foi confirmada com o negócio. A recepção vê quem está em qual leito (paciente, tutor e hora da entrada) para atender tutores e visitas, e nada do que é clínico (motivo, situação, previsão de alta, responsável, observações e plantão). Se o negócio preferir que a recepção não veja a internação, retire \"recepcao_ve_leitos\" de \"opcoes\" no perfil do site e gere de novo. Como todo o painel, é barreira de interface: o dado fica no armazenamento do navegador."
+      ]
+    }
+  }
+}

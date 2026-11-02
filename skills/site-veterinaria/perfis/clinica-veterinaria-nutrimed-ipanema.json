@@ -1,0 +1,11 @@
+{
+  "subtipo": "clinica_loja",
+  "tema": "gondola",
+  "pendencias": [
+    "Só o telefone (15) 99719-7619 (o do Perfil do Google e do guia Sorocaba Fácil) foi usado. O (15) 8105-6263, que consta no guia Clinica.net.br, NÃO foi usado em lugar nenhum; confirmar com o negócio qual é o número principal e se algum deles tem WhatsApp.",
+    "O levantamento dos leads cita uma loja \"Nutrimed Ipanema\" ao lado, com 764 avaliações e sem site. Confirmar se é a mesma operação (o cadastro da empresa tem atividade veterinária e comércio de produtos) ou um negócio à parte; o cadastro não fala dessa loja e não chama a clínica de loja nem de agropet, só repete o serviço \"Medicamentos e produtos para animais\" como está no cadastro."
+  ],
+  "pendencias_vitrine": [
+    "Fotos, preços de produtos e marcas só entram com material do cliente (assets/material.js e assets/img/). Sem material, essas seções não existem no site."
+  ]
+}

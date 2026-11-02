@@ -1,0 +1,43 @@
+/* chapa.painel.css: identidade "Chapa" aplicada ao painel. Entra DEPOIS de painel/painel.css.
+   O painel herda as cores dos tokens; aqui ficam os detalhes de forma: cantos retos, entrada sobre a película escura e régua na borda do menu. */
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 2px; }
+h1, h2, h3 { font-weight: 700; letter-spacing: -.005em; }
+.btn, .btn-peq, .chip-botao { border-radius: var(--raio); }
+.chip { border-radius: 3px; }
+
+/* entrada e aviso de módulo: película escura, cartão claro liso */
+.painel-login, .painel-aviso { background: var(--folha); }
+.login-cartao { border: 0; border-radius: var(--raio); padding: 28px 24px 22px; box-shadow: none; }
+.login-cartao::before { content: none; }
+.login-marca { color: var(--musgo); font-weight: 700; }
+.aviso-modulo { border: 0; border-radius: var(--raio); box-shadow: none; }
+.aviso-limite { border-top-style: solid; border-top-color: var(--linha); }
+.login-cartao :focus-visible, .aviso-modulo :focus-visible { outline-color: var(--folha); }
+
+/* menu lateral: régua na borda, item ativo em gelo */
+.lateral { position: relative; }
+.lateral::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 12px; pointer-events: none; background-repeat: repeat-y; background-position: right top, right top; background-size: 6px 10px, 12px 50px;
+  background-image: linear-gradient(0deg, rgba(191, 230, 255, .35) 1px, transparent 1px), linear-gradient(0deg, rgba(191, 230, 255, .35) 1px, transparent 1px); }
+.lateral nav a { border-radius: var(--raio); }
+.lateral nav a[aria-current="page"] { font-weight: 700; }
+.lateral nav a:hover { background: rgba(191, 230, 255, .12); }
+
+/* blocos de cantos retos */
+.bloco, .tabela-wrap, .vazio, .painel-vazio, .registro, .grade-dia, .leito, .nota-restrita { border-radius: var(--raio); }
+.resumo-card { border-radius: var(--raio); }
+dialog.modal { border-radius: var(--raio); }
+.modal-topo { border-radius: 0; }
+.aba { border-radius: 2px 2px 0 0; }
+
+/* cores fixas da primeira identidade */
+.fundo-menu, .menu-aberto .fundo-menu { background: rgba(20, 28, 38, .55); }
+dialog.modal::backdrop { background: rgba(20, 28, 38, .62); }
+.toast { box-shadow: 0 6px 20px rgba(13, 22, 32, .4); }
+.tabela tr.clicavel:hover td { background: #eef3f7; }
+.bloco-consulta { background: #e9eff5; }
+.bloco-consulta.st-confirmada { background: #dbe8f5; } /* a cor do estado vence a do fundo comum (sem isto o status sumia) */
+.bloco-consulta.st-em_atendimento { background: #fbeab8; }
+.bloco-consulta.st-concluida { background: #d6ecdf; }
+.chip-neutro { background: #e1e8ef; color: #223140; }
+.chip-info { background: #dbe8f5; color: #14324f; }
+.resumo-forte { background: var(--folha); }

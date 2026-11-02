@@ -1,0 +1,68 @@
+[
+ {
+  "key": "analog",
+  "title": "File:Van Gogh - Starry Night - Google Art Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Vincent van Gogh",
+  "date": "1889date QS:P571,+1889-00-00T00:00:00Z/9",
+  "desc": "",
+  "credit": "Google Arts &amp; Culture — bgEuwDxel93-Pg",
+  "size": "44567x35291"
+ },
+ {
+  "key": "comp",
+  "title": "File:Vincent van Gogh - Self-Portrait - Google Art Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Vincent van Gogh",
+  "date": "1889date QS:P571,+1889-00-00T00:00:00Z/9",
+  "desc": "",
+  "credit": "9gFw_1Vou2CkwQ at Google Cultural Institute maximum zoom level",
+  "size": "3142x3820"
+ },
+ {
+  "key": "triad",
+  "title": "File:Piet Mondriaan, 1930 - Mondrian Composition II in Red, Blue, and Yellow.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Piet_Mondriaan,_1930_-_Mondrian_Composition_II_in_Red,_Blue,_and_Yellow.jpg",
+  "license": "Public domain",
+  "artist": "Piet Mondrian",
+  "date": "1930date QS:P571,+1930-00-00T00:00:00Z/9",
+  "desc": "One of Mondrian's best known works, a product of his De Stijl period, Catalobus #B219 per http://pietmondrian.rkdmonographs.nl/1929-1930-b206-b225.html",
+  "credit": "[1]",
+  "size": "5918x6000"
+ },
+ {
+  "key": "split",
+  "title": "File:Vincent van Gogh - Wheatfield with crows - Google Art Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Wheatfield_with_crows_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Vincent van Gogh",
+  "date": "(July 1890 - 1890)",
+  "desc": "",
+  "credit": "dwFdD5AMQfpSew at Google Cultural Institute maximum zoom level",
+  "size": "3508x1669"
+ },
+ {
+  "key": "rect",
+  "title": "File:Van Gogh - The Night Café (1888).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_The_Night_Caf%C3%A9_(1888).jpg",
+  "license": "Public domain",
+  "artist": "Vincent van Gogh",
+  "date": "September 1888",
+  "desc": "",
+  "credit": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. Unknown sourceUnknown so",
+  "size": "7408x5848"
+ },
+ {
+  "key": "square",
+  "title": "File:Paul Gauguin - Arearea - Google Art Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Arearea_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Paul Gauguin",
+  "date": "December 1892",
+  "desc": "",
+  "credit": "nAHq1cbXN_aFlg at Google Cultural Institute maximum zoom level",
+  "size": "7441x5860"
+ }
+]

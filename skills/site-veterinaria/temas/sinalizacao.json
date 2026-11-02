@@ -1,0 +1,62 @@
+{
+  "nome": "sinalizacao",
+  "descricao": "Sinalização de hospital, azul-marinho, cobalto e amarelo. Hero (v1.2, refeito do zero): a cruz da marca vira a janela de uma imagem ilustrativa, com uma cruz amarela deslocada atrás, como placa; CTAs em amarelo escurecido com texto branco; trilho de dados práticos no pé. Nada de selo de urgência nem de relógio de funcionamento. Usado no site 3 (CEDVET, hospital/plantão).",
+  "hero": "cruz",
+  "ornamento": {
+    "marca": "cruz",
+    "servico": "pata",
+    "sprite": ["cruz", "pata", "seta", "fone", "pino", "relogio"],
+    "faixa": null
+  },
+  "favicon": {"fundo": "#2142c7", "cor": "#ffc21a", "simbolo": "cruz"},
+  "css": {"vitrine": "sinalizacao.vitrine.css", "painel": "sinalizacao.painel.css"},
+  "papeis": {
+    "folha": "fundo escuro da marca (faixas, rodapé, menu lateral do painel)",
+    "musgo": "cor de ação e de sinalização (botões, links, placas)",
+    "carimbo": "acento âmbar sobre o escuro ou o cobalto (setas, item ativo do menu, botão na faixa)",
+    "papel": "fundo da página",
+    "superficie": "cartões, formulários e campos"
+  },
+  "tokens": {
+    "folha": "#0f1b52",
+    "musgo": "#2142c7",
+    "musgo-escuro": "#1a34a0",
+    "papel": "#f2f4f8",
+    "superficie": "#ffffff",
+    "tinta": "#0d1326",
+    "neblina": "#4a5468",
+    "linha": "#d3d9e6",
+    "borda-campo": "#68738f",
+    "carimbo": "#ffc21a",
+    "carimbo-tinta": "#0d1326",
+    "claro-sobre-escuro": "#c9d3f2",
+    "wa": "#0f7a4a",
+    "perigo": "#a3262a",
+    "aviso": "#7a4b00",
+    "fonte-titulo": "'DIN Alternate', 'Bahnschrift', 'Frutiger', 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif",
+    "fonte-corpo": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+    "raio": "4px"
+  },
+  "pares_contraste": [
+    ["superficie", "musgo"],
+    ["superficie", "musgo-escuro"],
+    ["papel", "tinta"],
+    ["papel", "neblina"],
+    ["superficie", "neblina"],
+    ["papel", "musgo"],
+    ["carimbo", "carimbo-tinta"],
+    ["folha", "superficie"],
+    ["folha", "claro-sobre-escuro"],
+    ["folha", "carimbo"],
+    ["musgo", "superficie"],
+    ["musgo", "carimbo"],
+    ["wa", "superficie"],
+    ["superficie", "perigo"],
+    ["superficie", "aviso"],
+    ["superficie", "borda-campo"]
+  ],
+  "foto_hero": {
+    "arquivo": "vet-emergencia",
+    "alt": "Sala de procedimentos veterinários vazia, com mesa e monitor desligado"
+  }
+}

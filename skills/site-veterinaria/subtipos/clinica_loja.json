@@ -1,0 +1,23 @@
+{
+  "nome": "clinica_loja",
+  "descricao": "Clínica veterinária que também vende medicamentos e produtos para animais (o cadastro da empresa inclui comércio varejista). Receita do site 5 (Nutrimed Ipanema). A vitrine só diz o que o JSON do site diz: nada de catálogo, marca, foto nem preço (esses entram só com material do cliente, em assets/material.js), e não afirma \"loja\" nem \"agropet\" sem fonte. O painel ganha a VENDA NO BALCÃO dentro do Estoque (preço de venda por item, \"Registrar venda\" que dá baixa no estoque e lança a entrada no caixa); é uma proposta do gerador, a confirmar com o cliente.",
+  "vitrine": {
+    "cta": ["ligar", "como_chegar", "whatsapp"],
+    "cta_confirmado": ["whatsapp", "ligar", "como_chegar"],
+    "horario_com_fonte": true
+  },
+  "painel": {
+    "venda": true,
+    "estoqueCategorias": [["alimento", "Alimento"], ["artigo", "Artigo para animais"]],
+    "titulos": { "estoque": "Estoque e produtos" },
+    "matriz": {
+      "dono": { "vendas": "rw" },
+      "recepcao": { "vendas": "rw" }
+    }
+  },
+  "descricao_painel": "agenda de consultas, tutores e pets, prontuários, vacinas e lembretes de retorno, caixa, estoque e produtos (medicamentos, vacinas, insumos, alimentos e artigos, com preço de venda e venda no balcão), profissionais e serviços, configurações. Perfis: dono/gerente, veterinário e recepção.",
+  "resumo_painel": "O Estoque vira \"Estoque e produtos\": cada item pode ter preço de venda, e o botão \"Registrar venda\" (dono e recepção) dá baixa na quantidade, registra a saída no histórico e lança a entrada no Caixa, com a forma de pagamento e, se quiser, o tutor. Não é um caixa de supermercado: sem código de barras, sem nota fiscal, sem comanda, sem desconto por regra; o valor pode ser combinado na hora (campo \"Valor cobrado\"). A venda vale dentro do mesmo navegador (duas máquinas vendendo o mesmo item exigem o adaptador de servidor do armazenamento).",
+  "pendencias_gestao": [
+    "Venda no balcão no painel (Estoque e produtos): é uma proposta do gerador, baseada no cadastro da empresa (que inclui comércio de medicamentos e artigos para animais), e NÃO foi confirmada com o negócio. Perguntar se a clínica vende produtos no balcão, quais categorias, e se precisa de mais (código de barras, nota fiscal, venda a prazo). Se não vende, o pacote pode sair sem esse recurso (basta tirar \"venda\" da receita do subtipo e gerar de novo)."
+  ]
+}

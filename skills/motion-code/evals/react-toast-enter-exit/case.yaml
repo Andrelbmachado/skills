@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: react-toast-enter-exit
+expected_outcome: |
+  src/Toast.jsx gets enter and exit animations using the already-installed motion package
+  (AnimatePresence for exit), exit shorter than enter, transform/opacity only, and a reduced-motion
+  path that keeps the toast visible and readable. No new dependencies.
+context:
+  scaffold_script: place-files.sh

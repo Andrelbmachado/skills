@@ -1,0 +1,154 @@
+/* pilares.vitrine.css: identidade "Pilares" (site 10: Pilares, unidade veterinária no Jardim América).
+   Entra DEPOIS de components/vitrine.base.css e movimento.css (vira o final de assets/style.css) e sobrepõe o chão liso.
+   Ideia: o NOME. Pilares são colunas, e os serviços divulgados são cinco. O hero é uma fachada de templo, simples e geométrica: o frontão (triângulo) sobre o friso índigo com o título, a
+   apresentação e os dois atalhos do primeiro toque; abaixo, uma coluna por serviço do cadastro (capitel, fuste estriado com o título numa placa branca, base; decorativa e aria-hidden: a seção
+   Serviços repete tudo por inteiro) e, nos degraus, o número de contato como texto, o endereço e o horário. No celular a colunata vira UMA coluna de tambores empilhados. As seções levam um
+   friso duplo sobre o título e os serviços têm numeral romano (contador do CSS). Violeta, índigo-escuro e coral-claro sobre cinza-pedra; título em geométrica (Futura); cantos retos de 4px; sem
+   sombra; sem rótulo em caixa-alta. NÃO tem selo de urgência, relógio, luz acesa nem foto da unidade (o "24 horas" só aparece onde o gerador o cita com a fonte). Uma animação: as colunas se
+   erguem em sequência (atraso por índice); prefers-reduced-motion desliga. Classes do hero levam o prefixo pl-. Todo gradiente tem cor sólida por baixo. */
+
+:focus-visible { outline: 3px solid var(--folha); outline-offset: 3px; border-radius: 2px; }
+.escuro :focus-visible, .rodape :focus-visible, .pagina-topo :focus-visible, .topo :focus-visible, .faixa :focus-visible, .pl-friso :focus-visible { outline-color: var(--carimbo); }
+
+/* ---------- tipografia: geométrica, peso 700 ---------- */
+h1, h2, h3 { font-weight: 700; letter-spacing: 0; line-height: 1.12; }
+h1 { font-size: clamp(1.75rem, 1.15rem + 2.8vw, 3.1rem); }
+h2 { font-size: clamp(1.45rem, 1.15rem + 1.3vw, 2.15rem); }
+h3 { font-size: 1.25rem; }
+.texto p { line-height: 1.72; }
+
+/* ---------- botões ---------- */
+@media (max-width: 520px) { .linha-botoes .btn:not(.btn-terciario) { flex: 1 1 100%; } }
+.btn { border-radius: var(--raio); }
+.btn-segundo { background: transparent; border-color: var(--folha); color: var(--folha); }
+.btn-segundo:hover { background: var(--folha); border-color: var(--folha); color: #fff; }
+.btn-terciario { background: transparent; border-color: transparent; color: var(--musgo); text-decoration: underline; text-underline-offset: .2em; padding-inline: 8px; }
+.btn-terciario:hover { background: transparent; border-color: transparent; color: var(--musgo-escuro); }
+.escuro .btn-segundo, .faixa .btn-segundo { background: transparent; border-color: var(--carimbo); color: var(--carimbo); }
+.escuro .btn-segundo:hover, .faixa .btn-segundo:hover { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.escuro .btn-terciario, .faixa .btn-terciario { background: transparent; border-color: transparent; color: #fff; }
+.escuro .btn-terciario:hover, .faixa .btn-terciario:hover { background: transparent; border-color: transparent; color: var(--carimbo); }
+.acao-secao .btn-fantasma { background: transparent; }
+
+/* ---------- topo: índigo; a marca é o frontão sobre as colunas; a página atual é uma aba clara ---------- */
+.topo { background: var(--folha); border-bottom: 5px solid var(--musgo); }
+.marca, .marca:hover { color: #fff; }
+.marca { font: 700 1.35rem/1.1 var(--fonte-titulo); }
+.marca svg { width: 36px; height: 36px; color: var(--carimbo); }
+.menu a { color: var(--claro-sobre-escuro); border-radius: 4px 4px 0 0; }
+.menu a:hover { background: rgba(255, 255, 255, .1); color: #fff; }
+.menu a[aria-current="page"] { background: var(--papel); color: var(--folha); }
+@media (max-width: 359px) {
+  .marca { font-size: 1.15rem; gap: 6px; } .marca svg { width: 30px; height: 30px; }
+  .menu a { padding-inline: 1px; font-size: .88rem; }
+}
+
+/* ---------- hero: a fachada ---------- */
+.hero--pilares { padding: 20px 0 54px; overflow: visible; background-color: var(--papel); }
+.pl-fachada { display: grid; margin-top: 44px; }
+.pl-fachada > * { min-width: 0; }
+/* o friso: índigo, com o frontão (triângulo) em cima e o filete de violeta embaixo */
+.pl-friso { position: relative; padding: 32px 22px 30px; background-color: var(--folha); color: #fff; border-bottom: 8px solid var(--musgo); }
+.pl-friso::before { content: ""; position: absolute; left: -8px; right: -8px; bottom: 100%; height: 44px; background-color: var(--folha); clip-path: polygon(0 100%, 50% 0, 100% 100%); pointer-events: none; }
+.hero--pilares h1 { max-width: 22ch; color: #fff; }
+.hero--pilares .pl-lead { margin: 14px 0 0; max-width: 46ch; font-size: 1.05rem; color: var(--claro-sobre-escuro); }
+.pl-acoes { display: grid; gap: 10px; margin-top: 22px; }
+.pl-botao { min-height: 54px; font-size: 1.05rem; justify-content: flex-start; padding-inline: 18px; background-color: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); overflow-wrap: anywhere; }
+.pl-botao:hover { background-color: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+.pl-botao--onde { background-color: transparent; border-color: #fff; color: #fff; }
+.pl-botao--onde:hover { background-color: #fff; border-color: #fff; color: var(--folha); }
+
+/* a colunata: no celular, UMA coluna de tambores empilhados (cada serviço é um tambor: fuste estriado nas laterais e a placa com o título no meio) */
+.pl-colunas { list-style: none; margin: 0; padding: 0; display: grid; counter-reset: pl; background-color: var(--superficie); border-inline: 1px solid var(--linha); }
+.pl-coluna { counter-increment: pl; display: grid; animation: pl-erguer .7s ease-out both; animation-delay: calc(var(--i, 0) * 90ms); }
+.pl-capitel, .pl-base { display: block; height: 10px; background-color: var(--linha); }
+.pl-capitel { border-top: 4px solid var(--musgo); }
+.pl-base { border-bottom: 4px solid var(--musgo); }
+.pl-coluna:not(:first-child) .pl-capitel { display: none; } /* tambores empilhados: o capitel só no primeiro e a base só no último */
+.pl-coluna:not(:last-child) .pl-base { height: 0; border-bottom: 0; }
+.pl-fuste { display: block; padding: 10px 46px; background: repeating-linear-gradient(90deg, var(--superficie) 0 9px, #e3ddf1 9px 11px) var(--superficie); }
+.pl-fuste b { display: block; padding: 9px 12px 10px; background-color: var(--superficie); border: 2px solid var(--folha); font: 700 1rem/1.25 var(--fonte-titulo); color: var(--folha); text-align: center; overflow-wrap: anywhere; }
+.pl-fuste b::before { content: counter(pl, upper-roman); display: block; margin-bottom: 2px; font: 800 .8rem/1 var(--fonte-corpo); letter-spacing: .08em; color: var(--musgo); }
+@keyframes pl-erguer { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* os degraus: o número, o endereço e o horário em texto; cada degrau é mais largo que o de cima */
+.pl-degraus { list-style: none; margin: 0; padding: 0; display: grid; }
+.pl-degrau:nth-child(1) { margin-inline: 12px; } .pl-degrau:nth-child(2) { margin-inline: 6px; }
+.pl-linha { display: grid; gap: 2px; padding: 13px 18px 14px; background-color: var(--superficie); border: 1px solid var(--linha); border-top: 4px solid var(--musgo); color: var(--tinta); }
+.pl-rotulo { display: flex; align-items: center; gap: 8px; color: var(--neblina); }
+.pl-rotulo b { font: 600 .92rem/1.2 var(--fonte-corpo); letter-spacing: 0; }
+.pl-rotulo svg { width: 18px; height: 18px; fill: currentColor; color: var(--musgo); flex: none; }
+.pl-valor { font: 600 1.05rem/1.4 var(--fonte-corpo); overflow-wrap: anywhere; }
+.pl-linha--numero .pl-valor { font-size: 1.55rem; font-weight: 800; line-height: 1.2; letter-spacing: .01em; color: var(--folha); font-variant-numeric: lining-nums tabular-nums; }
+.pl-pe { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 20px; }
+@media (max-width: 899px) { body:has(.wa-flutuante) .pl-valor { padding-right: 52px; } body:has(.wa-flutuante) .pl-linha--numero .pl-valor { padding-right: 0; } } /* o WhatsApp flutuante (quando há) não cobre o fim das linhas */
+@media (max-width: 359px) { .pl-friso { padding: 28px 16px 26px; } .pl-fuste { padding-inline: 30px; } .pl-linha--numero .pl-valor { font-size: 1.4rem; } .hero--pilares { padding-top: 12px; } }
+@media (min-width: 900px) {
+  .hero--pilares { padding: 28px 0 80px; }
+  .pl-fachada { margin-top: 64px; }
+  .pl-friso { padding: 48px 56px 44px; }
+  .pl-friso::before { height: 64px; left: -14px; right: -14px; }
+  .pl-acoes { display: flex; flex-wrap: wrap; }
+  .pl-colunas { margin-inline: 40px; }
+  .pl-fuste { padding-inline: 70px; }
+  .pl-degrau:nth-child(1) { margin-inline: 20px; } .pl-degrau:nth-child(2) { margin-inline: 10px; }
+  .pl-linha { grid-template-columns: 10rem minmax(0, 1fr); align-items: baseline; column-gap: 16px; padding: 16px 28px 18px; }
+  .pl-linha--numero .pl-valor { font-size: 1.9rem; }
+  .pl-valor { padding-right: 0; }
+}
+/* a colunata lado a lado só cabe a partir de 1100px (a palavra mais longa, "especializado", mede uns 117px em Futura; entre 900 e 1099px as colunas de 5 quebravam a palavra no meio) e só com até 5 colunas;
+   fora disso fica a coluna de tambores empilhados, mesmo no desktop. As colunas têm largura máxima: com 1 ou 2 serviços não viram blocos de 990px. */
+@media (min-width: 1100px) {
+  .pl-colunas:not(.pl-colunas--muitas) { grid-template-columns: repeat(var(--n, 5), minmax(0, 240px)); justify-content: center; gap: 0 16px; padding: 22px 16px 0; }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-coluna { grid-template-rows: auto 1fr auto; }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-coluna:not(:first-child) .pl-capitel { display: block; }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-coluna:not(:last-child) .pl-base { height: 14px; border-bottom: 4px solid var(--musgo); }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-capitel, .pl-colunas:not(.pl-colunas--muitas) .pl-base { height: 14px; margin-inline: -8px; }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-fuste { display: grid; place-items: center; min-height: 190px; padding: 22px 8px; }
+  .pl-colunas:not(.pl-colunas--muitas) .pl-fuste b { padding: 10px 6px 12px; font-size: 1rem; }
+}
+
+/* selo da nota do Google: etiqueta coral com o fio escuro (não é selo de qualidade: é a nota e o link para o Perfil) */
+.carimbo { width: auto; height: auto; flex: none; position: static; display: flex; align-items: baseline; gap: 8px; padding: 6px 14px 7px; background-color: var(--carimbo); color: var(--carimbo-tinta); border: 2px solid var(--carimbo-tinta); border-radius: var(--raio); }
+.carimbo:hover { color: var(--carimbo-tinta); background-color: var(--superficie); }
+.carimbo b { font: 800 1.45rem/1 var(--fonte-corpo); }
+.carimbo span { font-size: .78rem; margin-top: 0; }
+.ficha .carimbo { display: inline-flex; margin: 0 0 14px; }
+
+/* ---------- ficha (página Sobre: "Onde atendemos"): uma lápide com o capitel de violeta ---------- */
+.ficha { padding: 24px 22px 14px; background: var(--superficie); border: 1px solid var(--linha); border-top: 8px solid var(--musgo); border-radius: 0; }
+.ficha h2, .ficha h3 { font-size: 1.4rem; }
+.ficha a:not(.carimbo) { color: var(--musgo); }
+
+/* ---------- seções: friso duplo sobre o título; serviços com numeral romano ---------- */
+.secao--clara { background: var(--superficie); border-block: 1px solid var(--linha); }
+.secao-cabeca h2::before { content: ""; display: block; width: 46px; height: 14px; margin-bottom: 12px; border-block: 4px solid var(--musgo); }
+.servicos--fotos { counter-reset: romano; }
+.servico { counter-increment: romano; padding: 0 0 22px; margin-bottom: 30px; background-color: var(--superficie); border: 1px solid var(--linha); border-top: 6px solid var(--musgo); border-radius: 0; align-content: start; }
+.secao--clara .servico { background-color: var(--papel); }
+.servico > * { margin-inline: 20px; }
+.servico > .ilustra { margin: 0 0 4px; border-radius: 0; }
+.servico .icone { margin-right: 0; width: 46px; height: 46px; background-color: var(--folha); color: #fff; border-radius: 0; }
+.servico .icone svg { display: none; }
+.servico .icone::before { content: counter(romano, upper-roman); font: 800 .95rem/1 var(--fonte-corpo); letter-spacing: .04em; }
+.servico h3 { margin-left: 0; font-size: 1.25rem; align-self: center; }
+@media (min-width: 800px) { .servico { grid-template-columns: auto minmax(0, 1fr); } .servico h3 { font-size: 1.35rem; } }
+.passos li::before { background-color: var(--folha); color: #fff; border-radius: 0; font: 800 1.2rem/46px var(--fonte-corpo); }
+.passos li:not(:last-child)::after { border-color: var(--musgo); border-top-style: solid; }
+.passos strong { font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.12rem; }
+.lista-simples li::before { width: 10px; height: 10px; top: .55em; background-color: var(--musgo); border-radius: 0; }
+
+/* ---------- faixas escuras ---------- */
+.faixa { background-color: var(--musgo); border-top: 6px solid var(--folha); }
+.faixa .btn { background: var(--carimbo); border-color: var(--carimbo); color: var(--carimbo-tinta); }
+.faixa .btn:hover { background: #fff; border-color: #fff; color: var(--carimbo-tinta); }
+
+/* ---------- páginas internas ---------- */
+.pagina-topo { background: var(--folha); border-bottom: 5px solid var(--musgo); padding: 44px 0 40px; }
+.pagina-topo h1 { color: #fff; font-size: clamp(1.7rem, 1.2rem + 2.6vw, 2.8rem); }
+.pagina-topo p { color: var(--claro-sobre-escuro); }
+.mapa iframe { border: 1px solid var(--linha); border-radius: 0; }
+.galeria img { border: 1px solid var(--linha); border-radius: 0; }
+
+/* ---------- rodapé ---------- */
+.rodape { background: var(--folha); border-top: 6px solid var(--musgo); }

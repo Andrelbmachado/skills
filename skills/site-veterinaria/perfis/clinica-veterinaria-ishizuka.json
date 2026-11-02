@@ -1,0 +1,21 @@
+{
+  "subtipo": "geral",
+  "tema": "registro",
+  "pendencias": [
+    "Telefone: o pacote usa só o fixo (15) 3233-3242, o do Perfil do Google, do guia Sorocaba Fácil e do Lista Mais. O guia Guia-se (https://www.guia-se.com.br/sp/sorocaba/jardim-faculdade/ishizuka-clinica-veterinaria-e-petshop, aberto em 22/10/2026) lista também (15) 3232-8162; esse número NÃO foi usado em lugar nenhum do pacote e a pesquisa não o registra. Confirmar com o negócio quais telefones são dele e se algum tem WhatsApp: telefone fixo nunca vira número de conversa, então o pacote não tem contato por WhatsApp. Com um celular ou WhatsApp confirmado, o número entra no cadastro e o gerador liga o WhatsApp.",
+    "Horário e \"24 horas\": a pesquisa registra fontes em conflito. O guia Sorocaba Fácil indica \"Aberto 24 horas\" e o Guia-se cita \"plantão clínico 24 horas e atendimento em domicílio\", mas o Lista Mais mostra horários inconsistentes (a pesquisa pede para confirmar). O cadastro do negócio (data/content) não traz horário, então o pacote não afirma horário nem \"24 horas\". Confirmar com o negócio os dias e os horários (e se há plantão) antes de afirmar qualquer prazo.",
+    "Nome do Guia-se: o guia chama o negócio de \"ISHIZUKA - Clinica Veterinária e PetShop\" e a pesquisa registra que ele cita petshop entre os serviços. O cadastro (data/content) e o pacote não afirmam venda de produtos nem pet shop. Confirmar com o negócio se a clínica vende produtos, banho e tosa ou outros serviços de pet shop.",
+    "Bairro e CEP: o bairro diverge entre os guias (Jardim Emilia no Perfil do Google, no Sorocaba Fácil e no Lista Mais; Jardim Faculdade no Guia-se); o pacote mantém o do CSV, Jardim Emilia, como a pesquisa registra. O CEP 18031-000 é o mesmo no CSV, no Guia-se e no Lista Mais.",
+    "Avaliações de clientes: o Lista Mais traz comentários de clientes (tempo de atendimento da clínica, relatos de casos). Nenhum comentário, depoimento nem tempo de funcionamento foi usado em lugar nenhum do pacote: não há fonte do próprio negócio que os confirme. Só entra a nota do Google (4,9 com 181 avaliações), que vem do Perfil do Google.",
+    "Redes e página própria: a página do negócio no Sorocaba Fácil (https://www.sorocabafacil.com.br/guia/animais/clinica-veterinaria-ishizuka-54-5423) exibe os rótulos Facebook, Instagram e Website, mas os endereços não puderam ser conferidos e a pesquisa não registra nenhum. Nada disso foi usado. Confirmar com o negócio se tem redes sociais e se quer divulgá-las."
+  ],
+  "pendencias_vitrine": [
+    "Os seis serviços do site (consulta clínica, cirurgia, internação, vacinação, acupuntura veterinária e atendimento em domicílio) vêm do cadastro do negócio e têm como fonte só a página do Guia-se (aberta em 22/10/2026: ela cita clínica, cirurgia, internação, vacinação, acupuntura e atendimento em domicílio). A pesquisa pede para confirmar quais seguem ativos (cirurgia, internação, acupuntura e domicílio). Os textos mandam falar com a equipe; nada diz que há preço, equipe especializada, equipamento ou prazo. Confirmar com o negócio antes de publicar.",
+    "A imagem de cada serviço é ilustrativa (gerada, com a legenda \"Imagem ilustrativa\" sempre à vista) e não mostra a clínica, a equipe nem pacientes: a da acupuntura é uma bandeja com agulhas embaladas. Fotos reais só entram quando o negócio enviar o material (assets/material.js).",
+    "Sem celular ou WhatsApp no cadastro, o site não tem botão de contato: o número fixo aparece como texto na folha do início, em Contato e no rodapé. A mensagem do início diz \"ligue\" (texto do cadastro), sem link de ligação.",
+    "O site não mostra horário nem \"24 horas\" em lugar nenhum (o cadastro não traz horário e a única afirmação de prazo está no README)."
+  ],
+  "pendencias_gestao": [
+    "O painel deste pacote é o da clínica geral, sem módulo de internação nem de plantão. O guia cita internação e cirurgia: se o negócio confirmar que mantém animais internados, o gerador tem o modelo de internação (subtipo hospital24h) que pode ser ligado como proposta; nada disso foi incluído por conta própria."
+  ]
+}
