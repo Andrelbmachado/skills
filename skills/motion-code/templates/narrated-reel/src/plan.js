@@ -25,6 +25,8 @@ export function buildPlan(T) {
     if (!hits[n]) throw new Error(`word "${word}" #${n} not in line ${id}`)
     return hits[n].t0
   }
+  // like w(), but falls back to a fraction of the line when the word is missing (stale sample timing)
+  const wOr = (id, word, frac) => { try { return w(id, word) } catch { return line(id).start + frac * line(id).dur } }
   const L = id => line(id).start
   const End = id => line(id).start + line(id).dur
 
@@ -109,6 +111,10 @@ export function buildPlan(T) {
     // CTA: recap of the six schemes first; the spoken line starts together with the on-screen text
     ctaStart: End('square') + 0.1,
     ctaText: L('cta') - 0.04,
+    // FIXED ENDING (André, all videos): ONLY "Curta, comenta e compartilha." + the 3 Instagram icons, each on its word
+    ctaLike: wOr('cta', 'curta', 0),
+    ctaComment: wOr('cta', 'comenta', 0.36),
+    ctaShare: wOr('cta', 'compartilha', 0.62),
     end: T.duration,
   }
   K.ctaMinis = K.ctaStart + 0.12
@@ -150,7 +156,7 @@ export function buildPlan(T) {
     ...art(K.sqArt, [1, 4, 7, 10], 0.14),
     { t: K.ctaStart, type: 'whoosh' },
     { t: K.ctaMinis, type: 'pop', hue: 0, gain: 0.6 }, { t: K.ctaMinis + 0.25, type: 'pop', hue: 4, gain: 0.6 },
-    { t: K.ctaText, type: 'chime' },
+    { t: K.ctaLike, type: 'pop', hue: 4, gain: 0.8 }, { t: K.ctaComment, type: 'pop', hue: 8, gain: 0.7 }, { t: K.ctaShare, type: 'pop', hue: 2, gain: 0.7 },
   ]
   return { K, cues: cues.sort((a, b) => a.t - b.t), line, End }
 }

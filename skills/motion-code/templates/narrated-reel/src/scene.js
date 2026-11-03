@@ -471,17 +471,48 @@ function drawCTA(t) {
     const s = sIn * (1 - out)
     if (s > 0.01) drawMini(m, cx, cy, s, clamp(sIn * 2) * (1 - out))
   })
-  if (t >= K.ctaText) {
-    const k = sstep(t - K.ctaText, 2.4, 0.55), a = fin(t, K.ctaText, 0.12)
-    ctx.save(); ctx.globalAlpha = a; ctx.translate(540, 900); ctx.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k)
-    // bookmark (save) glyph
-    ctx.strokeStyle = PAPER; ctx.lineWidth = 7; ctx.lineJoin = 'round'
-    ctx.beginPath(); ctx.moveTo(-34, -250); ctx.lineTo(34, -250); ctx.lineTo(34, -150); ctx.lineTo(0, -178); ctx.lineTo(-34, -150); ctx.closePath(); ctx.stroke()
-    setFont(96, 800, 'condensed'); ctx.textAlign = 'center'; ctx.fillStyle = PAPER
-    ctx.fillText('SALVA E TESTA', 0, -10)
-    ctx.fillText('NA PRÓXIMA PALETA', 0, 84)
+  if (t >= K.ctaText) drawEnding(t)
+}
+
+// FIXED ENDING (all videos): "Curta, comenta e compartilha." + Instagram icons, nothing else on screen.
+// Like = FILLED red heart (liked state, #FF3040); comment + share = white OUTLINE only (still clickable).
+const IG_RED = '#FF3040'
+function igHeart(x, y, s, fillK) {          // fillK 0 → outline, 1 → filled red
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.lineJoin = 'round'; ctx.lineWidth = 6
+  ctx.beginPath(); ctx.moveTo(0, 34)
+  ctx.bezierCurveTo(-52, -4, -40, -40, -18, -40); ctx.bezierCurveTo(-8, -40, 0, -32, 0, -24)
+  ctx.bezierCurveTo(0, -32, 8, -40, 18, -40); ctx.bezierCurveTo(40, -40, 52, -4, 0, 34); ctx.closePath()
+  if (fillK > 0) { ctx.fillStyle = IG_RED; ctx.fill() }
+  ctx.strokeStyle = fillK > 0.5 ? IG_RED : '#FFFFFF'; ctx.stroke(); ctx.restore()
+}
+function igComment(x, y, s) {               // speech bubble, outline only
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.lineJoin = 'round'; ctx.lineWidth = 6; ctx.strokeStyle = '#FFFFFF'
+  ctx.beginPath(); ctx.moveTo(-6, 36); ctx.lineTo(-40, 40); ctx.lineTo(-30, 22)
+  ctx.bezierCurveTo(-52, 6, -46, -38, 0, -38); ctx.bezierCurveTo(46, -38, 52, 20, 18, 32); ctx.bezierCurveTo(8, 36, 0, 36, -6, 36)
+  ctx.closePath(); ctx.stroke(); ctx.restore()
+}
+function igShare(x, y, s) {                 // paper plane, outline only
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.lineWidth = 6; ctx.strokeStyle = '#FFFFFF'
+  ctx.beginPath(); ctx.moveTo(-44, -6); ctx.lineTo(46, -40); ctx.lineTo(24, 40); ctx.lineTo(2, 14); ctx.closePath(); ctx.stroke()
+  ctx.beginPath(); ctx.moveTo(2, 14); ctx.lineTo(46, -40); ctx.moveTo(-44, -6); ctx.lineTo(2, 14); ctx.stroke(); ctx.restore()
+}
+function drawEnding(t) {
+  const rows = [
+    { word: 'CURTA', t0: K.ctaLike, draw: (x, y, s, k) => igHeart(x, y, s, k) },
+    { word: 'COMENTA', t0: K.ctaComment, draw: (x, y, s) => igComment(x, y, s) },
+    { word: 'COMPARTILHA', t0: K.ctaShare, draw: (x, y, s) => igShare(x, y, s) },
+  ]
+  rows.forEach((r, i) => {
+    if (t < r.t0 - 0.05) return
+    const k = sstep(t - r.t0, 2.4, 0.55), a = fin(t, r.t0 - 0.05, 0.12)
+    const y = 800 + i * 190, ix = 250, s = 1.5 * (0.7 + 0.3 * k)
+    ctx.save(); ctx.globalAlpha = a
+    // heart: fills red right after its word lands (liked / pressed state); other icons stay outline
+    r.draw(ix, y, s, i === 0 ? clamp((t - r.t0 - 0.12) / 0.18) : 0)
+    setFont(120, 800, 'condensed'); ctx.textAlign = 'left'; ctx.fillStyle = '#FFFFFF'
+    ctx.fillText(r.word, ix + 130, y + 42)
     ctx.restore()
-  }
+  })
 }
 
 // ---------- frame ----------

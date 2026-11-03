@@ -41,7 +41,7 @@ If the user pastes a key in chat: write it to `.env` with `umask 077` without ec
 - **Visual changes are bound to spoken words.** The concept name triggers the title and the caption's heavier weight (no coloured pill). The geometry word ("opostos", "igualmente", "quatro") triggers the point move, edge or interval arcs. The example appears on the word that introduces it, and each sampled colour ball pops on the word naming that colour.
 - **CTA:**
   - The recap (six mini diagrams) plays silently from `End(last) + 0.1`.
-  - The CTA voice line ("Salva e testa na próxima paleta.") starts together with the on-screen CTA text. Set the CTA `lead` so that `ctaText = L('cta') − 0.04`.
+  - The CTA voice line ("Curta, comenta e compartilha." — the FIXED ENDING; icons + words in `drawEnding`, see SKILL.md "REGRA FIXA DO FINAL") starts together with the on-screen CTA text. Set the CTA `lead` so that `ctaText = L('cta') − 0.04`.
   - Captions hide from `ctaText` onwards, because the on-screen text is the caption.
 
 ## Layout tokens (1080×1920)
