@@ -36,6 +36,18 @@ Goal: motion that reads right in one or two passes, proven by evidence, at low t
 - **Série em partes:** sem numerar partes na tela; gancho de confronto (não de contagem) e CTA com loop aberto ("segue pra próxima parte").
 - **Entrega extra:** pasta `carrossel/` ao lado do MP4 com PNGs 1080×1350 (4:5), 6–10 slides (capa-gancho, problema→solução, CTA), mesma regra neutra, balões sem texto, fontes em `projeto/carrossel-src/` (HTML/SVG + `build.mjs` com Playwright do `scripts/node_modules`). Slide sem numeração/"2/10".
 
+## Padrão de qualidade (post 17)
+
+André aprovou o post 17 ("sensacional"): todo post novo deve igualar ou superar. Evidência: `~/DZiny-pipeline/post17/` (STORYBOARD.md, RESEARCH.md, claude-*.log) e `Posts design/17-iconografia-…/projeto` (`src/`, `tools/`, `carrossel-src/build.mjs`, `artifacts/`).
+
+- **Antes → transformação → depois, visível:** o elemento ruim (ícones feios) é mostrado primeiro e SE TRANSFORMA no bom, animado diante dos olhos. Nunca corte seco entre erro e acerto; o espectador ama ver a correção acontecendo.
+- **Ativos reais, defeito = parâmetro:** use biblioteca real (Lucide, ISC, grid 24, stroke uniforme; `tools/mklucide.mjs` gera `src/lucide.js` + licença em `assets/licenses/`). O defeito é só um parâmetro do MESMO ícone (traço fino, preenchido, escala, deslocamento), nunca desenho à mão diferente; assim a transformação é contínua e mensurável.
+- **Carrossel:** cada slide mostra o problema ANTES da solução, desenhado em HTML/SVG (não recortes do vídeo). Marca dos posts 16/18: fundo #000, Bricolage Grotesque 800 condensado caixa alta branco, cor só ✗ vermelho/✓ verde, sem contador/escada/rodapé. 8 slides via `carrossel-src/build.mjs` (Playwright) + `contact.html`.
+- **Processo:** Codex (esforço médio) pesquisa e escreve `RESEARCH.md` + `STORYBOARD.md` primeiro; Claude implementa. Carrossel e vídeo em sessões/subagentes paralelos. Voz Fish e builds em primeiro plano (headless mata background).
+- **SFX:** um por evento visual (post 17: ~147 cues) + música baixa.
+- **Crítica em contact sheets:** carrossel 4 rodadas, vídeo 2 (`artifacts/*-contact-r*.png`); corrigir sobreposição, borrão, texto quebrado a cada rodada.
+- **Specs que o `check.mjs` deve confirmar:** duração = quadros/30 (post 17: 49,5 s), 1486/1486 quadros, 1080×1920, pico −5,2 dBFS; `syncverify` (whisper base, medium estoura) mediana ≈ 0,016 s, p90 ≈ 0,05 s. Pendência conhecida: alvo ~60 s, voz Fish saiu rápida; planeje texto/pausas para chegar perto.
+
 ## Route — read only what the task needs
 
 | Task | Read | Usual engine |
