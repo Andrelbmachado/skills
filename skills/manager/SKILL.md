@@ -38,6 +38,13 @@ Grok is always the manager. It plans, splits, delegates, monitors, verifies and 
 - In interactive Claude Code, use `/loop` wherever it helps, so the session keeps working until every task is finished.
 - `/loop` doesn't work the same way in headless mode (`claude -p`). There, build the loop yourself with a routine that checks progress (STATUS.md, logs, the process) and relaunches whatever stopped until everything is done.
 
+
+### Measure everything (André's rule, permanent)
+- From the start of every project or video, log tokens and time for each step and for the whole project.
+- Use JSON output: `claude -p --output-format json` reports usage and duration; `codex exec --json` emits `token_count` events.
+- Append one line per step to `~/metrics/metrics.csv` on the Mac (date, project, step, agent, model, input, output and total tokens, cost if reported, start, end, duration_s) using `~/skills-repo/scripts/log-metrics.sh`.
+- Every final report includes a table per step plus the project total for tokens and time.
+
 ## 2. Running the CLIs headless
 - Always set a permission mode explicitly, always run in the background, and always cap with turn/budget limits plus a shell `timeout`.
 - **Claude Code:** `claude -p "<brief>" --output-format stream-json --verbose --permission-mode acceptEdits --allowedTools "Read,Edit,Bash" --max-turns N`. Save the `session_id` and continue with `--resume <id>`. Use `--dangerously-skip-permissions` only in a sandbox or a project folder the user approved.
@@ -90,6 +97,8 @@ Rules:
 - **Cue:** final report of a build. **Lesson:** list untested parts (other levels, mobile, sound) instead of claiming it's all done. **Evidence:** Maré de Cobalto, only phase 1 was played end to end by the headless test. **Confidence:** high.
 - **Cue:** copying result files from the user's Mac to show them. **Lesson:** files in `/tmp` can be refused; save screenshots and artifacts inside the project folder (e.g. `artifacts/`). **Evidence:** 2026-10-30, copying `/tmp/viralrunner_gameplay.png` was refused, `artifacts/` worked. **Confidence:** high.
 - **Cue:** building a Mac app or tool. **Lesson:** install only one instance and clean up test copies. **Evidence:** AIUsageBar, 2026-10-22, test copies piled up until single-instance cleanup was added. **Confidence:** medium.
+
+- **Cue:** writing a brief for `claude -p`. **Lesson:** forbid background tasks and require long commands to run in the foreground, in stages, because in headless mode a background task dies when the session ends. A session that ends very fast with an empty log is the sign; resume it with `--resume` and the corrected brief. **Evidence:** post 17, 2026-11-02: both sessions stopped after 4 min; after the resume, the carousel took 6 min and the video 24 min. **Confidence:** high.
 
 ## Sources
 - [Anthropic: multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system)
