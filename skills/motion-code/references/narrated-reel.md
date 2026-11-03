@@ -300,3 +300,8 @@ Lessons from the redo of "Kerning, tracking e padding" (poster reel):
 - Valores de plataforma têm unidade própria: 48 dp (Android) e 44 pt (Apple) ≠ px; WCAG 2.2 AA = 24×24 CSS px (com exceções), AAA = 44×44. Mostre com selo EXEMPLO, nunca como valor universal.
 - Razões de contraste na arte vêm de `wcag.mjs` (ex.: #B2B2B2 × branco = 2,12:1 → #727272 = 4,8:1), não do roteiro; rótulo na tela = valor medido.
 - Foco visível: contorno que acompanha o controle e salta de um para o outro por Tab; toque que acerta o vizinho → área ampliada + espaçamento. Sem contador de Tab.
+
+## Etapa 5 sem revisão — Página inicial (2026-11-02)
+- Sem `revisao-gemini.md` → sem revisão. Validar: `check.mjs` (49,7 s, 1491/1491 quadros, pico −5,7 dBFS) + `syncverify.sh` com caminho absoluto do MP4 (base: 147/153, mediana 0,093 s, p90 0,170 s; max 0,79 s = outlier do whisper) + grep de balões. MP4 (23:45) mais novo que src/timing/mix → não re-renderiza.
+- Duração real 49,7 s vs 60 s planejados; timing.json manda.
+- Exemplos de copy/avaliações/depoimentos levam selo EXEMPLO; prova social nunca com nomes/notas inventados que pareçam reais.

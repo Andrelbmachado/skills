@@ -48,6 +48,17 @@ André aprovou o post 17 ("sensacional"): todo post novo deve igualar ou superar
 - **Crítica em contact sheets:** carrossel 4 rodadas, vídeo 2 (`artifacts/*-contact-r*.png`); corrigir sobreposição, borrão, texto quebrado a cada rodada.
 - **Specs que o `check.mjs` deve confirmar:** duração = quadros/30 (post 17: 49,5 s), 1486/1486 quadros, 1080×1920, pico −5,2 dBFS; `syncverify` (whisper base, medium estoura) mediana ≈ 0,016 s, p90 ≈ 0,05 s. Pendência conhecida: alvo ~60 s, voz Fish saiu rápida; planeje texto/pausas para chegar perto.
 
+## Regras do André (feedback post 18)
+Valem para TODOS os posts (feedback do vídeo 18 v2).
+1. **Final fixo:** o vídeo termina SÓ com o CTA "Curta, comenta e compartilha." — mesmo texto e mesma tela em todo post. Nada de "segue pra próxima parte", "teste no seu perfil" ou variações.
+2. **Paleta calma e sóbria:** fundo preto, branco, cinzas e no máximo 1 cor de destaque da marca fictícia; ✗/✓ discretos. Sem carnaval de cores. (Pill da legenda karaokê segue colorido.)
+3. **Mockups detalhados e realistas:** site com navbar, hero, botões, texto; sacola com alças, dobras, sombra, etiqueta; app com status bar, cards, tab bar, ícones Lucide. Nunca retângulos/formas genéricas.
+4. **Ritmo:** explicar com calma sem ficar lento — frases completas, pausas curtas, ~130-150 palavras em ~60-70 s.
+5. **Proibido** o molde repetitivo "você fez X, mas ainda falta Y / mas aí... então...". Varie o estilo de explicação entre vídeos.
+6. **Estrutura numerada** anunciada no gancho (ex.: "4 passos para sua marca ter um design consistente"), depois "Passo 1...", "Passo 2...".
+7. **Cada passo completo antes do próximo:** PROBLEMA (visto na tela) → SOLUÇÃO (transformação animada acontecendo) → COMO FUNCIONA PARA O USUÁRIO FINAL (porquê/benefício). Nunca pular sem explicar o porquê.
+8. **Padrão post 17:** antes → transformação na tela → depois. Sem quadros vazios/gaps (ex.: 0,4 s de tela vazia antes do CTA).
+
 ## Route — read only what the task needs
 
 | Task | Read | Usual engine |
@@ -254,3 +265,9 @@ Educational 9:16 reel with a voice-driven timeline, one persistent diagram, a re
 
 **Etapa 5 / Design system (2026-11-02):** `syncverify` varia por projeto: o `tools/syncverify.mjs` do post pode receber JSON do whisper (não o MP4). Em dúvida, use `scripts/syncverify.sh <mp4 absoluto>` (whisper base; 149/159, mediana 0,099 s, p90 0,179 s — aceito). Legenda karaokê: o retângulo da palavra falada é COLORIDO (`HL_BOX` violeta `#7250A1`, texto branco); revisão Codex que sugere caixa violeta está certa, não "corrigir" para cinza. Token ≠ "muda tudo": só os componentes conectados acompanham; mostre valores locais desatualizados ficando para trás. Sem `revisao-gemini.md` + MP4 mais novo que src/timing/mix + `check.mjs` ok (52,5 s, 1576 quadros, −5,5 dBFS) → não re-renderiza.
 - Botão claro/fácil (26): syncverify.sh com caminho absoluto do MP4 rodou limpo em ~1 min com o padrão base (138/155, mediana 0,011 s, p90 0,051 s); max 0,59 s = outlier do whisper. Sem revisao-gemini.md e MP4 (23:23) mais novo que src/ (23:22), timing e mix → etapa 5 só valida (check.mjs 50,13 s, 1504/1504, pico −5,3 dBFS), sem re-render. Medidas de toque/contraste/tempo de reação do botão são exemplos ilustrativos (selo EXEMPLO), nunca regra universal.
+
+## Etapa 5 (revisão) — checklist rápido (post 28, formulários/login)
+- Sem `revisao-gemini.md` = sem revisão: valide o Codex com `tools/check.mjs` (de dentro de `projeto/`) + `scripts/syncverify.sh` (caminho absoluto do MP4; base: mediana ~0,1 s, p90 ~0,17 s aceitos) + grep `grep -nF "bubble(" src/*.js | grep -E "bubble\([^)]*'[^']+'"` (vazio = ok).
+- Compare mtimes com `stat -f '%Sm %N'` (MP4 vs src/, timing.json, tools/mix.mjs); MP4 mais novo e sem achado real = não re-renderiza.
+- Duração real (timing.json) costuma ficar ~48–50 s vs 60 s planejados; não estique para 60.
+- Tema "login" com exemplo de cadastro (senha): deixe o escopo explícito na fala ou troque o bloco.
