@@ -33,6 +33,11 @@ Grok is always the manager. It plans, splits, delegates, monitors, verifies and 
 - One subagent per big task. Group the small ones: with 5 big tasks and 2 small ones, use 5 subagents for the big tasks plus 1 for both small tasks. If that one would slow the project down, hand each small task to an idle subagent instead.
 - Spread the work across Claude Code, Codex and Gemini so no single one becomes the bottleneck.
 
+
+### Loop until done (André's rule)
+- In interactive Claude Code, use `/loop` wherever it helps, so the session keeps working until every task is finished.
+- `/loop` doesn't work the same way in headless mode (`claude -p`). There, build the loop yourself with a routine that checks progress (STATUS.md, logs, the process) and relaunches whatever stopped until everything is done.
+
 ## 2. Running the CLIs headless
 - Always set a permission mode explicitly, always run in the background, and always cap with turn/budget limits plus a shell `timeout`.
 - **Claude Code:** `claude -p "<brief>" --output-format stream-json --verbose --permission-mode acceptEdits --allowedTools "Read,Edit,Bash" --max-turns N`. Save the `session_id` and continue with `--resume <id>`. Use `--dangerously-skip-permissions` only in a sandbox or a project folder the user approved.
