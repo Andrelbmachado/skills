@@ -271,3 +271,17 @@ Educational 9:16 reel with a voice-driven timeline, one persistent diagram, a re
 - Compare mtimes com `stat -f '%Sm %N'` (MP4 vs src/, timing.json, tools/mix.mjs); MP4 mais novo e sem achado real = não re-renderiza.
 - Duração real (timing.json) costuma ficar ~48–50 s vs 60 s planejados; não estique para 60.
 - Tema "login" com exemplo de cadastro (senha): deixe o escopo explícito na fala ou troque o bloco.
+
+## Etapa 5 / Luz e materiais 3D (post 29, 2026-11-03)
+- Esfera 3D em canvas 2D: shader por pixel (`src/sphere.js`), normais/ranhuras pré-calculadas, ~26 ms/quadro; seek de 1486 quadros ≈ 40 s. Luz/material = parâmetros f(t) (`stage.js params(t)`), mesma esfera em todos os passos (objeto persistente; não deforme geometria para ilustrar luz).
+- "3D" no script.json como "três dê"; a legenda funde as duas palavras (`mergeTresDe`). `badgeOK` do core.js desenha ✓ branco: use `okIcon` (ui.js) para ✓ verde.
+- Fala ambígua ("o brilho é igual") → descreva o que se vê ("estreito demais"); etiqueta da arte = fala do termo.
+- Etapa 5 sem `revisao-gemini.md`: check.mjs 49,53 s/1486 quadros/−5,6 dBFS + syncverify.sh base 136/152 (mediana 0,106 s, p90 0,167 s) + grep de balões vazio; MP4 (00:37) mais novo que src/timing/mix → não re-renderiza.
+- Checar SEMPRE se `carrossel/` existe ao lado do MP4 na etapa 5: no post 29 só o vídeo foi feito na etapa 3 (carrossel pendente = entrega faltando, não "revisão limpa").
+
+## Etapa 5 / Low poly, high poly e retopologia (post 30, 2026-11-03)
+- Cabeça 3D em canvas 2D puro (`src/head.js`): superfície r(θ,φ) + malha densa 120×84; níveis agg/low/retopo = subconjuntos de linhas; morph por interpolação, sombreado facetado por célula, mapa de normais por quadro, UV = lerp 2D por vértice. ~7–15 ms/quadro; seek de 1652 quadros ≈ 60–90 s. Copie como base de reels com objeto que muda de resolução/topologia.
+- Poros/relevo = ruído por hash do índice do vértice, nunca senoides (viram moiré xadrez).
+- `retime.mjs` com LEAD/TAIL por linha (cauda 1,4–2,2 s após o termo) fecha ~55 s sem esticar a voz; todo o palco precisa de fade em `R.out` (cabeça/tiles vazavam no recap); título CTA 150 px estoura a largura (124 px).
+- ✗/✓ seguem o canto do objeto em trabalho (`cState(t).pos`), não coordenada fixa.
+- Etapa 5 sem `revisao-gemini.md`: check.mjs 55,07 s/1652 quadros/−5,1 dBFS + syncverify.sh base 130/145 (mediana 0,100 s, p90 0,150 s) + grep de balões vazio; MP4 (01:07) mais novo que src/timing/mix → não re-renderiza. Carrossel (8 slides) existe.
