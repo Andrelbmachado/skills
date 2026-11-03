@@ -291,34 +291,22 @@ const GROUPS = (() => {
   })
   return groups
 })()
-function drawCaptions(t) {
+function drawCaptions(t) { // neutro: branco; palavra falada = opacidade total; termo do passo = peso 800 (sem pílula colorida)
   if (t > K.ctaText - 0.05) return
   const g = GROUPS.find(g => t >= g.start && t < g.end); if (!g) return
   const a = fin(t, g.start, 0.1) * fout(t, g.end - 0.08, 0.08)
-  let size = 58; setFont(size, 650)
-  const space = ctx.measureText(' ').width
-  let widths = g.words.map(w => ctx.measureText(w.w).width)
-  let total = widths.reduce((s, x) => s + x, 0) + space * (g.words.length - 1)
-  if (total > 980) { size = Math.floor(size * 980 / total); setFont(size, 650); widths = g.words.map(w => ctx.measureText(w.w).width); total = widths.reduce((s, x) => s + x, 0) + ctx.measureText(' ').width * (g.words.length - 1) }
-  const sp = ctx.measureText(' ').width
+  const wt = w => w.hl ? 800 : 650
+  let size = 58
+  const meas = () => g.words.map(w => { setFont(size, wt(w)); return ctx.measureText(w.w).width })
+  let widths = meas(); setFont(size, 650); let sp = ctx.measureText(' ').width
+  let total = widths.reduce((s, x) => s + x, 0) + sp * (g.words.length - 1)
+  if (total > 980) { size = Math.floor(size * 980 / total); widths = meas(); setFont(size, 650); sp = ctx.measureText(' ').width; total = widths.reduce((s, x) => s + x, 0) + sp * (g.words.length - 1) }
   const y = CAP_Y + (1 - eOut(clamp((t - g.start) / 0.14))) * 10
-  let x = 540 - total / 2
+  let x = 540 - total / 2; const xs = []; g.words.forEach((w, i) => { xs.push(x); x += widths[i] + sp })
   ctx.save(); ctx.globalAlpha = a; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic'
-  const xs = []; g.words.forEach((w, i) => { xs.push(x); x += widths[i] + sp + (i < g.words.length - 1 && !!w.hl !== !!g.words[i + 1].hl ? 14 : 0) })
-  { const span = x - sp - xs[0], shift = 540 - span / 2 - xs[0]; for (let i = 0; i < xs.length; i++) xs[i] += shift }
-  // highlight pill behind spoken scheme-name words
-  let run = null
-  const runs = []
-  g.words.forEach((w, i) => { const lit = w.hl && t >= w.t0 - 0.03; if (lit) { if (!run) { run = { a: i, b: i }; runs.push(run) } else run.b = i } else run = null })
-  for (const r of runs) {
-    const k = sstep(t - g.words[r.a].t0 + 0.03, 3, 0.6)
-    const pad = Math.min(12, sp * 0.7), x0 = xs[r.a] - pad, x1 = xs[r.b] + widths[r.b] + pad
-    ctx.fillStyle = PAPER; ctx.beginPath(); ctx.roundRect(x0 + (1 - k) * (x1 - x0) / 2, y - size * 0.86, (x1 - x0) * k, size * 1.12, 16); ctx.fill()
-  }
   g.words.forEach((w, i) => {
-    const lit = t >= w.t0 - 0.03
-    const inRun = runs.some(r => i >= r.a && i <= r.b)
-    ctx.fillStyle = inRun ? BG : css(P_RGB, lit ? 1 : 0.32)
+    const cur = t >= w.t0 - 0.03 && t < w.t1 + 0.04, past = t >= w.t1 + 0.04
+    setFont(size, wt(w)); ctx.fillStyle = `rgba(255,255,255,${cur ? 1 : past ? 0.82 : 0.32})`
     ctx.fillText(w.w, xs[i], y)
   })
   ctx.restore()
