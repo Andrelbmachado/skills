@@ -1,12 +1,29 @@
 ---
 name: manager
 description: >-
-  Use whenever you are managing a project or build: Grok only orchestrates and
+  Master router and orchestrator. Use when the user invokes it, or whenever a
+  task spans several domains (front-end, full stack, database, CI/CD, security,
+  LLM, motion, planning/executing): it picks and auto-invokes the right skills,
+  auto-downloads missing ones from the shared repo, and records lessons back
+  into skills. Also use whenever you are managing a project or build: Grok only orchestrates and
   monitors, while Claude Code, Codex and Gemini CLI agents (and their subagents)
   do all the heavy work, with a tiered check-in schedule and a recursive lessons
   loop that updates this skill after every project.
 ---
 # Manager
+
+## Auto-invoke router (start here, every time)
+When the user invokes this skill, or any skill hits a need it does not cover, route instead of doing everything inline:
+1. Read `routing.tsv` (need → skills). Match every need in the task, not just the first.
+2. **Auto-download:** `scripts/ensure-skill.sh <slug>...` installs from `~/skills-repo` if missing (pull + sync for Claude/Codex/Gemini). Exit 2 / `MISSING` → invoke `skill-manager` to find, vet and install, then re-run.
+3. Invoke each needed skill with the Skill tool: process skills first (writing-plans → executing-plans), then domain skills (frontend-design, motion-code, fullstack-dev…), then verification. Delegate big independent pieces via `subagent-driven-development` / `dispatching-parallel-agents`.
+4. **Repetition check:** if the same kind of answer/computation is requested repeatedly, invoke `ml-cache` (look up before computing, store after).
+5. Skills that need another skill call this one back. Planning/executing skills carry an "Auto-invoke" block pointing here, so the loop is: planning → manager → domain skills → executing → manager.
+
+## Self-improvement (every skill, every project)
+Whenever an agent hits an error and finds the fix, it appends a lesson to the skill in use (or `manager` if cross-cutting): **cue / lesson / evidence / confidence / date+project**. No evidence → no entry. Then `~/skills-repo/scripts/publish-skill.sh <skill-dir>`. Merge duplicates, drop lessons the new evidence contradicts. Details in §7.
+
+---
 
 Grok is always the manager. It plans, splits, delegates, monitors, verifies and merges results. It never does the heavy work itself (deep research, planning docs, coding, testing, building). It only does quick lookups needed to write good briefs.
 

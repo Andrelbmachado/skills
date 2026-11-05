@@ -1,0 +1,33 @@
+need	skills (invoke in order; run scripts/ensure-skill.sh first)
+planning / multi-step task	superpowers:writing-plans, writing-plans
+executing a plan	superpowers:executing-plans, executing-plans
+new feature / creative work	superpowers:brainstorming
+independent parallel tasks	dispatching-parallel-agents
+subagent orchestration	subagent-driven-development
+bug / failing test	systematic-debugging
+implementing feature or bugfix	test-driven-development
+before saying done	verification-before-completion
+code review	requesting-code-review, review-changes
+front-end / website / landing	frontend-design, frontend-skill, web-design-guidelines
+UI components	shadcn-ui, design-md
+UX / accessibility	a11y-debugging, web-design-guidelines
+animation / motion / video by code	motion-code
+3D / WebGL	threejs-fundamentals (+ threejs-* as needed)
+iOS / macOS / Android UI	ios-design-guidelines, macos-design-guidelines, android-design-guidelines
+Figma	figma-use, figma-implement-design
+veterinary / pet site	site-veterinaria
+art-movement style kit	criar-site-arte
+browser test / screenshots	playwright, webapp-testing, chrome-devtools
+full stack project	fullstack-dev (+ database-dev, devops-cicd, security-best-practices)
+database / SQL / schema	database-dev
+CI/CD / Docker / infra	devops-cicd
+network / hardening	network-security, security-best-practices
+LLM app / agents / evals	llm-ops
+repetitive task / token savings / embeddings	ml-cache
+Azure / cloud	azure-prepare, azure-deploy (+ azure-*)
+Firebase	firebase-basics (+ firebase-*)
+bio / science data	the matching *-database skill
+deploy	netlify-deploy, vercel-deploy, render-deploy
+documents	docx, pdf, pptx, xlsx
+need a skill not listed	skill-manager (discover, vet, install, then re-run ensure-skill.sh)
+prompt tuning / metrics	prompt-improver
