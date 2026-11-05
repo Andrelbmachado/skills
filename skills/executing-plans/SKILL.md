@@ -5,6 +5,9 @@ description: Use when executing an implementation plan in the current session as
 
 # Executing Plans
 
+## Auto-invoke
+For each task, invoke the skill the plan names for it; if none is named or the skill is not installed, invoke `manager` (router + `ensure-skill.sh` auto-download). Independent tasks → `subagent-driven-development`; bugs → `systematic-debugging`; before "done" → `verification-before-completion`. On every error you fix, record cue/lesson/evidence in the skill used and publish it (`manager` §Self-improvement).
+
 Execute the plan yourself, task by task, in this session: no implementer
 subagent per task, no reviewer per task. One fresh-context review of the
 whole branch at the end.
