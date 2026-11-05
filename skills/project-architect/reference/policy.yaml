@@ -1,0 +1,29 @@
+version: 1
+roles:
+  junior:
+    allow: [READ_SCOPED, DRAFT, TEST_SANDBOX]
+    deny: [WRITE_MAIN, EXECUTE_PROD, EXTERNAL_PUBLISH, ACCESS_SECRETS, DESTRUCTIVE, CHANGE_POLICY, APPROVE]
+  supervisor:
+    allow: [READ_SCOPED, DRAFT, TEST_SANDBOX, REVIEW, APPROVE_LOW_RISK, WRITE_BRANCH]
+    deny: [DESTRUCTIVE, CHANGE_POLICY, APPROVE_SELF, EXECUTE_PROD_UNREVIEWED]
+  project_architect:
+    allow: [READ_SCOPED, DRAFT, REVIEW, APPROVE_LOW_RISK, WRITE_BRANCH, CROSS_ROLE_COORDINATION]
+    deny: [APPROVE_SELF, CHANGE_POLICY, DESTRUCTIVE, EXECUTE_PROD_UNREVIEWED]
+  human_owner:
+    allow: [AUTHORIZE_PRODUCTION, AUTHORIZE_EXTERNAL, AUTHORIZE_COST_OVER_LIMIT, AUTHORIZE_DESTRUCTIVE, MODIFY_POLICY]
+approvals:
+  low_risk_branch_write: [supervisor]
+  cross_area_architecture: [project_architect, affected_supervisors]
+  production_release: [human_owner, quality_assurance]
+  secrets_access: [human_owner]
+  destructive: [human_owner]
+  external_publication: [human_owner]
+  over_budget: [human_owner]
+constraints:
+  approval_binds_to: [task_id, actor_id, action, resource, artifact_hash, expires_at]
+  no_self_approval: true
+  deny_on_missing_context: true
+  revoke_on_scope_change: true
+  always_audit: true
+  concurrency_limit_per_role: 4
+  junior_sandbox_budget_usd: 1.00

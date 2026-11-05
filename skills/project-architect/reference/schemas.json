@@ -1,0 +1,49 @@
+{
+  "message": {
+    "required": [
+      "id",
+      "from",
+      "to",
+      "task_id",
+      "kind",
+      "payload_hash",
+      "context_version",
+      "timestamp"
+    ],
+    "kinds": [
+      "proposal",
+      "review",
+      "approval_request",
+      "approval_grant",
+      "approval_deny",
+      "status",
+      "handoff",
+      "incident"
+    ]
+  },
+  "approval": {
+    "required": [
+      "approver",
+      "actor",
+      "action",
+      "resource",
+      "task_id",
+      "artifact_hash",
+      "expires_at"
+    ]
+  },
+  "task": {
+    "states": [
+      "proposed",
+      "scoped",
+      "delegated",
+      "in_progress",
+      "review",
+      "approved",
+      "completed",
+      "blocked",
+      "rejected",
+      "cancelled"
+    ]
+  }
+}
