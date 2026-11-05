@@ -31,3 +31,12 @@ deploy	netlify-deploy, vercel-deploy, render-deploy
 documents	docx, pdf, pptx, xlsx
 need a skill not listed	skill-manager (discover, vet, install, then re-run ensure-skill.sh)
 prompt tuning / metrics	prompt-improver
+requirements / acceptance criteria	requirements-engineer
+break work into tasks	task-decomposer
+dependencies / critical path	dependency-manager
+workflow states / handoffs / queues	workflow-orchestrator
+record decisions (ADR)	decision-manager
+save/restore project context	context-manager
+token / model cost budget	cost-optimizer
+test against acceptance criteria	quality-assurance
+architecture governance / approvals / charter	project-architect (policy in reference/)
