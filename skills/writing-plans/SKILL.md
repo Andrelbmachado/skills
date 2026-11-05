@@ -5,6 +5,9 @@ description: Use when you have a spec or requirements for a multi-step task, bef
 
 # Writing Plans
 
+## Auto-invoke
+Before writing the plan, invoke the `manager` skill to route: it reads `routing.tsv`, runs `ensure-skill.sh` (auto-download) and invokes the domain skills the plan will need (frontend-design, motion-code, fullstack-dev, database-dev, devops-cicd, security…). Name the skill each task needs inside the plan. After execution, append any error→fix lesson to the skill used.
+
 ## Overview
 
 Write implementation plans for an engineer who has not seen this codebase or this spec. Assume they write idiomatic code in the project's language once they know the exact interface and the exact test, and that they will make a reasonable choice wherever the plan leaves one open. What they cannot know is what you decided: which files, which names and signatures, which values from the spec, which tests prove each task. Document those. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
