@@ -10,12 +10,6 @@ for l in open(f):
   if j.get('type')=='assistant' and isinstance(m,dict) and m.get('usage'):
     u=m['usage']; model=m.get('model',model)
     i+=u.get('input_tokens',0)+u.get('cache_read_input_tokens',0)+u.get('cache_creation_input_tokens',0); o+=u.get('output_tokens',0)
-  if 'costUSD' in l:
-    for k in ('total_cost_usd',):
-      pass
-s=open(f).read()
-import re
-c=re.findall(r'"costUSD":([0-9.]+)',s)
-if c: cost=f"{sum(map(float,c)):.4f}"
+# sessão do Claude Code roda no plano (cota semanal / janela de 5 h): gasto é em tokens, sem US$
 ts.sort()
 subprocess.run([os.path.expanduser('~/skills-repo/scripts/log-metrics.sh'),proj,step,'claude',model or 'sonnet',str(i),str(o),cost,ts[0][:19],ts[-1][:19]],check=True)
