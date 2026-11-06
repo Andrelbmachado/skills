@@ -243,3 +243,51 @@ O log detalhado de render/sync/armadilhas de cada reel entregue (Kerning, Panton
 - `desat()` cinzeia `rgba(255,42,42,.6)`: use hex `#FF2A2A` + `globalAlpha`; cor quente só com `withSat(1)` onde é o assunto.
 - Painel de um bloco vaza para o seguinte: feche no `mas` do próximo bloco; confira folha de contato nos tempos de transição.
 - Projeto herdado sem cena: reaproveite voz Fish em cache; só sintetize linhas com texto novo. Orçamento/limite = faixa fixa com excesso vermelho, nunca barra de progresso.
+
+### Lição post 34 (quando usar 3D em marca/campanha/interface)
+- Sólido de revolução por pixel (`flask.js`) com cache por parâmetros: render 1× por estado, reuso nos quadros.
+- Relevo→mancha: efeitos (sombra, bisel, brilho) em px proporcionais ao ícone; `rel` 1→0 contínuo, nunca troca de arte.
+- Voz Fish speed 0.85 com janelas largas (7/25/25/28/8 s) → zero re-síntese; retime → shift → seekall → build.
+- Duração real 54,67 s vs ~60 s; check.mjs ok, pico −5,7 dBFS. Sem revisao-gemini.md → MP4 mais novo que src → não re-renderiza.
+- Checar `carrossel/` na etapa 5: pode estar pendente (post 34 estava).
+
+### Lição post 35 (etapas de projeto 3D)
+- Objeto único persistente (robô) que passa por todas as etapas com defeito = parâmetro (silhueta, volume, malha, UV, luz); gancho começa no retrabalho, não no resultado pronto.
+- Etapa 5 sem `revisao-gemini.md`: rode `tools/check.mjs` de dentro de `projeto/`, compare mtime do MP4 com src/timing/mix com `stat -f`; MP4 mais novo = não re-renderiza.
+- Cheque `carrossel/` na etapa 5: se faltar, registre como pendente (posts 34 e 35).
+
+## Lição post 36 (referências antes de modelar)
+- Etapa 5 sem `revisao-gemini.md`: validar com `tools/check.mjs` (rodar de dentro de `projeto/`) + frames; se MP4 mais novo que src/timing/mix e sem achado real, não re-renderizar.
+- Objeto 3D simples (cadeira) por prismas em canvas 2D basta; defeito da referência = parâmetro do mesmo objeto (✗→✓ no mesmo canto).
+
+## Lição post 37 (IA para pesquisar referências sem copiar)
+- Roteiro com 4 blocos + layout de 6 slides: decida a divisão do carrossel antes de montar (não repetir termo em 2 slides).
+- Um objeto abstrato único (cartaz gerado por `poster()` em variantes A–G) serve de referência, cópia e versão própria nos pares ✗→✓; reutilize `kit.mjs` do post anterior.
+- Cenas sobre fonte/crédito/licença: usar barras e ícones, nunca campos preenchidos nem nomes inventados.
+- Carrossel faltando na etapa 5 → delegar a subagente (modelo = carrossel-src do post anterior) em vez de pular.
+
+## Lição post 38 (IA para gerar moodboards)
+- `art.js` procedural: uma função gera as "imagens" do moodboard (paleta, textura, forma) por semente; as 3 direções são parâmetros, nunca imagens externas nem texto legível.
+- Bug `rgba()` em helper de cor (`mx`): validar canal alfa antes de interpolar; checar `seek` em todos os quadros.
+- Títulos desenhados por cima do palco: feche o palco antes do título do recap para não sobrepor.
+- Etapa 5 sem `revisao-gemini.md`: check.mjs (59 s, 1770/1770, 1080x1920, pico −5,8 dBFS) + MP4 mais novo que src/timing/mix → não re-renderizar.
+
+## Lição post 39 (briefing → conceitos visuais com IA)
+- Conceitos A/B/C = mesmo objeto (embalagem paramétrica) com parâmetros diferentes; evita assets externos e mantém ✗→✓ no mesmo canto.
+- Painel de um bloco vaza para o seguinte: feche no `mas` do próximo bloco e confira em folha de contato nos tempos de transição.
+- Etapa 5 sem revisao-gemini.md: valide com `tools/check.mjs` (de dentro de `projeto/`) e compare mtime do MP4 com src/timing/mix antes de re-renderizar.
+
+## Lição post 40 (IA na criação de imagens: onde ajuda e onde exige direção)
+- Etapa 5 sem revisao-gemini.md (só revisao-codex.md): rode `tools/check.mjs` de dentro de `projeto/` e compare mtime (`stat -f '%Sm %N'`) do MP4 com src/timing/mix; MP4 mais novo = não re-renderiza.
+- Tema "IA gera imagem": nunca usar imagem gerada/externa; mostrar "a IA ajuda" vs "exige direção" como variantes paramétricas do mesmo cartaz procedural (art.js), ✗→✓ no mesmo canto.
+- Carrossel em `carrossel-src/` com `build.mjs` + `slides.js` + fonte local (Bricolage.ttf); rodar o build regenera os PNGs.
+
+## Lição post 41 (prompts melhores para gerar imagens)
+- Prompt na arte = só barras/ícones no campo, nunca texto legível; um cartaz procedural único em variantes (especificidade, vocabulário visual, exclusões, iteração) mostra o antes→depois no mesmo lugar.
+- Etapa 5 sem `revisao-gemini.md`: valide com `tools/check.mjs` (55,93 s, 1678 quadros, pico −5,9 dBFS) e compare mtimes (`stat -f`); MP4 mais novo que src/timing/mix → não re-renderize.
+- Exclusão/negativo varia por ferramenta: não apresente como controle universal; iteração = trocar só um parâmetro (ex.: luz) e guardar o que funcionou, sem prometer repetibilidade.
+
+## Lição post 42 (IA para variações de layout, cor ou composição)
+- Etapa 5 sem `revisao-gemini.md`: `tools/check.mjs` (55,47 s, 1664 quadros, pico −6,1 dBFS) + mtime (`stat -f`); MP4 mais novo que src/timing/mix → não re-renderize.
+- Layout por pesos: cartaz procedural único remonta blocos por pesos (layout), troca só paleta (cor) ou só enquadramento (composição); variantes = parâmetros, wipe de cor entre versões.
+- Estimativa do roteiro (60,2 s) vs voz real (55,5 s): timing.json manda; CTA com lead ~3,4 s mantém recap legível.
