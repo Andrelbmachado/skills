@@ -231,3 +231,8 @@ Educational 9:16 reel with a voice-driven timeline, one persistent diagram, a re
 ### Lições por post (índice)
 
 O log detalhado de render/sync/armadilhas de cada reel entregue (Kerning, Pantone, Microinterações, Liquid Glass, Halloween, Tipografias, Dia a dia do designer, Datas comemorativas, Hierarquia visual, Contraste/alinhamento, Grid, Espaço em branco, Teoria das cores, Paleta, Tipografia por categoria, Legibilidade, Iconografia, Identidade visual, UX×UI, Wireframe, Estados de interface, Design system, Botão claro, Formulários/login, Luz e materiais 3D, Low poly) foi movido, sem perda, para **`references/post-lessons.md`** (grep pelo título). Regras gerais que sobreviveram a todos os redos: recap `✗ problema → ✓ TERMO` sem numeração, ✗/✓ no mesmo canto, título do termo branco, voz Fish em cache quando o texto não muda (`retime` → `shift` → `seekall` → `build`), validar com `check.mjs` + `syncverify.sh` (base) + folha de contato, MP4 mais novo que src/timing/mix → não re-renderiza, `timing.json` manda na duração. A CTA de todos os posts agora é a REGRA FIXA DO FINAL.
+
+### Lição post 32 (render tempo real × pré-calculado)
+- `desat()` cinzeia `rgba(255,42,42,.6)`: use hex `#FF2A2A` + `globalAlpha`; cor quente só com `withSat(1)` onde é o assunto.
+- Painel de um bloco vaza para o seguinte: feche no `mas` do próximo bloco; confira folha de contato nos tempos de transição.
+- Projeto herdado sem cena: reaproveite voz Fish em cache; só sintetize linhas com texto novo. Orçamento/limite = faixa fixa com excesso vermelho, nunca barra de progresso.
