@@ -33,7 +33,7 @@ Goal: motion that reads right in one or two passes, proven by evidence, at low t
 - **Proibido contador ou indicador de progresso:** nada de "1/5", "0/4→4/4", escadinha/degraus/barra de progresso, "já vimos X", "os 7 primeiros", "degrau N". Mesmo ao listar itens, não numere na tela nem na fala. Onde lições antigas abaixo falam em contador/escada/degraus/pílula colorida/cor por termo/slider de valor/selo ×2, ignore: foram revogadas.
 - **Mostrar de verdade:** cada ferramenta/conceito = PROBLEMA acontecendo visualmente (✗) → SOLUÇÃO resolvendo (✓) → rótulo do termo. Corte firula decorativa (washes, brilhos, anéis, mascotes) que não explica nada.
 - **Visual neutro:** fundo #000, título e legenda SEMPRE #FFF; destaque da palavra falada só por peso/opacidade (nunca cor, nem pílula colorida). Cor só em ✗ (vermelho) e ✓ (verde) e só onde cria foco; resto cinza/branco. Na dúvida, cinza.
-- **Série em partes:** sem numerar partes na tela; gancho de confronto (não de contagem) e CTA com loop aberto ("segue pra próxima parte").
+- **Série em partes:** sem numerar partes na tela; gancho de confronto (não de contagem). O FINAL é sempre a REGRA FIXA DO FINAL ("Curta, comenta e compartilha." + ícones): nada de "segue pra próxima parte", cadeado ou "???".
 - **Entrega extra:** pasta `carrossel/` ao lado do MP4 com PNGs 1080×1350 (4:5), 6–10 slides (capa-gancho, problema→solução, CTA), mesma regra neutra, balões sem texto, fontes em `projeto/carrossel-src/` (HTML/SVG + `build.mjs` com Playwright do `scripts/node_modules`). Slide sem numeração/"2/10".
 
 ## Padrão de qualidade (post 17)

@@ -104,3 +104,11 @@ Detalhes de render, sync e armadilhas de cada reel DZiny já entregue. Consulte 
 - ✗/✓ seguem o canto do objeto em trabalho (`cState(t).pos`), não coordenada fixa.
 - Etapa 5 sem `revisao-gemini.md`: check.mjs 55,07 s/1652 quadros/−5,1 dBFS + syncverify.sh base 130/145 (mediana 0,100 s, p90 0,150 s) + grep de balões vazio; MP4 (01:07) mais novo que src/timing/mix → não re-renderiza. Carrossel (8 slides) existe.
 
+
+## Texturas, UVs e materiais (post 31)
+- `src/box.js` (projeto 31): baú/caixa por pixel em canvas 2D com rede UV única (cruz), texturas procedurais cor/rugosidade/metal, dobra/desdobra por dobradiças, luz pontual no espaço da câmera. Reutilizável em posts 3D/UV/material.
+- Rede UV (cruz) NÃO é simétrica: centro fica ~0,8 unid. à direita da face frontal; compense `cx − 0,8·s` no painel achatado ou corta na borda.
+- `tools/tts.mjs` usa whisper `medium` por padrão e trava >10 min: rode com `WHISPER_MODEL=base`. Fish GOAWAY transitório: laço de 4 tentativas (cache preserva clipes).
+- ✓ do cartão colide com o sol de varredura de luz: ponha ✓ ao lado do objeto (0,3·s), não no canto de cima.
+- Cartão de material: mapas entram no shader; luz pertence à cena, nunca é entrada do cartão (revisão Codex).
+- Etapa 5 sem `revisao-gemini.md`: check.mjs 61,8 s/1854 quadros/−5,4 dBFS + syncverify.sh base 138/153 (mediana 0,012 s, p90 0,052 s) + grep de balões vazio; MP4 (02:34) mais novo que src/timing/mix → não re-renderiza. Carrossel 8 slides existe.

@@ -305,3 +305,9 @@ Lessons from the redo of "Kerning, tracking e padding" (poster reel):
 - Sem `revisao-gemini.md` → sem revisão. Validar: `check.mjs` (49,7 s, 1491/1491 quadros, pico −5,7 dBFS) + `syncverify.sh` com caminho absoluto do MP4 (base: 147/153, mediana 0,093 s, p90 0,170 s; max 0,79 s = outlier do whisper) + grep de balões. MP4 (23:45) mais novo que src/timing/mix → não re-renderiza.
 - Duração real 49,7 s vs 60 s planejados; timing.json manda.
 - Exemplos de copy/avaliações/depoimentos levam selo EXEMPLO; prova social nunca com nomes/notas inventados que pareçam reais.
+
+## Post 29 (luz e materiais) — final fixo aplicado em post já neutro (2026-11-06)
+- **Troca do final:** script.json `fim` = só "Curta, comenta e compartilha." (speed 1.05, lead 3,0 = recap silencioso); plan.js usa `c.like/c.comment/c.share = w('fim', ...)`, `c.in = c.like − 0,04`, `r.end = c.in − 0,12` (recap segurado até a CTA, sem quadro vazio; lança erro se < 1,6 s legível). Palco (esfera/lâmpadas), títulos, cadeado e legenda saem da CTA (`drawCaptions` ignora a linha `fim`).
+- **Armadilha:** `desat()` neutraliza o coração `#FF3040` (ficava cinza no vídeo); inclua `#ff3040` no `KEEP` do core.js e confira o último quadro do MP4.
+- Mudar o texto de 1 linha re-sintetiza também linhas cujo budget mudou (hook caiu de 3,37 s para 3,13 s de janela → nova síntese); a CTA curta rende vídeo ~5 s menor (44,7 s) — duração real manda.
+- Carrossel por subagente em paralelo: slides desenhados em SVG (esfera radialGradient, lâmpadas, pedestal), recap com seta SVG (glifo "→" cai em fonte reserva).
