@@ -232,6 +232,13 @@ Educational 9:16 reel with a voice-driven timeline, one persistent diagram, a re
 
 O log detalhado de render/sync/armadilhas de cada reel entregue (Kerning, Pantone, Microinterações, Liquid Glass, Halloween, Tipografias, Dia a dia do designer, Datas comemorativas, Hierarquia visual, Contraste/alinhamento, Grid, Espaço em branco, Teoria das cores, Paleta, Tipografia por categoria, Legibilidade, Iconografia, Identidade visual, UX×UI, Wireframe, Estados de interface, Design system, Botão claro, Formulários/login, Luz e materiais 3D, Low poly) foi movido, sem perda, para **`references/post-lessons.md`** (grep pelo título). Regras gerais que sobreviveram a todos os redos: recap `✗ problema → ✓ TERMO` sem numeração, ✗/✓ no mesmo canto, título do termo branco, voz Fish em cache quando o texto não muda (`retime` → `shift` → `seekall` → `build`), validar com `check.mjs` + `syncverify.sh` (base) + folha de contato, MP4 mais novo que src/timing/mix → não re-renderiza, `timing.json` manda na duração. A CTA de todos os posts agora é a REGRA FIXA DO FINAL.
 
+### Lição post 33 (composição de cena 3D)
+- Diorama persistente em `world.js` (canvas 2D) com parâmetros por passo (centro→terços, planos, perspectiva, foco); o mesmo mundo muda, nunca corte seco.
+- Janelas de 60 s do roteiro são estimativa: voz Fish deu 60,5 s (1815 quadros); `timing.json` manda. Janelas largas no TTS evitam re-síntese.
+- syncverify (base) 140/152, mediana 0,010 s, p90 0,055 s: aceitar; max 0,417 s = outlier do whisper.
+- Sem `revisao-gemini.md`: validar Codex com check.mjs + syncverify + frames; MP4 mais novo que src/timing/mix → não re-renderiza.
+- Carrossel (7 slides, HTML/SVG desenhado) pode ser feito por subagente em paralelo ao vídeo.
+
 ### Lição post 32 (render tempo real × pré-calculado)
 - `desat()` cinzeia `rgba(255,42,42,.6)`: use hex `#FF2A2A` + `globalAlpha`; cor quente só com `withSat(1)` onde é o assunto.
 - Painel de um bloco vaza para o seguinte: feche no `mas` do próximo bloco; confira folha de contato nos tempos de transição.
