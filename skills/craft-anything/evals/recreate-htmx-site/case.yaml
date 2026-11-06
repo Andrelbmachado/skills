@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: recreate-htmx-site
+expected_outcome: |
+  A static HTML/CSS rebuild of htmx.org built from a visitor-view capture, checked against the original at 3 widths, with a similarity score reported.

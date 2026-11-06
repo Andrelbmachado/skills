@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: snake-game-clone
+expected_outcome: |
+  A playable browser snake game with its own identity, a mechanics sheet whose numbers appear in the code, and an automated self-test and screenshot proving move/act/hud work.
