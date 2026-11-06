@@ -51,11 +51,11 @@ André aprovou o post 17 ("sensacional"): todo post novo deve igualar ou superar
 ## Regras do André (feedback post 18)
 Valem para TODOS os posts (feedback do vídeo 18 v2).
 1. **Final fixo:** o vídeo termina SÓ com o CTA "Curta, comenta e compartilha." — mesmo texto e mesma tela em todo post. Nada de "segue pra próxima parte", "teste no seu perfil" ou variações.
-2. **Paleta calma e sóbria:** fundo preto, branco, cinzas e no máximo 1 cor de destaque da marca fictícia; ✗/✓ discretos. Sem carnaval de cores. (Pill da legenda karaokê segue colorido.)
+2. **Paleta calma e sóbria:** fundo preto, branco e cinzas; cor só em ✗ vermelho / ✓ verde e, quando for o próprio assunto (ex.: luz indireta), no detalhe em foco. Sem carnaval de cores, sem cor por termo/passo. Única exceção fixa: retângulo violeta `#7250A1` atrás da palavra falada na legenda karaokê.
 3. **Mockups detalhados e realistas:** site com navbar, hero, botões, texto; sacola com alças, dobras, sombra, etiqueta; app com status bar, cards, tab bar, ícones Lucide. Nunca retângulos/formas genéricas.
 4. **Ritmo:** explicar com calma sem ficar lento — frases completas, pausas curtas, ~130-150 palavras em ~60-70 s.
 5. **Proibido** o molde repetitivo "você fez X, mas ainda falta Y / mas aí... então...". Varie o estilo de explicação entre vídeos.
-6. **Estrutura numerada** anunciada no gancho (ex.: "4 passos para sua marca ter um design consistente"), depois "Passo 1...", "Passo 2...".
+6. ~~Estrutura numerada~~ **REVOGADA** pela regra "proibido contador": gancho de confronto, sem anunciar "N passos" nem "Passo 1/2…" na fala ou na tela; cada ideia entra pelo problema visível.
 7. **Cada passo completo antes do próximo:** PROBLEMA (visto na tela) → SOLUÇÃO (transformação animada acontecendo) → COMO FUNCIONA PARA O USUÁRIO FINAL (porquê/benefício). Nunca pular sem explicar o porquê.
 8. **Padrão post 17:** antes → transformação na tela → depois. Sem quadros vazios/gaps (ex.: 0,4 s de tela vazia antes do CTA).
 

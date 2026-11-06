@@ -112,3 +112,11 @@ Detalhes de render, sync e armadilhas de cada reel DZiny já entregue. Consulte 
 - ✓ do cartão colide com o sol de varredura de luz: ponha ✓ ao lado do objeto (0,3·s), não no canto de cima.
 - Cartão de material: mapas entram no shader; luz pertence à cena, nunca é entrada do cartão (revisão Codex).
 - Etapa 5 sem `revisao-gemini.md`: check.mjs 61,8 s/1854 quadros/−5,4 dBFS + syncverify.sh base 138/153 (mediana 0,012 s, p90 0,052 s) + grep de balões vazio; MP4 (02:34) mais novo que src/timing/mix → não re-renderiza. Carrossel 8 slides existe.
+
+## Post 32 — render em tempo real × pré-calculado (redo 2026-11-06, regras neutras + REGRA B)
+- Projeto tinha só voz/timing/ferramentas (cópia do post 30), sem scene/plan: cena nova escrita do zero; voz Fish reaproveitada (texto igual, zero API): `seekall` → `build`.
+- Estúdio persistente em canvas 2D (`studio.js`): piso em ladrilhos com yaw da câmera, cubo (faces projetadas + veios), esfera metálica por pixel (reflexo do ambiente real × falso por `refl`), sombra dura→macia por camadas de traço, ruído por tile aleatório, raios = polilinhas janela→superfície→lente. Todo parâmetro (refl, soft, noise, gi, giFlick, ghost, dyn, bloom, part) é keyframe de `K`.
+- Engasgo = yaw mostrado `floor(t·rate)/rate` × yaw verdadeiro num mostrador (agulha suave): o contraste lê sem contador. Orçamento = faixa fixa + blocos de efeito que caem; só a parte além do prazo fica vermelha; "≈ 16,7 ms" é etiqueta com colchete, não barra.
+- Cor de luz indireta só no piso/lightmap via `withSat(1)`; `rgba(255,42,42,.6)` em string é cinza no `desat()`: use `#FF2A2A` + `globalAlpha`. `#ff3040` no KEEP.
+- Painéis (orçamento, lightmap) precisam sumir ao entrar o próximo bloco (`S4.mas − 0,2`), não só no recap; chip de legenda perto de y 1650 colide com a legenda (CAP_Y 1700).
+- Carrossel via subagente em paralelo (8 slides desenhados em SVG/HTML) enquanto o vídeo era escrito.
