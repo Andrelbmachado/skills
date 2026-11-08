@@ -43,7 +43,12 @@ Ainda não chegam ao Mac: poses, depth e fotos dos passes (Part D).
 ```bash
 python3 -I scripts/scan_report.py ~/PlantaRender/Models/<uuid>        # peça salva
 python3 -I scripts/scan_report.py <FurnitureDraft>/<uuid>              # rascunho (state.json)
+python3 -I scripts/rebuild_furniture.py ~/PlantaRender/Models/<uuid> [--json]  # reconstrução offline
 ```
+`rebuild_furniture.py`: perfil lateral dos pontos externos (faixas de 2 cm, frente = p3 de z, lado que chega à parede;
+degrau ≥ 4 cm por ≥ 10 cm = nova seção; faixa vazia = nicho; última seção curta e rasa = cornija), roll do modelo
+(normais por área dobradas a 90°, pico; usdz via `/usr/bin/usdcat`) e `synced`. 90BD: 1,374 × 1,998, seções
+0–0,76 (0,38) / 0,76–1,88 (0,29) / nicho 0,84–1,16 / cornija 1,88–2,0; roll 9,2°.
 Bloco furniture: tamanho, painéis por papel, **painéis fora da caixa**, **cantos < 0**, **prateleiras < 1,5 cm**,
 tamanho/`sizeMeters`, tamanho/pontos LiDAR e **ALTURA CORTADA** (layout < 0,7 × altura do LiDAR externo).
 Bloco `scan_mobile_v2`: por passe quadros, borrados (fração), keyframes, depth, fotos por intenção, vídeo;
@@ -63,6 +68,10 @@ Referência: `~/PlantaRender/Models/90BD16D1-C563-481B-8FD7-097735E70E69` (v1, A
 9. **Armário vizinho vaza** na caixa.
 10. Portas > 90° e travessa curva: porta nem sempre retângulo.
 11. Ferragens pequenas e escuras: precisam de fotos de perto e presets.
+12. **Portões do relatório (Task 7)** — `scan_report.py` marca `alerts`: **ALERTA altura** se layout / altura dos lados
+    fora de 0,9–1,1 (90BD 0,578: caixa parou no tampo); **ALERTA roll** se o modelo Object Capture tem roll > 2°
+    (90BD 9,2°); **ALERTA sync** se faltam `interior/frames.jsonl`, `interior/depth.bin`, `interior_cells.bin`
+    (Task 6; sem eles não há reconstrução offline). `depth_vs_sides` só informa (90BD 2,1: porta aberta como lateral).
 
 **Causas achadas (Part D):** `clipToBoards` cortava a altura na prateleira mais larga; **porta aberta lida como lateral**
 (+0,41 m de profundidade); **modelo inclinado 9°** sem nivelar (`FurnitureFit` só resolve yaw + translação);
