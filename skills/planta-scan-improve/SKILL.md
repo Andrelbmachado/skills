@@ -20,7 +20,7 @@ O ciclo é sempre: **relatório → hipótese → mudança → teste → novo re
 |---|---|
 | parede sumiu, parede a mais, pilar falso, casa inteira virou um cômodo | `scan-roomplan` |
 | textura da parede/piso errada, móvel 3D do RoomPlan feio | `scan-roomplan-advanced` |
-| móvel (armário, pia…) com altura errada, painéis fora da caixa, prateleira dupla | `scan-mobile` |
+| móvel (armário, pia…): altura cortada, porta aberta virou lateral, painéis fora da caixa, prateleira dupla, passes borrados, dobradiça/gaveta/item errado, camadas (v2: passes `closed`/`open`, `parts.jsonl`, `layers.json`) | `scan-mobile` |
 | malha 3D com buracos, cor errada, objeto cortado pelo alcance | `scan-lidar` |
 | detalhe fino perdido de perto, poucas fotos | `scan-lidar-advanced` |
 | nuvem de pontos com ruído, pontos voando | `scan-point-cloud` |
@@ -47,7 +47,7 @@ para móveis, painéis fora da caixa, cantos abaixo de y=0, prateleiras a < 1,5 
 ## Falhas conhecidas (entre tipos)
 - RoomPlan solta paredes nas atualizações ao vivo (`WallMemory`, corrigido em 2026-11-06, commit 6ab2451).
 - Heurística de pilar (`ProDrawing.detectingPillars`) come paredes curtas.
-- Scan Mobile: altura parou no balcão (1,07 m para um móvel de ~1,85 m), painéis fora da caixa.
+- Scan Mobile: altura parou no balcão (1,07 m para um móvel de ~1,85 m; o relatório marca ALTURA CORTADA), painéis fora da caixa, porta aberta lida como lateral, modelo inclinado 9°.
 
 ## Alavancas (modelos 3D, todos os tipos)
 - Encaixe guiado por profundidade: ajustar a saída do Object Capture à profundidade LiDAR (`Sources/PlantaLiDAR/Furniture/FurnitureFit.swift`).
