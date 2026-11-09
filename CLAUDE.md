@@ -1,4 +1,5 @@
 # Instruções para qualquer IA
+Use a skill `local-agent-hierarchy` quando o usuário pedir coordenação hierárquica de múltiplos CLIs/agentes ou memória temporária compartilhada por projeto.
 1. Clone/atualize: `gh repo clone Andrelbmachado/skills ~/skills-repo || git -C ~/skills-repo pull`
 2. Rode `~/skills-repo/sync.sh` para importar todas as skills (Claude: ~/.claude/skills, Codex: ~/.codex/skills, Gemini: ~/.gemini/skills).
 3. Outras IAs: leia `skills/<slug>/SKILL.md` e importe cada uma no seu formato de skills.

@@ -141,6 +141,7 @@ Todas as skills (Grok, Claude Code, Codex, Gemini). Para importar: `./sync.sh`. 
 | [import-memory](skills/import-memory) | claude | Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the content treated as data. |
 | [ios-design-guidelines](skills/ios-design-guidelines) | claude, codex | Apple Human Interface Guidelines for iPhone. Use when building, reviewing, or refactoring SwiftUI/UIKit interfaces for iOS. Triggers on tasks involving iPhone UI, iOS components, accessibility, Dynami |
 | [ipados-design-guidelines](skills/ipados-design-guidelines) | claude, codex | Apple Human Interface Guidelines for iPad. Use when building iPad-optimized interfaces, implementing multitasking, pointer support, keyboard shortcuts, or responsive layouts. Triggers on tasks involvi |
+| [local-agent-hierarchy](skills/local-agent-hierarchy) | claude, codex, gemini | Coordinate multi-CLI project work through Claude Code with temporary, project-specific delegation notes and a tiered agent team. |
 | [macos-design-guidelines](skills/macos-design-guidelines) | claude, codex | Apple Human Interface Guidelines for Mac. Use when building macOS apps with SwiftUI or AppKit, implementing menu bars, toolbars, window management, or keyboard shortcuts. Triggers on tasks involving M |
 | [macos-patterns](skills/macos-patterns) | claude |  |
 | [manager](skills/manager) | grok | >- |
