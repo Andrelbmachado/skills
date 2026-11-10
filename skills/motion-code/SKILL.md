@@ -291,3 +291,13 @@ O log detalhado de render/sync/armadilhas de cada reel entregue (Kerning, Panton
 - Etapa 5 sem `revisao-gemini.md`: `tools/check.mjs` (55,47 s, 1664 quadros, pico −6,1 dBFS) + mtime (`stat -f`); MP4 mais novo que src/timing/mix → não re-renderize.
 - Layout por pesos: cartaz procedural único remonta blocos por pesos (layout), troca só paleta (cor) ou só enquadramento (composição); variantes = parâmetros, wipe de cor entre versões.
 - Estimativa do roteiro (60,2 s) vs voz real (55,5 s): timing.json manda; CTA com lead ~3,4 s mantém recap legível.
+
+## Motor opcional: render na GPU sem navegador (ex.: raea)
+Use só quando a cena já é React/TSX, depende apenas do tempo ou do frame, e o render pelo navegador está lento.
+1. Confirmar suporte da plataforma, licença e termos do motor; fixar a versão. Não usar em trabalho comercial antes de revisar a licença.
+2. Manter a cena como função pura do tempo ou do frame, sem estado externo que mude o resultado.
+3. Renderizar só frames-chave e conferir texto cortado, contraste e áreas seguras. Use a sintaxe documentada da versão instalada; não presuma comandos.
+4. Corrigir e repetir até os frames-chave passarem.
+5. Fazer o render completo com áudio e rodar a verificação normal desta skill: quadros, duração, pico de áudio e contact sheet.
+6. Registrar o tempo de render. Se o motor falhar ou sair diferente, voltar ao pipeline já validado, como navegador + ffmpeg ou Remotion, sem reescrever a cena.
+Benchmarks do fabricante não são prova; compare no próprio projeto. Fonte: @dopaminedevs sobre raea, vibecode-2026-11-10.
