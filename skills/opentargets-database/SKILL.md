@@ -6,6 +6,9 @@ description: >
   for therapeutic target identification.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Open Targets Database Skill
 
 ## Overview

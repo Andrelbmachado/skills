@@ -6,6 +6,9 @@ description: >-
   prerequisite.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # uv (Python Package Manager)
 
 `uv` is a fast Python package manager used by Science Skills to run their Python

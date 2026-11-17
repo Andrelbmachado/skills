@@ -3,6 +3,9 @@ name: prepare
 description: "Prepare — Architecture Planning & Cost Estimation"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Prepare — Architecture Planning & Cost Estimation
 
 ## Quick Reference

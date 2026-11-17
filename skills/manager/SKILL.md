@@ -10,6 +10,9 @@ description: >-
   do all the heavy work, with a tiered check-in schedule and a recursive lessons
   loop that updates this skill after every project.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Manager
 
 ## Auto-invoke router (start here, every time)

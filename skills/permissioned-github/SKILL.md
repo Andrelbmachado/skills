@@ -3,6 +3,9 @@ name: permissioned-github
 description: Guidelines for interacting with GitHub and request permissions from the user when commands fail due to restrictions in the agent environment.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # GitHub Skill
 
 This skill describes how to interact with GitHub and request the permissions to perform actions that are not authorized by default in the agent environment.

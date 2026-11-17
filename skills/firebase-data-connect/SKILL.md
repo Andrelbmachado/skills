@@ -5,6 +5,9 @@ metadata:
   category: Databases
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Firebase SQL Connect
 
 Firebase SQL Connect is a relational database service using Cloud SQL for

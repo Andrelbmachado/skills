@@ -5,6 +5,9 @@ version: 1.0.0
 owner: task-decomposer
 triggers: [task_assigned, artifact_changed, review_requested]
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Task Decomposer — Skill principal
 
 ## Missão

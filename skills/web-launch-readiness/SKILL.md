@@ -3,6 +3,9 @@ name: web-launch-readiness
 description: Use quando preparar o lançamento de um site ou app web e precisar conferir metadados sociais, separação app/marketing, reputação de e-mail e indexação.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Preparação de lançamento web e domínio
 
 ## Fluxo

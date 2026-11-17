@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Web Platform Design Guidelines
 
 Framework-agnostic rules for accessible, performant, responsive web interfaces. Based on WCAG 2.2, MDN Web Docs, and modern web platform APIs.

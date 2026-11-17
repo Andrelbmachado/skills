@@ -3,6 +3,9 @@ name: a11y-debugging
 description: Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Core Concepts
 
 **Page Targeting**: Page-scoped tools (`take_snapshot`, `list_console_messages`, `evaluate_script`, `press_key`, `take_screenshot`, `lighthouse_audit`, etc.) require a `pageId` parameter. Retrieve available page IDs using `list_pages` or from `new_page`.

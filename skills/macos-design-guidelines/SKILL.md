@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # macOS Human Interface Guidelines
 
 Mac apps serve power users who expect deep keyboard control, persistent menu bars, resizable multi-window layouts, and tight system integration. These guidelines codify Apple's HIG into actionable rules with SwiftUI and AppKit examples.

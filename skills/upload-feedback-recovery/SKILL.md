@@ -3,6 +3,9 @@ name: upload-feedback-recovery
 description: Use quando revisar ou projetar upload de arquivos e precisar de feedback no arraste, progresso verdadeiro, retomada e recuperação por arquivo.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Upload com feedback e recuperação
 
 ## Fluxo

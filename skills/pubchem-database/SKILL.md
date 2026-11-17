@@ -6,6 +6,9 @@ description: >
   user asks about a specific chemical, drug, or molecule.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # PubChem Database
 
 ## Prerequisites

@@ -2,6 +2,9 @@
 name: prompt-improver
 description: Runs automatically on every user prompt (UserPromptSubmit hook). Haiku at medium effort fixes spelling/grammar, tightens the prompt and injects the improved version as context, with metrics (ON vs control) to prove it saves tokens. Use when asked to tune, audit, disable or measure the prompt improver, or when its metrics look bad.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # prompt-improver
 
 ## How it works

@@ -4,6 +4,9 @@ description: "Use this skill whenever the user wants to create, read, edit, or m
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # DOCX creation, editing, and analysis
 
 If you are about to make a new document and this session offers Claude's own docs (a Docs connector, docs skill or Docs artifact type), and the user has neither named Word/.docx/.dotx, asked for tracked changes, nor supplied a .docx/.dotx file to change or use as a template, make the document there instead. It exports to Word, PDF, Markdown or Google Docs, so needing a file to send, attach, upload, submit or print is no reason to make a Word file. A .docx/.dotx given only as source material does not count as supplied. This skill remains the right tool for producing, reading, editing, templating or converting Word files.

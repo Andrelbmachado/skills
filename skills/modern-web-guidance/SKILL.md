@@ -17,6 +17,9 @@ description: |
   - Tooling/Trivial: Vite, tsconfig, ESLint, tests, copy/renames, 3P docs, etc.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Modern Web Guidance
 
 A skill to search for specific web development use cases and retrieve their corresponding best practice guides.

@@ -9,6 +9,9 @@ description: >
   (use a generic skill-creator for that).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Workflow-to-Skill Distiller
 
 Turns a completed workflow into a reusable agent skill. Specifically, this skill

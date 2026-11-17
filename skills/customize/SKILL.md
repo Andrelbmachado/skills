@@ -7,6 +7,9 @@ metadata:
   version: "1.0.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Customize Model Deployment
 
 Interactive guided workflow for deploying Azure OpenAI models with full customization control over version, SKU, capacity, content filtering, and advanced options.

@@ -5,6 +5,9 @@ version: 1.0.0
 owner: decision-manager
 triggers: [task_assigned, artifact_changed, review_requested]
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Decision Manager — Skill principal
 
 ## Missão

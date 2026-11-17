@@ -3,6 +3,9 @@ name: subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Subagent-Driven Development
 
 **Auto-invoke:** brief each subagent with the domain skill its task needs (via `manager` routing + `ensure-skill.sh`); collect lessons from subagent errors into those skills.

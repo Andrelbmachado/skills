@@ -5,6 +5,9 @@ compatibility: "Cowork in the Claude desktop app, and Cowork Remote or upgraded 
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Built-in browser
 
 The built-in browser is a real browser pane inside the Claude desktop app, separate from the person's Chrome. Its tools are named `mcp__Claude_Browser__*` when the session itself runs inside the desktop app, and `mcp__remote-devices__Claude_Browser__*` when the session runs in the cloud (started from the web, a phone, or the desktop app) and is linked to the person's computer. The names after the prefix are the same either way, Claude uses whichever prefix is actually present, and this skill refers to the tools by the part after the prefix.

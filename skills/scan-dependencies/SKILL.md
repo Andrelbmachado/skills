@@ -8,6 +8,9 @@ description: >
   versioning. This is the first step in the dependency lifecycle.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan dependencies
 
 ## When to use this skill

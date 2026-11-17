@@ -6,6 +6,9 @@ metadata:
   category: CloudObservabilityAndMonitoring
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Crashlytics
 
 This skill provides a complete guide for getting started with Crashlytics on

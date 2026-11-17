@@ -7,6 +7,9 @@ description: >
   the vulnerability is still exploitable after remediation.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Run PoC
 
 This skill produces a **PoC verification artifact** — a script that would

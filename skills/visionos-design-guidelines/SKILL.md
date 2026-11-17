@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # visionOS Design Guidelines
 
 Comprehensive design rules for Apple Vision Pro based on Apple Human Interface Guidelines. These rules ensure spatial computing apps are comfortable, intuitive, and consistent with platform conventions.

@@ -3,6 +3,9 @@ name: scan-roomplan
 description: Melhorar, ajustar ou depurar o scan RoomPlan (arquitetura) do app Planta — paredes, portas, janelas, escadas e cantos travados por toque. Use para "melhorar o scan RoomPlan", "parede sumiu", "parede curta virou pilar", "casa inteira virou um cômodo", "wall loss", "RoomPlan dropped walls", ou ao abrir roomplan_raw.json, scan.json, floor_grid.json, WallMemory.swift, RoomScanController.swift, ProDrawing.swift.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan RoomPlan (arquitetura)
 
 `ScanKind.roomPlan` — "Paredes, portas, janelas e escadas com medida exata. Toque nos cantos para travar."

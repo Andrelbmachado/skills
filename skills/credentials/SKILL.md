@@ -5,6 +5,9 @@ description: >-
   presence, and prompting the user to add them if missing using a safe protocol.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Safe Credentials Protocol
 
 Many skills require API keys or other credentials to function or to access

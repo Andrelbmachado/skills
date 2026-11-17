@@ -10,6 +10,9 @@ description: >-
   legacy workflow files (see migrate-workflows).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Dynamic workflows with `run_workflow`
 
 A workflow is a short Python script that the `run_workflow` tool executes. The

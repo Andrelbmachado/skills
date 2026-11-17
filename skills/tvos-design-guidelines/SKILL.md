@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # tvOS Design Guidelines
 
 Apple TV is a living room device driven entirely by focus-based navigation and the Siri Remote. There is no pointer, no touch screen, and no mouse. Every design decision must account for the 10-foot viewing distance, the simplicity of the remote, and the lean-back nature of TV consumption.

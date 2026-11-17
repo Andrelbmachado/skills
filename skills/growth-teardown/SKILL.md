@@ -2,6 +2,9 @@
 name: growth-teardown
 description: Use para entender como uma empresa ou concorrente conquistou clientes e quais jogadas de crescimento podem ser adaptadas.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Growth teardown
 
 1. Definir o alvo (nome, domínio, perfis oficiais), o mercado e a pergunta de negócio.

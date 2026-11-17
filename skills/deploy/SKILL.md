@@ -3,6 +3,9 @@ name: deploy
 description: "Deploy — IaC Execution & Health Verification"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Deploy — IaC Execution & Health Verification
 
 ## Quick Reference

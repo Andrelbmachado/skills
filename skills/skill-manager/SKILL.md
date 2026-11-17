@@ -3,6 +3,9 @@ name: skill-manager
 description: Discovers, vets and installs new free skills for every AI (Claude Code, Codex, Gemini CLI, Grok) based on what the user actually asks about. Syncs the shared skills repo, has each AI research its own history separately, merges and dedupes the findings, searches free skill sources, inspects each candidate, installs and publishes the safe ones, and writes a report. Use when asked to "manage skills", "find new skills", "update skills for all AIs", or on a periodic skills review.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # skill-manager
 
 Shared repo: `~/skills-repo` (github.com/Andrelbmachado/skills, private). Works with `skills-synchronizer` (publish + sync rules).

@@ -6,6 +6,9 @@ description: >
   non-diseased tissue sites.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # GTEx Database Integration
 
 This skill retrieves transcriptomics data (RNA expression baselines) and

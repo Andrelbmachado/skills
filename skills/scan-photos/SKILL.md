@@ -3,6 +3,9 @@ name: scan-photos
 description: Melhorar, ajustar ou depurar o scan Fotos do app Planta — fotos em volta de um objeto e modelo texturizado pelo Apple Object Capture (fotogrametria no iPhone). Use para "melhorar o scan de fotos", "Object Capture falhou", "modelo de fotos torto", "modelo sem escala", "textura borrada", "photogrammetry", ou ao abrir PhotoCaptureView.swift, ObjectCaptureStep.swift, ObjectPhotoSet.swift, FurniturePhotogrammetry.swift, pastas Images/ e Checkpoints/.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan Fotos (Object Capture)
 
 `ScanKind.photos` — "Fotos em volta de um objeto, modelo texturizado (Object Capture)." A sessão guiada da Apple

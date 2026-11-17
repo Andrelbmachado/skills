@@ -3,6 +3,9 @@ name: mcp-batched-code-mode
 description: Use quando projetar um agente com muitas ferramentas MCP e precisar reduzir schemas e resultados intermediários no contexto usando uma API tipada em execução isolada.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Composição de ferramentas por Code Mode
 
 ## Fluxo

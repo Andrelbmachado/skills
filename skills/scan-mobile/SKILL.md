@@ -3,6 +3,9 @@ name: scan-mobile
 description: Melhorar, ajustar ou depurar o Scan Mobile v2 do app Planta — um móvel (armário, pia, estante…) com captura própria em dois passes (fechado/aberto), caixa AR com gizmos, detecção de portas, gavetas, puxadores, dobradiças e itens, rig de abrir/fechar e camadas. Use para "melhorar o scan mobile", "altura do armário cortada", "porta aberta virou lateral", "painel fora da caixa", "prateleira duplicada", "móvel inclinado", "quadros borrados", "dobradiça errada", "furniture scan", ou ao abrir poses.jsonl, keyframes/, parts.jsonl, photos.json, layers.json, model.json com furniture.parametric, FurnitureCapture.swift, BoxGizmo.swift, FurnitureFit.swift, PartDetector.swift, DoorRig.swift.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan Mobile v2 (captura própria)
 
 `ScanKind.furniture`. Fluxo (`FurnitureDraft.Step`): **pick** (`PieceKind`) → **frame** (caixa AR: primeira detecção da

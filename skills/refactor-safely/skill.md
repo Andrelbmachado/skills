@@ -3,6 +3,9 @@ name: refactor-safely
 description: Plan and execute safe refactoring using dependency analysis
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Refactor Safely
 
 Use the knowledge graph to plan and execute refactoring with confidence.

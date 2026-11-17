@@ -3,6 +3,9 @@ name: social-video-analysis
 description: Use quando receber um link de vídeo de rede social para entender o conteúdo (Threads, Instagram, TikTok, YouTube Shorts, X). Baixa o vídeo, extrai frames e áudio, transcreve com whisper, e gera relatório padrão (ANALISE.md) com o que aparece, o que é dito, ritmo, gancho, CTA e motivo do engajamento.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # social-video-analysis
 
 **Use quando receber um link de vídeo de rede social para entender o conteúdo.** Também serve como etapa de "vídeo de referência" antes de criar um reel/post parecido. Nunca publica nada em rede social.

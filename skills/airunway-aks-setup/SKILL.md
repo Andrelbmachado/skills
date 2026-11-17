@@ -8,6 +8,9 @@ metadata:
 argument-hint: "[skip-to-step N]"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # AI Runway AKS Setup
 
 This skill walks users from a bare Kubernetes cluster to a running AI model deployment. Follow each step in sequence unless the user provides `skip-to-step N` to resume from a specific phase.

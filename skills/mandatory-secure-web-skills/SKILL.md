@@ -3,6 +3,9 @@ name: mandatory-secure-web-skills
 description: "<!-- disableFinding(SKILLS_METADATA_MISSING) -->"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 <!-- disableFinding(SKILLS_METADATA_MISSING) -->
 <!-- disableFinding(SKILLS_BODY_LENGTH) -->
 ---

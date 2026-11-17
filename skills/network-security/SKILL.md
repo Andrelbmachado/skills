@@ -2,6 +2,9 @@
 name: network-security
 description: Use for networking and hardening tasks - DNS, TLS/certs, HTTP/CORS, firewalls/NSGs, VPN/zero-trust, port/service exposure, reverse proxies, and defensive security review. Defensive and authorized use only.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # network-security
 - **Diagnose bottom-up**: DNS (`dig`) → route/ping → port (`nc -vz`) → TLS (`openssl s_client`) → HTTP (`curl -v`) → app logs.
 - **TLS**: TLS1.2+ only, auto-renew certs (ACME), HSTS, redirect 80→443. **CORS**: explicit origins, never `*` with credentials.

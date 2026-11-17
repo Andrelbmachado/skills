@@ -7,6 +7,9 @@ metadata:
   version: "2.5.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure Compute Skill
 
 Routes Azure VM and Virtual Machine Scale Set (VMSS) requests to the right workflow.

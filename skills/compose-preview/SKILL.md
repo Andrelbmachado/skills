@@ -3,6 +3,9 @@ name: compose-preview
 description: Instructions for the Android Compose Preview sidecar, which renders Jetpack Compose @Preview functions with `android preview render` and shows them in the Android Compose Preview pane. Use it when the user wants to see a Compose preview, or to review the result of UI changes — re-render after changing the code so that the pane shows the result.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Android Compose Preview Skill
 
 The **Android Compose Preview** sidecar (plugin `android-cli`) is a local web server run by `android sidecar run compose-preview`.

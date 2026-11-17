@@ -13,6 +13,9 @@ description: >
   permission justifications, or drafting a privacy policy.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Chrome Extensions
 
 Build production-quality Chrome extensions using Manifest V3 and publish them to the Chrome Web Store.

@@ -8,6 +8,9 @@ description: >
   sequences by accession, gene name, locus tag, PubMed ID, or patent number.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # NCBI Sequence Fetch
 
 ## Prerequisites

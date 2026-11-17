@@ -7,6 +7,9 @@ metadata:
   version: "1.3.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure Enterprise Infra Planner
 
 ## When to Use This Skill

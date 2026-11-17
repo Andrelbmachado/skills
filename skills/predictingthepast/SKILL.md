@@ -9,6 +9,9 @@ description: >
   mentions "Aeneas", or "Ithaca".
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Predicting The Past (Aeneas / Ithaca)
 
 Aeneas (Latin) and Ithaca (Ancient Greek) perform four tasks on ancient texts:

@@ -4,6 +4,9 @@ description: Applies Anthropic's official brand colors and typography to any sor
 license: Complete terms in LICENSE.txt
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Anthropic Brand Styling
 
 ## Overview

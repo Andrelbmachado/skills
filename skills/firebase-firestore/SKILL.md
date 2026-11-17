@@ -7,6 +7,9 @@ metadata:
   category: Databases
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Cloud Firestore Database and Operations
 
 > [!IMPORTANT] **Security Rules Authoring (`firestore.rules`)**

@@ -9,6 +9,9 @@ description: >-
   BioC APIs.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # PubMed API
 
 ## Prerequisites

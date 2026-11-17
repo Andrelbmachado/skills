@@ -3,6 +3,9 @@ name: morning
 description: "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead."
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Context
 
 This page is my 30-second morning glance: one calm view of the shape of my day and the few things worth knowing, so I start oriented instead of overwhelmed.

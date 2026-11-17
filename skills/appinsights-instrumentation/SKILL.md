@@ -7,6 +7,9 @@ metadata:
   version: "1.2.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # AppInsights Instrumentation Guide
 
 This skill provides **guidance and reference material** for instrumenting webapps with Azure Application Insights.

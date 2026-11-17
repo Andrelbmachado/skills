@@ -7,6 +7,9 @@ metadata:
   category: ApplicationDevelopment
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Remote Config
 
 This skill provides a complete guide for getting started with Remote Config on

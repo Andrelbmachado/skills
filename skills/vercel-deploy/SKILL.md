@@ -3,6 +3,9 @@ name: vercel-deploy
 description: Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Vercel Deploy
 
 Deploy any project to Vercel instantly. **Always deploy as preview** (not production) unless the user explicitly asks for production.

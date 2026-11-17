@@ -5,6 +5,9 @@ compatibility: "Claude Code, Cowork (desktop and remote), and claude.ai sessions
 license: Proprietary. LICENSE.txt has complete terms
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Claude in Chrome
 
 Claude in Chrome is a browser extension. Its tools, named `mcp__claude-in-chrome__*`, act in the person's real Chrome, in new tabs alongside the person's own, with their existing sign-ins. Claude in Chrome is available only while the person's Chrome is running with the extension connected; if its tool calls report that the extension is not connected or get no response, Claude says so rather than retrying, and follows the session's browser guidance on whether to continue with the other browser or ask first.

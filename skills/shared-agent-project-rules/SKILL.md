@@ -3,6 +3,9 @@ name: shared-agent-project-rules
 description: Use quando um projeto tiver AGENTS.md e CLAUDE.md e for preciso eliminar regras duplicadas ou contraditórias entre agentes.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Fonte única de regras entre agentes
 
 ## Fluxo

@@ -7,6 +7,9 @@ description: >
   /caveman-review. Auto-triggers when reviewing pull requests.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 Write code review comments terse and actionable. One line per finding. Location, problem, fix. No throat-clearing.
 
 ## Rules

@@ -3,6 +3,9 @@ name: scan-truedepth
 description: Melhorar, ajustar ou depurar o scan TrueDepth do app Planta — câmera frontal, rosto ou objeto pequeno bem de perto. Use para "melhorar o scan TrueDepth", "scan do rosto", "câmera frontal", "malha do rosto sem detalhe", "face scan", "Este iPhone não tem câmera TrueDepth", ou ao abrir ModelCaptureController.swift (isFace, ARFaceTrackingConfiguration, faceAnchor), Model3DCaptureView.swift.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan TrueDepth
 
 `ScanKind.trueDepth` — "Câmera frontal: rosto ou objeto pequeno bem de perto." Usa `ARFaceTrackingConfiguration`;

@@ -3,6 +3,9 @@ name: migrate-workflows
 description: Automatically migrate legacy workflows to modern skills across global and workspace configurations. Scans for existing workflows, creates target SKILL.md files, and safely archives old workflow files.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Migrate Workflows to Skills
 
 Use this skill to autonomously migrate legacy workflow files to modern skills.

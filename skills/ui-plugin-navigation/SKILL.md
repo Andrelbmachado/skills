@@ -4,6 +4,9 @@ description: Discover UI plugin panels relevant to the current task and surface 
 disable-slash-command: true
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # UI Plugin Navigation
 
 > [!NOTE]

@@ -3,6 +3,9 @@ name: review-changes
 description: Perform a structured code review using change detection and impact
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Review Changes
 
 Perform a thorough, risk-aware code review using the knowledge graph.

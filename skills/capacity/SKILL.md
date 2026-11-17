@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Capacity Discovery
 
 Finds available Azure OpenAI model capacity across all accessible regions and projects. Recommends the best deployment location based on capacity requirements.

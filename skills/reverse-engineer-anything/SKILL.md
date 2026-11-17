@@ -6,6 +6,9 @@ metadata:
   tool_count: 170
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # REA
 
 Use REA when a claim depends on a shipped binary or package, decompilation,

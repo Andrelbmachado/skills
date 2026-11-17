@@ -8,6 +8,9 @@ description: >
   ReMap).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Conservation Scores & TFBS Lookup (UCSC)
 
 This skill provides access to evolutionary constraint scores and conserved

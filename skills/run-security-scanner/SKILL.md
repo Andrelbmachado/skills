@@ -6,6 +6,9 @@ description: >
   hardcoded secrets, and other CWE-classified vulnerabilities.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Run Security Scanner
 
 This skill runs the configured scanner backend to scan source files for security

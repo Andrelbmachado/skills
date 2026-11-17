@@ -7,6 +7,9 @@ metadata:
   version: "1.1.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure Reliability Assessment & Configuration
 
 ## Quick Reference

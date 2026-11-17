@@ -2,6 +2,9 @@
 name: fullstack-dev
 description: Use when building or extending a full-stack application (frontend + API + database + auth + deploy). Gives the project skeleton, stack choice rules, API/contract-first workflow and the checklist of skills to auto-invoke (frontend-design, database-dev, devops-cicd, security-best-practices, test-driven-development).
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # fullstack-dev
 1. **Scope first**: write PLAN.md (users, flows, data, non-goals) via `writing-plans`; pick the simplest stack that fits (static HTML/JS → Vite/React or Next → add API/DB only when state demands it).
 2. **Contract first**: define API (OpenAPI or typed route signatures) and DB schema before UI; share types between client and server.

@@ -8,6 +8,9 @@ description: >
   OpenTargets) or mechanistic signaling pathway diagrams (use KEGG).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # QuickGO Database Skill
 
 GO (Gene Ontology) annotations are one of the main ways to label a gene's

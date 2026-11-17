@@ -7,6 +7,9 @@ metadata:
   version: "1.1.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Python on Azure App Service — Code Deploy
 
 Deploys Python (Flask, Django, FastAPI, generic) code to Azure App Service Linux (P0v3, Python 3.14). Creates RG + Plan + Web App if missing. Hand off to `azure-prepare` for VNet, Key Vault, databases, or IaC.

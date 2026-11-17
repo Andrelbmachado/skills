@@ -2,6 +2,9 @@
 name: llm-ops
 description: Use when building or managing LLM/AI features - model choice, prompts, tool use/agents, RAG and embeddings, evals, cost/latency/token budgets, caching and observability. Also for managing fleets of AI agents.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # llm-ops
 - **Model tiering**: Haiku for classification/rewrites/summaries, Sonnet for coding/most agents, Opus/Fable for hard planning/review. Start cheap, escalate on eval failure.
 - **Prompts**: versioned files, explicit output schema (JSON schema/structured output), few-shot only when it moves the metric; shortest prompt that passes evals (`prompt-improver`).

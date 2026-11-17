@@ -3,6 +3,9 @@ name: heatmap-scale-integrity
 description: Use quando revisar um mapa de calor ou dashboard quantitativo e precisar evitar fronteiras artificiais, problemas de daltonismo e distorção pelo domínio da escala.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Integridade de escala e cor em heatmaps
 
 ## Fluxo

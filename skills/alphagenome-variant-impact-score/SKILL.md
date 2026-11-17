@@ -7,6 +7,9 @@ description: >-
   gene/exon/junction coordinates all via the AlphaGenome Atlas API.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # AlphaGenome Variant Impact (AVI) Analysis
 
 Score and prioritize genetic variants using AlphaGenome Variant Impact (AVI)

@@ -7,6 +7,9 @@ description: >
   overview.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Generate Security Audit Report
 
 After completing code generation, produce a **Security Audit** walkthrough

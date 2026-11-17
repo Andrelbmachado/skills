@@ -3,6 +3,9 @@ name: local-agent-hierarchy
 description: Coordinate project work across Claude Code, Codex, Gemini CLI, Grok CLI, and other available agents through a hierarchical team with Claude Code as the root coordinator and one local shared state. Use when the user asks to orchestrate multiple AI CLIs, delegate work through agent tiers, or maintain a shared project task and decision log.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Local Agent Hierarchy
 
 Use Claude Code as the root coordinator. At project start, create only the temporary coordination files and agent structure that project needs. Delegate work through a configurable tree of small peer groups, and have every group validate its own work before sending a concise report upward. The hierarchy distributes execution and review; it does not make every decision for the workers.

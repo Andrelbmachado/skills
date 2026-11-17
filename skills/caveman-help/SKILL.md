@@ -6,6 +6,9 @@ description: >
   "caveman help", "what caveman commands", "how do I use caveman".
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Caveman Help
 
 Display this reference card when invoked. One-shot — do NOT change mode, write flag files, or persist anything. Output in caveman style.

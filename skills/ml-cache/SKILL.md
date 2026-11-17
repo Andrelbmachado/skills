@@ -2,6 +2,9 @@
 name: ml-cache
 description: Use when a question, computation or generation is repeated or very similar to earlier work (same script, same boilerplate, same explanation) and tokens should be saved. Stores question→answer pairs with embeddings, looks them up before recomputing, and exports a 3D embedding graph. Also use to design reproducible ML/embedding pipelines and to review cache hit metrics.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # ml-cache
 
 ## When

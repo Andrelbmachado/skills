@@ -8,6 +8,9 @@ description: >
   or asks about 3D biomolecular structure annotations and highlighted residues.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Biomolecular Structure Viewer
 
 The Biomolecular Structure Viewer sidecar renders interactive 3D molecular

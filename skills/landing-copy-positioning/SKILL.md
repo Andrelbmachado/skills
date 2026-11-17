@@ -3,6 +3,9 @@ name: landing-copy-positioning
 description: Use quando revisar copy de landing page ou vitrine e precisar trocar mensagem genérica por ICP específico, benefícios humanos, missão e prova real.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Copy por público, benefício e prova
 
 ## Fluxo

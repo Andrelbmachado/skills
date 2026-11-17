@@ -5,6 +5,9 @@ description: >
   spatial localisation data from the Human Protein Atlas (HPA).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Human Protein Atlas (HPA) Database Integration
 
 This skill provides semi-quantitative protein expression and spatial

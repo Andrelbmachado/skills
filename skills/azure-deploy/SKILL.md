@@ -7,6 +7,9 @@ metadata:
   version: "1.2.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure Deploy
 
 > **AUTHORITATIVE GUIDANCE — MANDATORY COMPLIANCE**

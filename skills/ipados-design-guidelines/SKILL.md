@@ -7,6 +7,9 @@ metadata:
   version: "1.0.0"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # iPadOS Design Guidelines
 
 Comprehensive rules for building iPad-native apps following Apple's Human Interface Guidelines. iPad is not a big iPhone -- it demands adaptive layouts, multitasking support, pointer interactions, keyboard shortcuts, and inter-app drag and drop. These rules extend iOS patterns for the larger, more capable canvas.

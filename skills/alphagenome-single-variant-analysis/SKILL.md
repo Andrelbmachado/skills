@@ -11,6 +11,9 @@ description: >
   chr:pos:ref>alt format.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Variant Analysis using AlphaGenome
 
 ## Prerequisites

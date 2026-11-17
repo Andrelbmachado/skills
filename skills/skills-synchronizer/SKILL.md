@@ -3,6 +3,9 @@ name: skills-synchronizer
 description: Keeps every AI agent (Grok, Claude Code, Codex, Gemini CLI) in sync with the shared skills repo github.com/Andrelbmachado/skills. Use whenever you install, create or edit a skill, and once per day to pull and import missing skills.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Skills Synchronizer
 
 Shared repo: `~/skills-repo` (remote `github.com/Andrelbmachado/skills`). Layout: `skills/<slug>/SKILL.md` (uppercase).

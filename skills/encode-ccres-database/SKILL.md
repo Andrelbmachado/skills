@@ -7,6 +7,9 @@ description: >
     regulatory annotations or raw experimental data across human cell types.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # ENCODE Database Skill
 
 This skill allows you to query the ENCODE Registry of cCREs (candidate

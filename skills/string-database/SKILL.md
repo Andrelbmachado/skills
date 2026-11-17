@@ -7,6 +7,9 @@ description: >
   interaction partners, or pathway enrichments.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # STRING Database Skill
 
 This skill allows you to query the STRING database programmatically using a

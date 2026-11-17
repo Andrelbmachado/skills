@@ -8,6 +8,9 @@ description: >
   positives.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Determine Threat Model
 
 This skill produces a **threat model artifact** — a short security summary of

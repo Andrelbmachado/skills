@@ -3,6 +3,9 @@ name: scan-point-cloud
 description: Melhorar, ajustar ou depurar o scan Point Cloud (nuvem de pontos) do app Planta — profundidade bruta do LiDAR com cor da câmera. Use para "melhorar a nuvem de pontos", "pontos voando", "nuvem com ruído", "nuvem duplicada", "point cloud noise", ou ao abrir PointCloudBuilder.swift, ModelCaptureController.swift (pointCloud), exports PLY/XYZ.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan Point Cloud
 
 `ScanKind.pointCloud` — "Nuvem de pontos com a profundidade bruta do LiDAR." Cada pixel de profundidade de cada

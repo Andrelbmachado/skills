@@ -2,6 +2,9 @@
 name: devops-cicd
 description: Use for CI/CD pipelines (GitHub Actions), Docker/containers, environments, releases, infra-as-code and deploy automation, including pipeline failures (see gh-fix-ci).
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # devops-cicd
 - **Pipeline order**: install (cached) → lint → typecheck → unit tests → build → integration/E2E → security scan (`scan-dependencies`) → deploy. Fail fast; run independent jobs in parallel; pin action versions by SHA/tag.
 - **Docker**: multi-stage, pinned base tags, non-root user, `.dockerignore`, one process per container, healthcheck, no secrets in layers.

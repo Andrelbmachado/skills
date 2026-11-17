@@ -3,6 +3,9 @@ name: ui-dimensional-handoff
 description: Use quando documentar um componente existente para handoff e precisar de uma prancha com medidas reais de padding, gaps, raios, camadas e posição.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Prancha dimensional verificável de UI
 
 ## Fluxo

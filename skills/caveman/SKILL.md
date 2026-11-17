@@ -8,6 +8,9 @@ description: >
   "be brief", or invokes /caveman. Also auto-triggers when token efficiency is requested.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
 
 ## Persistence

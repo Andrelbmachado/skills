@@ -3,6 +3,9 @@ name: planta-scan-improve
 description: Hub para melhorar, ajustar ou depurar qualquer scan do app Planta (iOS LiDAR). Use quando pedirem "melhorar o scan", "o scan saiu errado", "parede sumiu", "medida errada", "móvel torto", "modelo 3D feio", "improve the scan", "scan quality", ou citarem ~/PlantaRender/Scans, ~/PlantaRender/Models, scan.json, roomplan_raw.json, model.json, events.jsonl, scan_report.py. Roteia pelo sintoma para a skill do tipo de scan (scan-roomplan, scan-roomplan-advanced, scan-mobile, scan-lidar, scan-lidar-advanced, scan-point-cloud, scan-photos, scan-truedepth, scan-classic-plan).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Planta: melhorar scans (hub)
 
 Os 9 tipos vêm de `enum ScanKind` em `Sources/PlantaLiDAR/RoomScan/RoomPlanBuilder.swift`.

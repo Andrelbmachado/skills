@@ -2,6 +2,9 @@
 name: precificacao-diaria-temporada
 description: Use quando precisar definir ou revisar o preço por noite de um imóvel de aluguel por temporada (Airbnb, Booking ou reserva direta) em vez de uma diária fixa.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Precificação diária de aluguel por temporada
 
 Preparar uma proposta de preços por noite. Esta skill não autoriza publicar preços ou alterar reservas.

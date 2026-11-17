@@ -9,6 +9,9 @@ description: >
     similarity.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Prerequisites
 
 1.  **`uv`**: Read the `uv` skill and follow its Setup instructions to ensure

@@ -7,6 +7,9 @@ metadata:
   version: "1.0.1"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Deploy Model to Optimal Region
 
 Automates intelligent Azure OpenAI model deployment by checking capacity across regions and deploying to the best available option.

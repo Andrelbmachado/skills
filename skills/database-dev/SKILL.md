@@ -2,6 +2,9 @@
 name: database-dev
 description: Use when designing schemas, writing SQL/migrations, choosing a database (Postgres, SQLite, MySQL, Mongo, Redis, vector DBs), tuning queries or indexes, or storing embeddings for AI features.
 ---
+
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # database-dev
 - **Choose**: SQLite for local/single-user; Postgres default for apps (JSONB, pgvector for embeddings); Redis only for cache/queues; Mongo only for truly document-shaped data.
 - **Schema**: normalise to 3NF first, denormalise with a measured reason; every table has PK, `created_at`; FKs + NOT NULL + CHECK constraints; money as integer cents/`numeric`.

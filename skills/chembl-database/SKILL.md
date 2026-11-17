@@ -6,6 +6,9 @@ description: >
   compounds, targets, IC50/Ki values, drug mechanisms, or structure searches.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # ChEMBL Database Query
 
 ## Prerequisites

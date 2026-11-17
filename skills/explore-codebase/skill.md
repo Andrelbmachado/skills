@@ -3,6 +3,9 @@ name: explore-codebase
 description: Navigate and understand codebase structure using the knowledge graph
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Explore Codebase
 
 Use the code-review-graph MCP tools to explore and understand the codebase.

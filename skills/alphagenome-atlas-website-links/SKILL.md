@@ -12,6 +12,9 @@ description: >-
   alphagenome-variant-impact-score).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # AlphaGenome Atlas Deep-Linking & URL Configuration
 
 Construct and validate deep-links for the AlphaGenome Atlas web application

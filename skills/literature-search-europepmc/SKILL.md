@@ -6,6 +6,9 @@ description: >
   lists and bibliography.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Europe PMC Database
 
 A skill for searching, downloading, and exploring open-access papers from

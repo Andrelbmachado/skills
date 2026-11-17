@@ -8,6 +8,9 @@ metadata:
 compatibility: Requires Azure CLI (az) for configuration and testing
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure AI Gateway
 
 Configure Azure API Management (APIM) as an AI Gateway for governing AI models, MCP tools, and agents.

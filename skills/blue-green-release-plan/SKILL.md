@@ -3,6 +3,9 @@ name: blue-green-release-plan
 description: Use quando planejar uma troca blue-green com testes no ambiente inativo, reversão de tráfego e compatibilidade do banco compartilhado.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Plano de release blue-green
 
 ## Fluxo

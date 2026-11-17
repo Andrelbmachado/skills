@@ -3,6 +3,9 @@ name: craft-anything
 description: Recria um site, app ou jogo a partir do original, do jeito do Craft Anything (storytold/craft-anything), mas feito pelo próprio Claude Code, sem o app. O loop é Estudar → Construir → Checar → Refinar → Pronto. O estudo captura o original como visitante com Playwright (screenshots em 1440/768/390, tokens de design, layout por largura, estados, outras páginas). A construção fica toda em app/. A checagem dá a nota "X% parecido" (pixels + SSIM) e as afirmações que bloqueiam o resultado. Também cobre os contratos de jogos e apps (--screenshot, --self-test, mechanics.json) e a comparação de programas de console. Use sempre que o usuário pedir para recriar, clonar, refazer, copiar o visual ou "fazer minha versão" de um site, landing page, app ou jogo. Use também quando pedir "recreate this website", "rebuild this app", "make my own version of this game", quando colar uma URL pedindo algo igual, ou quando mandar prints dizendo "faz igual", mesmo sem dizer "craft anything".
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Craft Anything (no Claude Code)
 
 Método do Craft Anything (storytold/craft-anything): **estudar o original com ferramentas reais → construir um projeto novo → comparar com o original → refinar até ficar perto.** Aqui você faz tudo isso direto, com Playwright, ffmpeg e os próprios scripts desta skill.

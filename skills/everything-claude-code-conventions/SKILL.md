@@ -3,6 +3,9 @@ name: everything-claude-code-conventions
 description: Development conventions and patterns for everything-claude-code. JavaScript project with conventional commits.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Everything Claude Code Conventions
 
 > Generated from [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) on 2026-03-20

@@ -3,6 +3,9 @@ name: scan-roomplan-advanced
 description: Melhorar, ajustar ou depurar o scan RoomPlan Advanced do app Planta — a planta exata com textura de parede e piso e os móveis em 3D tirados da filmagem. Use para "melhorar o RoomPlan Advanced", "textura da parede errada", "piso borrado", "móvel 3D do RoomPlan feio", "skin", "render avançado", ou ao abrir skin/skin.json, skin/objects.json, RoomSkin.swift, RoomSkinStore.swift, FurniturePhotogrammetry.swift, WallLook.swift.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan RoomPlan Advanced
 
 `ScanKind.roomPlanAdvanced` — "A planta exata com a textura das paredes e do piso e os móveis em 3D, tirados da filmagem."

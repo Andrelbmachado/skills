@@ -3,6 +3,9 @@ name: debug-issue
 description: Systematically debug issues using graph-powered code navigation
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 ## Debug Issue
 
 Use the knowledge graph to systematically trace and debug issues.

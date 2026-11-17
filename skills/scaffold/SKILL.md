@@ -3,6 +3,9 @@ name: scaffold
 description: "Azure App Onboard Scaffold — IaC Generation + Self-Review"
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Azure App Onboard Scaffold — IaC Generation + Self-Review
 
 Generate deployment-ready infrastructure code from an architecture plan, verify it with adversarial self-review, and bridge to validation — all without deploying.

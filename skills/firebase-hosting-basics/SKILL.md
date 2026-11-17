@@ -6,6 +6,9 @@ metadata:
   category: Serverless
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # hosting-basics
 
 This skill provides instructions and references for working with Firebase

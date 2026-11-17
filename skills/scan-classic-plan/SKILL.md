@@ -3,6 +3,9 @@ name: scan-classic-plan
 description: Melhorar, ajustar ou depurar o scan Planta clássica do app Planta — o escaneamento de planta antigo, LiDAR puro (sem RoomPlan) com RANSAC, grade de alturas e cantos por toque. Use para "melhorar a planta clássica", "scan antigo", "cantos errados", "parede dobrada", "planta torta", "classic plan", ou ao abrir ScanView.swift, ScanCoordinator.swift, ARFrameSource.swift, PlanBuilder.swift, WallMapper.swift, GridPlanner.swift, frames.jsonl de sessão.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan Planta clássica
 
 `ScanKind.classicPlan` — "O escaneamento de planta que o app já tinha." `HomeView.startScan()` abre uma `ScanSession`;

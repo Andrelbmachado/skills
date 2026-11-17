@@ -6,6 +6,9 @@ description: >
   positive" benchmark controls for human genomic variants.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # ClinVar Database
 
 ## Prerequisites

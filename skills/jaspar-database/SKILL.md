@@ -8,6 +8,9 @@ description: >
     TRANSFAC, PFM, JASPAR, YAML).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # JASPAR Skill
 
 JASPAR is the definitive open-access database for Transcription Factor (TF)

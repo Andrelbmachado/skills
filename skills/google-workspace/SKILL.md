@@ -3,6 +3,9 @@ name: google-workspace
 description: "Read this before the first Google Drive, Docs, Sheets or Slides connector call whenever the task creates or changes a Google file. Use this skill whenever the user wants to create or change a Google Doc, Sheet or Slides file in their Google Drive. Triggers include: a request that names Google Docs, Sheets, Slides or Drive and asks to make, edit, format, copy or rename a file; a docs.google.com link with a request to change that file, even a one-line fix or suggested edits; and any follow-up change to a Google file from earlier in the chat, even \"change it\" or \"add a tab\". Includes helper scripts for document positions, cell ranges and slide layout. However, if the user asks for a doc, deck or spreadsheet without naming Google, or gives a Google file only as source material for something new, use Claude's own output type instead. Do NOT use for read-only questions about a Google file, or for Word, Excel, PowerPoint or PDF files."
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Google Docs, Sheets, and Slides
 
 The Google connectors are thin wrappers over Google's raw APIs, with almost no guidance of their own. This skill supplies that guidance: which connector does what, the rules that keep edits in the user's file, and, in one reference file per app, how each API really behaves. Most of the app-specific rules in the references were tested against Google's Docs, Sheets and Slides APIs; the rest were seen through the connectors, and a few have not been checked yet.

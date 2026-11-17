@@ -7,6 +7,9 @@ description: >
   "/commit", or invokes /caveman-commit. Auto-triggers when staging changes.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 Write commit messages terse and exact. Conventional Commits format. No fluff. Why over what.
 
 ## Rules

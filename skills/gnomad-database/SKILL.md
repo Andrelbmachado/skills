@@ -9,6 +9,9 @@ description: >
   in cancer (use COSMIC), or requesting raw sequencing reads (use ENA).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # gnomAD Database
 
 ## Prerequisites

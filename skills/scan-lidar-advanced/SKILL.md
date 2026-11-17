@@ -3,6 +3,9 @@ name: scan-lidar-advanced
 description: Melhorar, ajustar ou depurar o scan LiDAR Advanced do app Planta — mais de perto, Full HD, mais fotos para detalhes e profundidade suavizada. Use para "melhorar o LiDAR Advanced", "detalhe fino perdido", "quina arredondada", "poucas fotos no modelo", "smoothed depth", ou ao abrir model.json com kind lidarAdvanced, ModelCaptureController.swift (lidarAdvanced, smoothedSceneDepth, keyframeWidth 640).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan LiDAR Advanced
 
 `ScanKind.lidarAdvanced` — "Mais de perto, Full HD e mais fotos para detalhes." Igual ao `scan-lidar`, mas:

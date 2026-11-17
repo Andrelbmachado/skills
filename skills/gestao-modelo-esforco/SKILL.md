@@ -3,6 +3,9 @@ name: gestao-modelo-esforco
 description: Define qual modelo (Haiku, Sonnet, Opus, Fable) e qual nível de esforço do Claude Code usar em cada tarefa, quando delegar a subagentes, e como economizar tokens e créditos (assinatura, API, usage credits). Use antes de despachar, planejar ou delegar qualquer trabalho, ao iniciar sessões longas, quando o custo estiver subindo, ou ao decidir entre /model, /effort, opusplan, subagentes, plan mode, workflows e agent teams.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Gestão de modelo, esforço e custo no Claude Code
 
 Skill para o GrokBot (gerente de projetos). Objetivo: entregar o resultado com o **modelo mais barato e o esforço mais baixo que ainda resolvem a tarefa com margem**, e gastar contexto apenas onde ele rende.

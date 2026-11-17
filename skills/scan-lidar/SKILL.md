@@ -3,6 +3,9 @@ name: scan-lidar
 description: Melhorar, ajustar ou depurar o scan LiDAR (Modelo 3D) do app Planta — malha 3D com cor de tudo ao redor, vídeo Full HD. Use para "melhorar o scan LiDAR", "malha com buracos", "cor da malha errada", "objeto cortado pelo alcance", "modelo 3D LiDAR", "mesh holes", ou ao abrir model.json com kind lidar, model.usdz, ModelCaptureController.swift, Model3DCapture.swift, ModelExporter.swift, ScanQuality.swift.
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
+
 # Scan LiDAR (Modelo 3D)
 
 `ScanKind.lidar` — "Malha 3D com cor de tudo ao redor, vídeo Full HD." Malha do ARKit (`sceneReconstruction = .mesh`)
