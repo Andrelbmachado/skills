@@ -1,10 +1,9 @@
 ---
 name: web-launch-readiness
-description: Use quando preparar o lançamento de um site ou app web e precisar conferir metadados sociais, separação app/marketing, reputação de e-mail e indexação.
+description: Use quando preparar o lançamento de um site ou app web e precisar conferir metadados sociais, separação app/marketing, peso das imagens (LCP), reputação de e-mail e indexação.
 ---
 
 > **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
-
 
 # Preparação de lançamento web e domínio
 
@@ -14,7 +13,8 @@ description: Use quando preparar o lançamento de um site ou app web e precisar 
 3. Se houver e-mail transacional e marketing, planejar subdomínios separados para esses dois usos. Conferir SPF, DKIM e DMARC conforme o serviço adotado; não inventar valores de registros DNS.
 4. Preparar o sitemap.xml e a indexação pelo Google Search Console. Diferenciar arquivo preparado de submissão efetivamente feita.
 5. Para apps, conferir o checklist de onboarding. Se houver necessidade de analisar o funil, considerar product analytics; o exemplo ensinado usa PostHog com cookie banner. Não adicionar rastreamento sem necessidade.
-6. Entregar uma lista de verificação com cada item como conferido, pendente ou não aplicável. Indicar qual decisão ou acesso ainda falta.
+6. Imagens: a imagem de destaque e as fotos grandes saem em AVIF e WebP com fallback JPG/PNG dentro de `<picture>` (`<source type="image/avif">`, `<source type="image/webp">`, `<img>` com alt). Pôr width/height no `<img>`. Na imagem LCP, usar `fetchpriority="high"` e não usar `loading="lazy"`; nas demais, `loading="lazy"`. Conferir o peso antes/depois e registrar no checklist.
+7. Entregar uma lista de verificação com cada item como conferido, pendente ou não aplicável. Indicar qual decisão ou acesso ainda falta.
 
 ## Limites
 - Complementa, não substitui, revisão de acessibilidade, segurança e CI/CD.

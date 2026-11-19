@@ -5,7 +5,6 @@ description: Use quando receber um link de vídeo de rede social para entender o
 
 > **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
 
-
 # social-video-analysis
 
 **Use quando receber um link de vídeo de rede social para entender o conteúdo.** Também serve como etapa de "vídeo de referência" antes de criar um reel/post parecido. Nunca publica nada em rede social.
@@ -31,3 +30,13 @@ Cabeçalho (link, duração, resolução, áudio) → Legenda do post → Linha 
 - Português: use `--lang pt` e `--whisper-model small` para melhor qualidade.
 - Login-walled (Instagram privado etc.): yt-dlp `--cookies-from-browser chrome`; sem acesso, diga que não foi possível e peça o arquivo.
 - Registre tokens/tempo em `~/metrics/metrics.csv` (`~/skills-repo/scripts/log-metrics.sh`).
+
+## Seção opcional: Ficha de estilo da referência
+Use quando o vídeo serve de referência para fazer um parecido.
+- Cada plano com início e duração (detecte cortes, ex.: ffmpeg scene detection, em vez de só amostrar frames).
+- BPM e se os cortes caem no tempo.
+- Tipo de transição entre planos.
+- Enquadramento (geral, médio, close) e movimento de câmera por plano.
+- Paleta e look por plano.
+Regra: copie só a técnica, nunca as imagens, personagens ou assets.
+Fonte: ReelMimic (github.com/edenfunf/reelmimic), via @repo.maniac.

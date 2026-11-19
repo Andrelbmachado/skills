@@ -5,7 +5,6 @@ description: Discovers, vets and installs new free skills for every AI (Claude C
 
 > **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
 
-
 # skill-manager
 
 Shared repo: `~/skills-repo` (github.com/Andrelbmachado/skills, private). Works with `skills-synchronizer` (publish + sync rules).
@@ -29,5 +28,6 @@ Shared repo: `~/skills-repo` (github.com/Andrelbmachado/skills, private). Works 
 4. **Merge + rank + dedupe** into one ranked topic list and candidate list; drop anything already in `skills/` (compare slugs and descriptions).
 5. **Search free sources**: anthropics/skills, openai/skills (.curated), obra/superpowers, google-labs-code/stitch-skills, vercel-labs/agent-skills, skills.sh / find-skills, awesome-*-skills lists (VoltAgent, ComposioHQ), Gemini extensions. Shallow-clone (`git clone --depth 1`) into `~/sm-run/src`.
 6. **Inspect** each candidate (rules above). Record skips with reasons.
+   - For skills.sh candidates, first open `https://skills.sh/<owner>/<repo>/<skill>` and read **Security Audits** (Gen Agent Trust Hub, Socket, Snyk). Any **Fail** means skip and record the reason. A **Warn** means open `/security/<auditor>` and continue only if the alert is understood and acceptable. Install counts are not a safety signal, and manual file inspection is still required (Snyk's ToxicSkills study found flaws in about 37% of 3,984 skills and 76 malicious ones).
 7. **Install + publish**: `scripts/install-skill.sh <skill-dir> <upstream-url> <license>` (adds SOURCE.md, runs `~/skills-repo/scripts/publish-skill.sh`). Then `~/skills-repo/sync.sh` and verify with `ls` in all CLI skill dirs.
 8. **Report**: write `reports/skill-manager-<date>.md` (topics, installed table slug | source | topic, skipped table name | reason, commit hash) and commit it.

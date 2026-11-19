@@ -13,6 +13,8 @@ description: >-
   ("Curta, comenta e compartilha." + ícones Instagram) e o padrão de reels narrados (Fish Audio, legendas sincronizadas).
 ---
 
+> **REGRA DO ANDRÉ: responda apenas o que foi perguntado.** Sim/não → só "Sim."/"Não.". Hora → só a hora. Nada extra.
+
 # Motion Code
 
 Goal: motion that reads right in one or two passes, proven by evidence, at low token cost.
@@ -103,7 +105,7 @@ Quando as skills de origem sugerirem paleta ousada, gradientes ou neon, valem as
 | Task | Read | Usual engine |
 |---|---|---|
 | Feel/weight/character/physics, "looks off", style presets | `references/principles.md` | — |
-| Concrete recipe (bounce, arc, roll, spring, pendulum, overlap, walk/run/jump, idle, leaf, shake, particles, stagger, loop, kinetic type, UI patterns) | `references/patterns.md` (grep the `##` heading) | — |
+| Concrete recipe (bounce, arc, roll, spring, pendulum, overlap, walk/run/jump, idle, leaf, shake, particles, stagger, loop, kinetic type, UI patterns, graph/map tour) | `references/patterns.md` (grep the `##` heading) | — |
 | DOM/SVG/UI, scroll, page transitions, React motion, Lottie/Rive | `references/web-runtime.md` | CSS/WAAPI → GSAP → Motion |
 | Canvas, sprite sheets, pixel art, PixiJS/Phaser, 2D rigs, SVG morph | `references/2d.md` | Canvas/PixiJS |
 | Three.js/R3F scenes, cameras, clips, rigs, morph targets, glTF | `references/3d.md` | Three.js / R3F |
@@ -301,3 +303,10 @@ Use só quando a cena já é React/TSX, depende apenas do tempo ou do frame, e o
 5. Fazer o render completo com áudio e rodar a verificação normal desta skill: quadros, duração, pico de áudio e contact sheet.
 6. Registrar o tempo de render. Se o motor falhar ou sair diferente, voltar ao pipeline já validado, como navegador + ffmpeg ou Remotion, sem reescrever a cena.
 Benchmarks do fabricante não são prova; compare no próprio projeto. Fonte: @dopaminedevs sobre raea, vibecode-2026-11-10.
+
+## Revisão independente por plano
+1. Divida a produção por plano ou seção, para construir em paralelo.
+2. Mande cada plano pronto para um revisor diferente de quem o fez (ninguém avalia o próprio trabalho).
+3. Toda correção precisa de print do frame antes e depois, e o revisor confere.
+4. Com o vídeo pronto, junte as notas de revisão presas a timestamps e aplique de uma vez.
+Fonte: ReelMimic README (github.com/edenfunf/reelmimic), via @repo.maniac.
