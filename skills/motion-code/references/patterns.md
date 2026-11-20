@@ -142,3 +142,13 @@ First (measure) → Last (apply final layout) → Invert (transform back to Firs
 - **Skeleton shimmer**: linear gradient translate, 1.2–1.6 s loop; reduced motion: static.
 - **Scroll reveal**: once, 16–40 px + opacity, 400–600 ms ease-out, threshold ~15–25 % visible; content must be visible without JS (progressive enhancement), never hide content waiting for an observer that may not fire.
 - **Loading spinner**: linear rotation 0.8–1.2 s/turn; indeterminate bars ease-in-out; after ~1 s prefer progress/skeleton.
+
+## Graph / map tour (tour narrativo num canvas de grafo)
+Use quando um vídeo ou demo precisa explicar uma cadeia (origem → saltos → destino) sem narração.
+1. Revele nós e arestas na ordem do caminho, com stagger de 40–80 ms por salto, sincronizado a um estado `running` → `success`.
+2. Desenhe arestas bezier com draw-on; o rótulo no meio da linha continua legível com o zoom.
+3. Câmera `{x, y, zoom}` como função do tempo, com um único dono: enquadramento inicial, punch-in de 300–700 ms (~1,8–2,3×) num salto, recuo para o mapa inteiro, zoom-to-fit após o morph, reenquadro no nó inspecionado. Sem cortes entre saltos. Se o zoom deixar o texto abaixo do mínimo legível (ex.: 1080×1920), segure a escala do rótulo.
+4. Morph de layout (ex.: Tree ↔ Hub) por FLIP, 400–700 ms ease-in-out, arestas acompanhando; uma mudança de layout por cena.
+5. Chrome na mesma timeline: painel explica enquanto o grafo cresce; recolha o chrome quando o mapa é o herói; termine com seleção + cartão inspector (drawer 250–400 ms ease-out). Cursor guiado é opcional e só aponta o nó que entrou ou vai ser inspecionado. Grade de fundo que escala com o zoom ajuda a ler o movimento da câmera.
+6. Sem narração, ~15–20 s: crescimento (~2 s), tour (~6 s), reenquadro/layout (~4 s), inspeção (~4 s). Com `prefers-reduced-motion`, mostre o grafo final e o inspector, sem viagem de câmera nem desenho de arestas.
+Fonte: @kaolti, https://www.threads.com/@kaolti/post/Dfjx4eQgr2Y
